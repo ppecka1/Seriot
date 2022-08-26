@@ -1,0 +1,523 @@
+Uruchomienie:
+kip,asm
+~/ryu/PYHTONPATH=. ryu-manager  --observe-links ryu/app/gui_topology/gui_topology.py ryu/app/simple_switch_13.py
+
+Budowanie sieci na podstawie interf sieciowych ( /etc/network/interfaces)
+Przyklad dla SERIOT4:
+ sudo ovs-vsctl add-br br0
+  618  sudo ovs-vsctl show
+  619  sudo ovs-vsctl add-port br0 eno1.124  #jak numeruje porty trze
+  620  sudo ovs-vsctl add-port br0 eno1.134
+  621  sudo ovs-vsctl add-port br0 eno1.146
+  622  sudo ovs-vsctl set-controller br0 tcp:10.0.2.50:6633  # na kazdym wezle pokazuje gdzie jest kontr
+  623  sudo ovs-vsctl set bridge br0 other_config:datapath-id=0000000000000004 # ustaw datapath  
+  624  sudo ovs-ofctl show br0
+
+PLIKI z intref. sieciowymi: 
+seriot@seriot:~/ryu/ryu/app$ shall.sh  cat /etc/network/interfaces
+**************************   SERIOT 1:
+# interfaces(5) file used by ifup(8) and ifdown(8)
+auto lo
+iface lo inet loopback
+
+#auto eno1
+auto enp5s0
+auto eno1.112
+auto eno1.113
+
+#iface eno1 inet static
+#    address 10.0.1.1
+#    netmask 255.255.255.0
+#    gateway 10.0.1.50
+
+iface enp5s0 inet static
+    address 10.0.2.1
+    netmask 255.255.255.0
+
+iface eno1.112 inet static
+    address 10.0.112.1
+    netmask 255.255.255.0
+    network 10.0.112.0
+    broadcast 10.0.112.255
+    mtu 1500
+    vlan-raw-device eno1
+
+iface eno1.113 inet static
+    address 10.0.113.1
+    netmask 255.255.255.0
+    network 10.0.113.0
+    broadcast 10.0.113.255
+    mtu 1500
+    vlan-raw-device eno1
+*********************** SERIOT2:
+# interfaces(5) file used by ifup(8) and ifdown(8)
+auto lo
+iface lo inet loopback
+
+auto enp5s0
+iface enp5s0 inet static
+    address 10.0.2.2
+    netmask 255.255.255.0
+
+#auto eno1
+#iface eno1 inet static 
+#   address 10.0.1.2
+#   netmask 255.255.255.0
+
+auto eno1.112
+iface eno1.112 inet static
+    address 10.0.112.2
+    netmask 255.255.255.0
+    vlan-raw-device eno1
+
+auto eno1.124
+iface eno1.124 inet static
+    address 10.0.124.1
+    netmask 255.255.255.0
+    vlan-raw-device eno1
+
+*** SERIOT3:
+# interfaces(5) file used by ifup(8) and ifdown(8)
+auto lo
+iface lo inet loopback
+
+auto enp5s0
+auto eno1.113
+auto eno1.134
+auto eno1.135
+
+iface enp5s0 inet static
+    address 10.0.2.3
+    netmask 255.255.255.0
+
+iface eno1.113 inet static
+    address 10.0.113.2
+    netmask 255.255.255.0
+    vlan-raw-device eno1
+
+iface eno1.134 inet static
+    address 10.0.134.1
+    netmask 255.255.255.0
+    network 10.0.134.0
+    broadcast 10.0.134.255
+    vlan-raw-device eno1
+
+iface eno1.135 inet static
+    address 10.0.135.1
+    netmask 255.255.255.0
+    vlan-raw-device eno1
+
+*** SERIOT4:
+# interfaces(5) file used by ifup(8) and ifdown(8)
+auto lo
+iface lo inet loopback
+
+auto enp5s0
+auto eno1.124
+auto eno1.134
+auto eno1.146
+
+iface enp5s0 inet static
+    address 10.0.2.4
+    netmask 255.255.255.0
+
+iface eno1.124 inet static
+    address 10.0.124.2
+    netmask 255.255.255.0
+    vlan-raw-device eno1
+
+iface eno1.134 inet static
+    address 10.0.134.2
+    netmask 255.255.255.0
+    vlan-raw-device eno1
+
+iface eno1.146 inet static
+    address 10.0.146.1
+    netmask 255.255.255.0
+    vlan-raw-device eno1
+
+*** SERIOT5:
+# interfaces(5) file used by ifup(8) and ifdown(8)
+auto lo
+iface lo inet loopback
+
+auto enp5s0
+auto eno1.135
+auto eno1.156
+
+iface enp5s0 inet static
+address 10.0.2.5
+netmask 255.255.255.0
+
+iface eno1.135 inet static
+address 10.0.135.2
+netmask 255.255.255.0
+vlan_raw_device eno1
+
+iface eno1.156 inet static
+address 10.0.156.1
+netmask 255.255.255.0
+vlan_raw_device eno1
+
+*** SERIOT6:
+# interfaces(5) file used by ifup(8) and ifdown(8)
+auto lo
+iface lo inet loopback
+
+auto eno1.146
+auto eno1.156
+
+auto enp5s0
+iface enp5s0 inet static
+address 10.0.2.6
+netmask 255.255.255.0
+
+
+# vlan156
+iface eno1.156 inet static
+address 10.0.156.2
+netmask 255.255.255.0
+vlan_raw_device eno1
+
+# vlan146
+iface eno1.146 inet static
+address 10.0.146.2
+netmask 255.255.255.0
+vlan_raw_device eno1
+
+SERIOT (kontroler)
+
+# interfaces(5) file used by ifup(8) and ifdown(8)
+auto lo
+iface lo inet loopback
+
+auto eno1
+iface eno1 inet static
+#address 10.0.1.50
+address 10.0.2.50
+netmask 255.255.255.0
+
+#auto enp5s0
+#iface enp5s0 inet static
+#address 10.0.2.50
+#netmask 255.255.255.0
+----------------------------------------------------------------
+Statyczne MAC-i
+seriot@seriot:~/ryu/ryu/app$ shall.sh  cat /etc/ethers
+*** SERIOT1:
+54:b2:03:93:25:b1   10.0.2.50
+54:b2:03:93:76:53   10.0.1.6
+54:b2:03:93:e7:b3   10.0.1.5
+54:b2:03:93:ea:94   10.0.1.4
+54:b2:03:93:50:9e   10.0.1.3
+54:b2:03:93:75:2b   10.0.1.2
+54:b2:03:93:e9:7d   10.0.1.1
+
+*** SERIOT2:
+54:b2:03:93:25:b1   10.0.2.50
+54:b2:03:93:76:53   10.0.1.6
+54:b2:03:93:e7:b3   10.0.1.5
+54:b2:03:93:ea:94   10.0.1.4
+54:b2:03:93:50:9e   10.0.1.3
+54:b2:03:93:75:2b   10.0.1.2
+54:b2:03:93:e9:7d   10.0.1.1
+.
+.
+*** SERIOT (kontr)
+brak
+--------------------------------------------
+Tu ustawiamy polaczenia (obrazki w mailu)
+https://10.0.1.253/
+poloaczenia: n+3
+np.
+2 z 5 = 5 z 8 
+Przyklad:
+VLAN name 112   ---> 4  z 5 (czyli 1 z 2 -obrazek na kartce)
+
+polaczenia : L2 features (n gorze)
+VLAN z boku 
+
+
+
+---------------------------------------------
+SYNCHROronizacja zegarow:
+ sudo ip r del default via 10.0.2.50 dev enp5s0 ????????????????
+ 
+  785  shall sudo apt -y install ntp
+  786  sudo apt -y install ntp
+  787  sudo vim /etc/ntp.conf 
+  788  sudo systemctl restart ntp.service 
+  789  sudo systemctl status ntp.service 
+  790  sudo vim /etc/ntp.conf 
+  791  sudo systemctl restart ntp.service 
+  792  sudo systemctl status ntp.service 
+  793  sudo vim /etc/ntp.conf 
+  794  sudo systemctl restart ntp.service 
+  795  sudo vim /etc/ntp.conf 
+  796  sudo systemctl status ntp.service 
+  797  sudo vim /etc/ntp.conf 
+  798  sudo systemctl restart ntp.service 
+  799  sudo systemctl status ntp.service 
+  800  sudo vim /etc/ntp.conf 
+  801  sudo systemctl restart ntp.service 
+  802  sudo vim /etc/ntp.conf 
+  803  sudo systemctl restart ntp.service 
+  804  sudo systemctl status ntp.service 
+  805  ip a
+  806  sudo ntpdate 10.0.2.50
+  807  sudo systemctl stop ntp.service 
+  808  sudo ntpdate 10.0.2.50
+  809  sudo systemctl restart ntp.service 
+  810  scp /etc/ntp.conf seriot@seriot:~
+  811  scp /etc/ntp.conf seriot@10.0.2.50:~
+Pliik /etc/ntp.conf
+*******************************************************************************SERIOT5:
+# /etc/ntp.conf, configuration for ntpd; see ntp.conf(5) for help
+
+driftfile /var/lib/ntp/ntp.drift
+
+# Leap seconds definition provided by tzdata
+leapfile /usr/share/zoneinfo/leap-seconds.list
+
+# Enable this if you want statistics to be logged.
+#statsdir /var/log/ntpstats/
+
+statistics loopstats peerstats clockstats
+filegen loopstats file loopstats type day enable
+filegen peerstats file peerstats type day enable
+filegen clockstats file clockstats type day enable
+
+# Specify one or more NTP servers.
+
+# Use servers from the NTP Pool Project. Approved by Ubuntu Technical Board
+# on 2011-02-08 (LP: #104525). See http://www.pool.ntp.org/join.html for
+# more information.
+#pool 0.ubuntu.pool.ntp.org iburst
+#pool 1.ubuntu.pool.ntp.org iburst
+#pool 2.ubuntu.pool.ntp.org iburst
+#pool 3.ubuntu.pool.ntp.org iburst
+
+# Use Ubuntu's ntp server as a fallback.
+#pool ntp.ubuntu.com
+
+# Access control configuration; see /usr/share/doc/ntp-doc/html/accopt.html for
+# details.  The web page <http://support.ntp.org/bin/view/Support/AccessRestrictions>
+# might also be helpful.
+#
+# Note that "restrict" applies to both servers and clients, so a configuration
+# that might be intended to block requests from certain clients could also end
+# up blocking replies from your own upstream servers.
+
+# By default, exchange time with everybody, but don't allow configuration.
+restrict -4 default kod notrap nomodify nopeer noquery limited
+restrict -6 default kod notrap nomodify nopeer noquery limited
+
+# Local users may interrogate the ntp server more closely.
+restrict 127.0.0.1
+restrict ::1
+
+# Needed for adding pool entries
+#restrict source notrap nomodify noquery
+
+# Clients from this (example!) subnet have unlimited access, but only if
+# cryptographically authenticated.
+#restrict 192.168.123.0 mask 255.255.255.0 notrust
+
+
+# If you want to provide time to your local subnet, change the next line.
+# (Again, the address is an example only.)
+#broadcast 192.168.123.255
+
+# If you want to listen to time broadcasts on your local subnet, de-comment the
+# next lines.  Please do this only if you trust everybody on the network!
+#disable auth
+#broadcastclient
+
+#Changes recquired to use pps synchonisation as explained in documentation:
+#http://www.ntp.org/ntpfaq/NTP-s-config-adv.htm#AEN3918
+
+server 10.0.2.50 prefer iburst
+
+#server 127.127.8.1 mode 135 prefer    # Meinberg GPS167 with PPS
+#fudge 127.127.8.1 time1 0.0042        # relative to PPS for my hardware
+
+#server 127.127.22.1                   # ATOM(PPS)
+#fudge 127.127.22.1 flag3 1            # enable PPS API
+************************************************************************************** SERIOT6:
+# /etc/ntp.conf, configuration for ntpd; see ntp.conf(5) for help
+
+driftfile /var/lib/ntp/ntp.drift
+
+# Leap seconds definition provided by tzdata
+leapfile /usr/share/zoneinfo/leap-seconds.list
+
+# Enable this if you want statistics to be logged.
+#statsdir /var/log/ntpstats/
+
+statistics loopstats peerstats clockstats
+filegen loopstats file loopstats type day enable
+filegen peerstats file peerstats type day enable
+filegen clockstats file clockstats type day enable
+
+# Specify one or more NTP servers.
+
+# Use servers from the NTP Pool Project. Approved by Ubuntu Technical Board
+# on 2011-02-08 (LP: #104525). See http://www.pool.ntp.org/join.html for
+# more information.
+#pool 0.ubuntu.pool.ntp.org iburst
+#pool 1.ubuntu.pool.ntp.org iburst
+#pool 2.ubuntu.pool.ntp.org iburst
+#pool 3.ubuntu.pool.ntp.org iburst
+
+# Use Ubuntu's ntp server as a fallback.
+#pool ntp.ubuntu.com
+
+# Access control configuration; see /usr/share/doc/ntp-doc/html/accopt.html for
+# details.  The web page <http://support.ntp.org/bin/view/Support/AccessRestrictions>
+# might also be helpful.
+#
+# Note that "restrict" applies to both servers and clients, so a configuration
+# that might be intended to block requests from certain clients could also end
+# up blocking replies from your own upstream servers.
+
+# By default, exchange time with everybody, but don't allow configuration.
+restrict -4 default kod notrap nomodify nopeer noquery limited
+restrict -6 default kod notrap nomodify nopeer noquery limited
+
+# Local users may interrogate the ntp server more closely.
+restrict 127.0.0.1
+restrict ::1
+
+# Needed for adding pool entries
+#restrict source notrap nomodify noquery
+
+# Clients from this (example!) subnet have unlimited access, but only if
+# cryptographically authenticated.
+#restrict 192.168.123.0 mask 255.255.255.0 notrust
+
+
+# If you want to provide time to your local subnet, change the next line.
+# (Again, the address is an example only.)
+#broadcast 192.168.123.255
+
+# If you want to listen to time broadcasts on your local subnet, de-comment the
+# next lines.  Please do this only if you trust everybody on the network!
+#disable auth
+#broadcastclient
+
+#Changes recquired to use pps synchonisation as explained in documentation:
+#http://www.ntp.org/ntpfaq/NTP-s-config-adv.htm#AEN3918
+
+server 10.0.2.50 prefer iburst
+
+#server 127.127.8.1 mode 135 prefer    # Meinberg GPS167 with PPS
+#fudge 127.127.8.1 time1 0.0042        # relative to PPS for my hardware
+
+#server 127.127.22.1                   # ATOM(PPS)
+#fudge 127.127.22.1 flag3 1            # enable PPS API
+----------------------------------------------------------
+WAZNIEJSZE POLECENIA:
+
+#to wszystko robimy na wezlach, nie na seriot
+Zatrzymujemy OVS:
+ sudo systemctl stop openvswitch-switch.service # stop
+ sudo rm /etc/openvswitch/conf.db  -  usuniecie konfiguracji
+ sudo ovs-vsctl set-controller br0 tcp:10.0.2.50:6633  # na kazdym wezle pokazuje gdzie jest kontroler
+ sudo ovs-vsctl set bridge br0 other_config:datapath-id=0000000000000004 datapath  # nadanie datapath id (TU: seriot4)
+ # reczne 
+  sudo ip link set eno1 down !!!!
+  599  ip a
+  600  sudo ip link set eno1.134 up  !!!!!!!!!!! nie istotne 
+  601  sudo ip link set eno1 up  ???????? !!!!!!
+  602  ip a
+  603  sudo ip link del ovs-system
+  604  sudo systemctl start  openvswitch-switch
+  605  sudo ovs-vsctl show
+  606  ovs-vsctl add-port br0 eno1.134
+  607  sudo ovs-vsctl add-port br0 eno1.134
+  608  ip r
+  609  ping 10.0.134.1
+  610  sudo systemctl stop openvswitch-switch.service # stop  
+  611  sudo ls /etc/openvswitch/*
+  612  sudo rm /etc/openvswitch/conf.db  -  usuniecie konfiguracji
+  613  sudo ls /etc/openvswitch/* 
+  614  sudo ovs-vsctl show  - pokazuje wirualne karty 
+  615  sudo systemctl start openvswitch-switch.service tworzy db ? 
+  616  sudo ovs-vsctl show
+  617  sudo ovs-vsctl add-br br0
+  618  sudo ovs-vsctl show
+  619  sudo ovs-vsctl add-port br0 eno1.124  #jak numeruje porty 
+  620  sudo ovs-vsctl add-port br0 eno1.134
+  621  sudo ovs-vsctl add-port br0 eno1.146
+  622  sudo ovs-vsctl set-controller br0 tcp:10.0.2.50:6633  # na kazdym wezle pokazuje gdzie jest kontr
+  623  sudo ovs-vsctl set bridge br0 other_config:datapath-id=0000000000000004 datapath   ?????????????????
+  624  sudo ovs-ofctl show br0
+  625  ip a
+  626  sudo ip addr add 10.0.1.4/24 dev br0  ??????????????????
+   pip3 install oslo_config ????
+   traceroute 8.8.8.8
+    ip a show dev eno1
+ sudo dhclient enp5s0 ??????????
+  statyczne MACI
+  cat /etc/network/interfaces - inf o kartach wirtualnych  zwiazane z tym sudo ip link set eno1.134 up  !!!!!!!!!!! 
+  cat /etc/network/if-up.d/br0 # na wezlach, nie na seriot
+
+ sudo ip a add 10.0.1.50/24 dev enp5s0 
+ 2133  ip a
+ 2134* sudo ip a del 10.0.1.50/24 dev enp
+ 2135  sudo ip a add 10.0.1.50/24 dev eno1
+ 2136  ip a
+
+
+----------------------------------------------------------------------------------------------
+conf.RoutingAlgo= 0 
+seriot@seriot3:~/Logs$ head  -20 logAsMRcvCog10.0.1.3.txt
+*Time=*0.005764 CogRecv - aktivation
+  / ppid=22631, dpid=22632 /
+*Time=*0.193638 CogRecv - receiving  COG packet from ('10.0.1.4', 45833) delay[NS]=0 ENERGY=18.530000
+*Time=*0.206140 CogRecv - receiving  COG packet from ('10.0.1.1', 48895) delay[NS]=0 ENERGY=18.450000
+*Time=*0.294514 CogRecv - receiving  COG packet from ('10.0.1.5', 42526) delay[NS]=0 ENERGY=17.640000
+*Time=*0.409606 CogRecv - receiving  COG packet from ('10.0.1.1', 48895) delay[NS]=0 ENERGY=18.673000
+*Time=*0.497160 CogRecv - receiving  COG packet from ('10.0.1.4', 45833) delay[NS]=0 ENERGY=18.355000
+*Time=*0.497515 CogRecv - receiving  COG packet from ('10.0.1.5', 42526) delay[NS]=0 ENERGY=17.180000
+*Time=*0.612773 CogRecv - receiving  COG packet from ('10.0.1.1', 48895) delay[NS]=0 ENERGY=18.180000
+*Time=*0.701039 CogRecv - receiving  COG packet from ('10.0.1.5', 42526) delay[NS]=0 ENERGY=17.419000
+*Time=*0.801226 CogRecv - receiving  COG packet from ('10.0.1.4', 45833) delay[NS]=0 ENERGY=18.511000
+*Time=*0.816590 CogRecv - receiving  COG packet from ('10.0.1.1', 48895) delay[NS]=0 ENERGY=18.041000
+*Time=*0.904913 CogRecv - receiving  COG packet from ('10.0.1.5', 42526) delay[NS]=0 ENERGY=17.174000
+*Time=*1.019849 CogRecv - receiving  COG packet from ('10.0.1.1', 48895) delay[NS]=0 ENERGY=18.195000
+*Time=*1.104984 CogRecv - receiving  COG packet from ('10.0.1.4', 45833) delay[NS]=0 ENERGY=18.516000
+*Time=*1.107998 CogRecv - receiving  COG packet from ('10.0.1.5', 42526) delay[NS]=0 ENERGY=17.266000
+*Time=*1.223186 CogRecv - receiving  COG packet from ('10.0.1.1', 48895) delay[NS]=0 ENERGY=18.087000
+*Time=*1.311907 CogRecv - receiving  COG packet from ('10.0.1.5', 42526) delay[NS]=0 ENERGY=17.563000
+*Time=*1.408836 CogRecv - receiving  COG packet from ('10.0.1.4', 45833) delay[NS]=0 ENERGY=18.526000
+*Time=*1.426025 CogRecv - receiving  COG packet from ('10.0.1.1', 48895) delay[NS]=0 ENERGY=42.269000
+
+seriot@seriot6:~/Logs$  head  -20 logAsMRcvCog10.0.1.6.txt
+
+*Time=*0.005445 CogRecv - aktivation
+  / ppid=13721, dpid=13722 /
+*Time=*0.157382 CogRecv - receiving  COG packet from ('10.0.1.5', 42526) delay[NS]=0 ENERGY=17.171000
+*Time=*0.259668 CogRecv - receiving  COG packet from ('10.0.1.4', 45833) delay[NS]=0 ENERGY=18.530000
+*Time=*0.360039 CogRecv - receiving  COG packet from ('10.0.1.5', 42526) delay[NS]=0 ENERGY=17.640000
+*Time=*0.563268 CogRecv - receiving  COG packet from ('10.0.1.4', 45833) delay[NS]=0 ENERGY=18.355000
+*Time=*0.563529 CogRecv - receiving  COG packet from ('10.0.1.5', 42526) delay[NS]=0 ENERGY=17.180000
+*Time=*0.767066 CogRecv - receiving  COG packet from ('10.0.1.5', 42526) delay[NS]=0 ENERGY=17.419000
+*Time=*0.867225 CogRecv - receiving  COG packet from ('10.0.1.4', 45833) delay[NS]=0 ENERGY=18.511000
+*Time=*0.970915 CogRecv - receiving  COG packet from ('10.0.1.5', 42526) delay[NS]=0 ENERGY=17.174000
+*Time=*1.171058 CogRecv - receiving  COG packet from ('10.0.1.4', 45833) delay[NS]=0 ENERGY=18.516000
+*Time=*1.173978 CogRecv - receiving  COG packet from ('10.0.1.5', 42526) delay[NS]=0 ENERGY=17.266000
+*Time=*1.377873 CogRecv - receiving  COG packet from ('10.0.1.5', 42526) delay[NS]=0 ENERGY=17.563000
+*Time=*1.474941 CogRecv - receiving  COG packet from ('10.0.1.4', 45833) delay[NS]=0 ENERGY=18.526000
+*Time=*1.581026 CogRecv - receiving  COG packet from ('10.0.1.5', 42526) delay[NS]=0 ENERGY=17.372000
+*Time=*1.778845 CogRecv - receiving  COG packet from ('10.0.1.4', 45833) delay[NS]=0 ENERGY=19.585000
+*Time=*1.784630 CogRecv - receiving  COG packet from ('10.0.1.5', 42526) delay[NS]=0 ENERGY=17.580000
+*Time=*1.987425 CogRecv - receiving  COG packet from ('10.0.1.5', 42526) delay[NS]=0 ENERGY=30.458000
+*Time=*2.083085 CogRecv - receiving  COG packet from ('10.0.1.4', 45833) delay[NS]=0 ENERGY=18.025000
+*Time=*2.191044 CogRecv - receiving  COG packet from ('10.0.1.5', 42526) delay[NS]=0 ENERGY=17.395000
+
+_______________________________________
+Energia:
+sudo apt install python3-pip
+python3 -m pip install pyserial
+--------------------------------------------

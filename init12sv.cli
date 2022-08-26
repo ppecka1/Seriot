@@ -1,0 +1,19 @@
+py "          ******************************************************* "
+py "          ******            Serwery dla uzytkownikow ************* "
+py "          ********************************************************** "
+h1 rm rapu* 
+h1 python3 Userv.py  1   >>rapus  2>>rapuser&
+h2 python3 Userv.py  2   >>rapus  2>>rapuser&
+h3 python3 Userv.py  3   >>rapus  2>>rapuser&
+h4 python3 Userv.py  4   >>rapus  2>>rapuser&
+
+h5 python3 Userv.py  5   >>rapus  2>>rapuser&
+h6 python3 Userv.py  6   >>rapus  2>>rapuser&
+h7 python3 Userv.py  7   >>rapus  2>>rapuser&
+h8 python3 Userv.py  8   >>rapus  2>>rapuser&
+
+
+h9 python3 Userv.py  9   >>rapus  2>>rapuser&
+h10 python3 Userv.py  10   >>rapus  2>>rapuser&
+h11 python3 Userv.py  11   >>rapus  2>>rapuser&
+h12 python3 Userv.py  12   >>rapus  2>>rapuser&

@@ -1,0 +1,724 @@
+sudo systemctl stop openvswitch-switch.service     
+sudo ls /etc/openvswitch/*
+sudo rm /etc/openvswitch/conf.db     
+sudo ls /etc/openvswitch/*
+sudo systemctl start openvswitch-switch.service      
+sudo ovs-vsctl add-br br0
+sudo ovs-vsctl set-controller br0 tcp:10.0.2.50:6633
+sudo ovs-vsctl show
+sudo ovs-ofctl show br0
+    1  ssh seriot@10.0.1.8
+    2  sudo service ssh start
+    3  sudo apt-get ssh
+    4  sudo apt-get install ssh
+    5  ping 10.0.1.8
+    6  ping 10.0.1.88
+    7  ping 10.0.1.77
+    8  sudo apt update
+    9  sudo apt upgrade
+   10  sudo apt-get install ssh
+   11  sudo apt upgrade
+   12  ps -aux
+   13  ps
+   14  sudo apt-get install ssh
+   15  sudo service ssh start
+   16  sudo shutdown now
+   17  ip a
+   18  ip r
+   19  ping google.com
+   20  sudo apt-get update
+   21  sudo apt-get upgrade
+   22  dpkg 
+   23  dpkg --help
+   24  sudo apt-get updarte
+   25  sudo apt-get update
+   26  sudo apt-get upgrade
+   27  sudo apt-get install openvswitch-switch
+   28  sudo reboot now
+   29  sudo apt install openvswitch-switch
+   30  sudo ovs-vswitchd
+   31  ovs-vsctl show
+   32  sudo ovs-vsctl show
+   33  exit
+   34  sudo ovs-vsctl add-br br0
+   35  exit
+   36  sudo ovs-vsctl set bridge br0 protocols=OpenFlow10,OpenFlow11,OpenFlow12,OpenFlow13,OpenFlow14,OpenFlow15
+   37  ping 10.0.1.88
+   38  ip r
+   39  nano init.sh
+   40  sudo chmod +x init.sh 
+   41  sudo ./init.sh 
+   42  ip a
+   43  nano init.sh 
+   44  sudo ./init.sh 
+   45  sudo apt-get install vlan
+   46  sudo ./init.sh 
+   47  sudo ovs-vsctl del port enps0.89
+   48  sudo ovs-vsctl del-port enps0.89
+   49  sudo ovs-vsctl del-port enp5s0.89
+   50  sudo ovs-vsctl del-port enp5s0.921
+   51  sudo ovs-vsctl del-port enp5s0.99
+   52  sudo ./init.sh 
+   53  exit
+   54  ls
+   55  nano init.sh 
+   56  sudo ./init.sh 
+   57  exit
+   58  clear
+   59  sudo apt-get update
+   60  sudo -Es
+   61  sudo apt-get update
+   62  sudo apt-get upgrade
+   63  sudo apt-get dist-upgrade
+   64  sudo apt-get install bind9
+   65  sudo apt-get install dnsutils
+   66  nano /etc/bind/named.conf
+   67  cp /etc/bind/db.local /etc/bind/db.iitis.org
+   68  nano /etc/bind/db.iitis.org 
+   69  vi /etc/bind/db.iitis.org 
+   70  dig iitis.org
+   71  sudo nano /etc/resolv.conf 
+   72  dig iitis.org
+   73  sudo apt install ffmpeg
+   74  sudo add-apt-repository ppa:obsproject/obs-studio
+   75  sudo apt update
+   76  sudo apt install obs-studio
+   77  obs
+   78  exit
+   79  obs
+   80  clear
+   81  sudo apt-get install docker-ce docker-ce-cli containerd.io
+   82  sudo apt-get install     apt-transport-https     ca-certificates     curl     gnupg-agent     software-properties-common
+   83  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+   84  sudo apt-key fingerprint 0EBFCD88
+   85  sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   86     $(lsb_release -cs) \
+   87     stable"
+   88  sudo apt-get update
+   89  sudo apt-get install docker-ce docker-ce-cli containerd.io
+   90  docker
+   91  docker run hello-world
+   92  sudo docker run hello-world
+   93  docker run tiangolo/nginx-rtmp
+   94  sudo docker run tiangolo/nginx-rtmp
+   95  sudo docker pull tiangolo/nginx-rtmp
+   96  sudo docker run -d -p 1935:1935 --name nginx-rtmp tiangolo/nginx-rtmp
+   97  obs
+   98  docker container ls
+   99  sudo docker container ls
+  100  clear
+  101  sudo nano /etc/bind/db.iitis.org 
+  102  ps 
+  103  ps -a vi
+  104  sudo nano /etc/bind/db.iitis.org 
+  105  kill 8439
+  106  sudo kill 8439
+  107  sudo nano /etc/bind/db.iitis.org 
+  108  sudo systemctl restart bind9
+  109  sudo systemctl status bind9
+  110  nano /etc/bind/named.conf
+  111  sudo nano /etc/bind/named.conf
+  112  sudo systemctl restart bind9
+  113  sudo systemctl status bind9
+  114  sudo nano /etc/bind/named.conf.local 
+  115  zone “example.com” {
+  116  type master;
+  117  file “/etc/bind/db.example.com”;
+  118  };sudo cp /etc/bind/db.127 /etc/bind/db.10
+  119  sudo cp /etc/bind/db.127 /etc/bind/db.10
+  120  nano /etc/bind/db.10
+  121  sudo nano /etc/bind/db.10
+  122  named-checkzone iitis.org /etc/bind/db.iitis.org 
+  123  named-checkzone 10.0.1.0/24 /etc/bind/db.10
+  124  named-checkconf  /etc/bind/named.conf.local 
+  125  named-checkconf  /etc/bind/named.conf
+  126  nano /etc/bind/db.iitis.org 
+  127  sudo nano /etc/bind/db.iitis.org 
+  128  sudo systemctl restart bind9
+  129  sudo systemctl status bind9
+  130  named-checkzone iitis.org /etc/bind/db.iitis.org 
+  131  ip a
+  132  sudo docker logs nginx-rtmp
+  133  exit
+  134  ip a
+  135  sudo ip addr add 192.168.0.2/24 dev enp5s0
+  136  ip r
+  137  exit
+  138  sudo apt-get update
+  139  sudo apt-get upgrade
+  140  exit
+  141  ls
+  142  ovs-vsctl
+  143  sudo ovs-vsctl show
+  144  sudo ovs-vsctl add-bridge br0
+  145  sudo ovs-vsctl add-br br0
+  146  ip a
+  147  ip addr del 192.168.0.2/24 dev enp5s0
+  148  sudo ip addr del 192.168.0.2/24 dev enp5s0
+  149  sudo ovs-vsctl add-port br0 eno1
+  150  sudo ovs-vsctl del-port br0 eno1
+  151  sudo ovs-vsctl show
+  152  sudo ovs-vsctl del-port enp5s0.89
+  153  sudo ovs-vsctl del-port enp5s0.921
+  154  sudo ovs-vsctl del-port enp5s0.99
+  155  sudo ovs-vsctl del-port eno1.99
+  156  sudo ovs-vsctl del-port eno1.921
+  157  sudo ovs-vsctl del-port eno1.89
+  158  sudo ovs-vsctl show
+  159  sudo ovs-vsctl del-port enp5s0.920
+  160  sudo ovs-vsctl show
+  161  sudo ovs-vsctl add-port br0 eno1
+  162  sudo ovs-vsctl show
+  163  ovs-vsctl
+  164  ovs-vsctl show
+  165  ovs-vsctl set bridge br0 other-config:datapath-id=
+  166  ovs-vsctl set bridge br0 other-config:datapath-id=0000000000000009
+  167  exit
+  168  ls
+  169  ovs-vsctl show
+  170  sudo -Es
+  171  exit
+  172  ls
+  173  ovs-vsctl --version
+  174  exit
+  175  ping 10.0.1.2
+  176  ping 10.0.1.3
+  177  ping 10.0.1.4
+  178  ping 10.0.1.5
+  179  ping 10.0.1.6
+  180  ping 10.0.1.7
+  181  ping 10.0.1.8
+  182  ping 10.0.1.16
+  183  ping 10.0.1.11
+  184  ping 10.0.1.12
+  185  ping 10.0.1.13
+  186  ping 10.0.1.14
+  187  ping 10.0.1.15
+  188  ping 10.0.1.16
+  189  ping 10.0.1.17
+  190  clear
+  191  ls
+  192  python syntcp_attack.py --help
+  193  ping google.com
+  194  sudo apt-get install python-docopt
+  195  sudo apt-get install python-scapy
+  196  python syntcp_attack.py --help
+  197  python syntcp_attack.py 10.0.1.88 9999 --very-verbose
+  198  sudo python syntcp_attack.py 10.0.1.88 9999 --very-verbose
+  199  nano syntcp_attack.py
+  200  sudo python syntcp_attack.py 10.0.1.88 9999 --very-verbose
+  201  nano syntcp_attack.py
+  202  sudo python syntcp_attack.py 10.0.1.88 9999 --very-verbose
+  203  nano syntcp_attack.py
+  204  sudo python syntcp_attack.py 10.0.1.88 9999 --very-verbose
+  205  sudo python syntcp_attack.py 10.0.1.88 9999 --sleep 1  --very-verbose
+  206  sudo python syntcp_attack.py 10.0.1.88 9999 --very-verbose
+  207  sudo python syntcp_attack.py 10.0.1.88 8080 --very-verbose
+  208  nano tcpsyn_attack.py
+  209  nano syntcp_attack.py
+  210  python3
+  211  exit
+  212  python3 service.py 
+  213  python service.py 
+  214  python3
+  215  python
+  216  exit
+  217  screen 
+  218  sudo apt install screen
+  219  screen 
+  220  ip a
+  221  sudo apt-get install python3-flask
+  222  screen 
+  223  screen -ls
+  224  screen 
+  225  exit
+  226  python3 service.py 
+  227  python3 service2.py 
+  228  sudo shutdown now
+  229  history | grep docker
+  230  sudo docker run -d -p 1935:1935 --name nginx-rtmp tiangolo/nginx-rtmp
+  231  sudo docker run -d -p 1935:1935 nginx-rtmp
+  232  sudo docker container ls
+  233  sudo docker remove nginx-rtmp
+  234  sudo docker image ls
+  235  sudo docker run -d -p 1935:1935 tiangolo/nginx-rtmp
+  236  sudo docker image ls
+  237  sudo ip l set dev br0 down
+  238  exit
+  239  sudo ovs-vsctl emer-reset
+  240  exit
+  241  sudo ovs-vs
+  242  sudo ovs-vsctl
+  243  sudo ovs-vsctl shiw
+  244  sudo ovs-vsctl show
+  245  sudo ovs-vsctl set Bridge br0 other-config:datapath-id=0000000000000001
+  246  sudo ovs-vsctl set-controller br0 tcp:10.0.1.88:6633
+  247  history | grep vn
+  248  history | grep vcon
+  249  exit
+  250  sudo vconfig add eno1 12
+  251  ip a
+  252  sudo vconfig add eno1 14
+  253  sudo vconfig add eno1 15
+  254  sudo ovs-vsctl show
+  255  sudo ovs-vsctl del-port eno1
+  256  sudo ovs-vsctl add-port br0 eno1.12
+  257  sudo ovs-vsctl add-port br0 eno1.14
+  258  sudo ovs-vsctl add-port br0 eno1.15
+  259  sudo ip l set dev eno1.12 up
+  260  sudo ip l set dev eno1.14 up
+  261  sudo ip l set dev eno1.15 up
+  262  sudo ovs-vsctl show
+  263  exit
+  264  sudo modprobe 8021q
+  265  ip a
+  266  sudo ovs-vsctl del-port eno1.12
+  267  sudo ovs-vsctl del-port eno1.14
+  268  sudo ovs-vsctl del-port eno1.15
+  269  sudo vconfig rem eno1.14
+  270  sudo vconfig rem eno1.12
+  271  sudo vconfig rem eno1.15
+  272  sudo vconfig add enp5s0 12
+  273  sudo vconfig add enp5s0 14
+  274  sudo vconfig add enp5s0 15
+  275  sudo ip l set dev enp5s0.12 up
+  276  sudo ip l set dev enp5s0.14 up
+  277  sudo ip l set dev enp5s0.15 up
+  278  sudo ovs-vsctl add-port br0 enp5s0.12
+  279  sudo ovs-vsctl add-port br0 enp5s0.14
+  280  sudo ovs-vsctl add-port br0 enp5s0.15
+  281  exit
+  282  sudo su
+  283  sudo apt install vim
+  284  sudo apt update
+  285  sudo apt upgrade
+  286  sudo ovs-vsctl set-controller br0 tcp:10.0.1.50:6633
+  287  sudo ovs-vsctl set bridge br0 other_config:datapath-id=00:00:00:00:00:00:00:04
+  288  sudo ovs-vsctl set bridge br0 other_config:datapath-id=0000000000000004
+  289  sudo ovs-vsctl show
+  290  sudo ovs-vsctl add-port br0 eno1.124
+  291  sudo ovs-vsctl add-port br0 eno1.134
+  292  sudo ovs-vsctl add-port br0 eno1.145
+  293  sudo ovs-vsctl show
+  294  sudo ovs-vsctl list bridge br0
+  295  ssh 10.0.124.1
+  296  sudo ovs-vsctl set-controller tcp:10.0.1.50:6633
+  297  sudo ovs-vsctl set-controller br0 tcp:10.0.1.50:6633
+  298  sudo ovs-vsctl list bridge br0
+  299  ssh 10.0.145.2
+  300  ssh 10.0.157.2
+  301  ip r
+  302  ssh 10.0.145.2
+  303  ip r
+  304  systemctl stop openvswitch-switch.service 
+  305  ssh 10.0.145.2
+  306  sudo ovs-vsctl show
+  307  systemctl start openvswitch-switch.service 
+  308  sudo ovs-vsctl show
+  309  sudo ovs-vsctl list bridge br0
+  310  ssh 10.0.134.1
+  311  ssh 10.0.124.1
+  312  ssh 10.0.145.2
+  313  systemctl stop openvswitch-switch.service 
+  314  ssh 10.0.145.2
+  315  sudo apt install tshark
+  316  ssh 10.0.145.2
+  317  ip r
+  318  ssh 10.0.145.2
+  319  tracert 10.0.145.2
+  320  traceroute 10.0.145.2
+  321  sudo apt install traceroute 
+  322  traceroute 10.0.145.2
+  323  ssh 10.0.145.2
+  324  ssh 10.0.145.1
+  325  ssh 10.0.145.2
+  326  arp
+  327  ssh 10.0.1.5
+  328  arp
+  329  sudo ovs-vsctl show
+  330  sudo ovs-vsctl list-ports
+  331  sudo ovs-vsctl list-ports br0
+  332  sudo ovs-vsctl add-port eno1
+  333  sudo ovs-vsctl add-port br0 eno1
+  334  tshark
+  335  sudo shark -h
+  336  sudo tshark -i eno1.145
+  337  sudo tshark -i eno1.145 -w -
+  338  sudo tshark -i eno1.145
+  339  sudo systemctl start openvswitch-switch.service 
+  340  sudo tshark -i eno1.145
+  341  sudo vim /etc/sysctl.conf 
+  342  sudo systemctl restart networking.service 
+  343  sudo systemctl restart openvswitch-switch.service 
+  344  sudo tshark -i eno1.145
+  345  sudo tshark -h
+  346  sudo tshark -i eno1.145 -p vlan
+  347  sudo tshark -i eno1 -p vlan
+  348  sudo ovs-vsctl del-controller
+  349  sudo ovs-vsctl del-controller br0
+  350  sudo tshark -i eno1 -p vlan
+  351  sudo ovs-vsctl set-controller br0 tcp:10.0.1.50:6633
+  352  sudo tshark -i eno1 -p vlan
+  353  arp
+  354  arp -h
+  355  ssh 10.0.1.3
+  356  arp -h
+  357  arp
+  358  ssh 10.0.1.2
+  359  ssh 10.0.1.7
+  360  ssh 10.0.1.1
+  361  ssh 10.0.1.2
+  362  arp
+  363  arp 10.0.1.145.2
+  364  arp 10.0.145.2
+  365  arp 10.0.134.2
+  366  arp 10.0.134.1
+  367  ssh 10.0.134.1
+  368  arp 10.0.134.1
+  369  arp -d
+  370  arp -d 10.0.145.2 54:b2:03:93:e7:b3
+  371  arp -s 10.0.145.2 54:b2:03:93:e7:b3
+  372  sudo arp -s 10.0.145.2 54:b2:03:93:e7:b3
+  373  arp
+  374  sudo arp -s 10.0.134.1 54:b2:03:93:50:9e
+  375  arp
+  376  ssh 10.0.134.1
+  377  history 
+  378  sudo tshark -i eno1 -p vlan
+  379  systemctl stop 
+  380  lldpcli
+  381  arp
+  382  arp -d 10.0.134.1
+  383  sudo arp -d 10.0.134.1
+  384  sudo arp -d 10.0.145.2
+  385  arp
+  386  sudo tshark -i eno1 -p vlan
+  387  ip a
+  388  sudo su
+  389  sudo ovs-vsctl show
+  390  sudo ovs-vsctl del-port eno1
+  391  sudo ovs-vsctl show
+  392  ip a
+  393  ip r\
+  394  ssh 10.0.1.50
+  395  sudo vim /etc/network/interfaces
+  396  sudo systemctl restart networking
+  397  sudo tshark -i eno1
+  398  systemctl stop cups
+  399  sudo tshark -i eno1
+  400  ssh 10.0.112.1
+  401  ip a
+  402  nmap -v 10.0.112.1
+  403  sudo apt  install nmap
+  404  nmap -v 10.0.112.1
+  405  nmap -Pn -v 10.0.112.1
+  406  sudo tshark -i eno1
+  407  sudo tshark -i eno1.134
+  408  sudo tshark -i eno1
+  409  tcpdump
+  410  sudo tcpdump
+  411  sudo tcpdump | grep 134
+  412  sudo tcpdump -vv | grep 134
+  413  tcpdump -h
+  414  sudo tcpdump -vv i eno1 | grep 134
+  415  sudo tcpdump -v -i eno1 | grep 134
+  416  sudo tcpdump -v -i eno1 | grep 10.0.134
+  417  sudo tcpdump -v -i eno1 | grep ICMP
+  418  sudo tcpdump -v -i eno1 | grep echo
+  419  arp
+  420  ssh 10.0.134.1
+  421  arp
+  422  sudo arp -s 10.0.134.1 54:b2:03:93:50:9e
+  423  sudo ip link add link eno1 name eno1.134 type vlan id 134
+  424  sudo tshark -i eno1
+  425  sudo apt install vlan
+  426  lsmod | grep 8021q
+  427  ifconfig eno1.134
+  428  ip r
+  429  sudo ip r del 10.0.1.0/24 dev eno1 proto kernel scope link src 10.0.1.4 
+  430  ip a
+  431  sudo apt install openvswitch-switch
+  432  tshark -i eno1.134
+  433  sudo tshark -i eno1.134
+  434  pkill -9 tshark
+  435  sudo pkill -9 tshark
+  436  sudo pkill -9 ping
+  437  tcpdump -i eno1.134
+  438  sudo tcpdump -i eno1.134
+  439  sudo pkill -9 tshark
+  440  vim t.txt
+  441  sudo apt remove openvswitch-switch
+  442  sudo systemctl state openvswitch-switch
+  443  sudo tshark -i eno1
+  444  arp
+  445  sudo arp -s 10.0.134.1 54:b2:03:93:50:9e
+  446  sudo tshark -i eno1
+  447  sudo tshark -i eno1 | grep 10.0.134
+  448  sudo tshark -2 -i eno1 | grep 10.0.134
+  449  sudo tshark -i eno1 | grep 10.0.134
+  450  sudo tshark -i eno1 -W
+  451  sudo tshark -i eno1 -V
+  452  sudo tshark -i eno1 -V > t.txt
+  453  ls
+  454  sudo tshark -i eno1 -V -f vlan > t.txt
+  455  sudo tshark -i eno1 -f vlan
+  456  sudo tshark -i eno1.145
+  457  sudo tshark -i eno1 -f vlan
+  458  ip r
+  459  ping 10.0.134.1
+  460  ssh 10.0.134.1
+  461  sudo ip a add 10.0.2.4 dev enp5s0 
+  462  sudo ip a del 10.0.2.4 dev enp5s0 
+  463  sudo ip a add 10.0.2.4/24 dev enp5s0 
+  464  ip a
+  465  sudo ip a del 10.0.1.1/24 dev eno1
+  466  sudo ip a del 10.0.1.4/24 dev eno1
+  467  ip a
+  468  sudo ip a del 10.0.1.99/24 dev enp5s0 
+  469  ping 10.0.134.2
+  470  ping 10.0.134.1
+  471  ip a
+  472  sudo vim /etc/sysctl.conf 
+  473  sudo sysctl -p
+  474  scp /etc/sysctl.conf seriot@10.0.2.5
+  475  ls
+  476  rm seriot@10.0.2.5 
+  477  scp -h
+  478  scp /etc/sysctl.conf seriot@10.0.2.5:sysctl.conf
+  479  ping 10.0.147.2
+  480  sudo vim /etc/network/interfaces
+  481  ping 10.0.147.2
+  482  ip a
+  483  sudo vim /etc/network/interfaces
+  484  sudo systemctl restart networking.service 
+  485  ping 10.0.147.2
+  486  arp
+  487  ping 10.0.134.1
+  488  ping 10.0.124.1
+  489  ping 10.0.147.2
+  490  ping 10.0.147.1
+  491  sudo ovs-vsctl show
+  492  sudo ovs-vsctl del-port eno1.124
+  493  sudo ovs-vsctl del-port eno1.145
+  494  sudo ovs-vsctl del-port eno1.134
+  495  sudo ovs-vsctl del-controller
+  496  sudo ovs-vsctl del-controller br0
+  497  ping 10.0.134.1
+  498  sudo ovs-vsctl set-controller br0 tcp:10.0.2.50:6633
+  499  sudo ovs-vsctl add-port br0 eno1.124
+  500  sudo ovs-vsctl add-port br0 eno1.134
+  501  sudo ovs-vsctl add-port br0 eno1.147
+  502  ping 10.0.134.1
+  503  ls ala
+  504  ls
+  505  ifconfig
+  506  sudo systemctl start openvswitch-switch.service      
+  507  sudo ovs-vsctl add-br br0
+  508  sudo ovs-vsctl set-controller br0 tcp:10.0.2.50:6633
+  509  sudo ovs-vsctl add-port br0 eno1.124
+  510  sudo ovs-vsctl add-port br0 eno1.134
+  511  sudo ovs-vsctl add-port br0 eno1.147
+  512  sudo ovs-vsctl show
+  513  sudo ovs-ofctl show br0
+  514  history > h.txt
+  515  history
+  516  vim h.txt 
+  517  sudo ovs-vsctl set bridge br0 other_config:datapath-id=0000000000000004
+  518  sudo ip addr add 10.0.1.4/24 dev br0
+  519  sudo ip link set up dev br0
+  520  ip addr
+  521  tshark -i eno1
+  522  sudo tshark -i eno1
+  523  arp
+  524  sudo vim /etc/network/interfaces
+  525  seriot@seriot1:~$ sudo vim /etc/network/interfaces
+  526  sudo vim /etc/network/interfaces
+  527  ls /etc/openvswitch/
+  528  cat /etc/openvswitch/system-id.conf 
+  529  h |grep 00000
+  530  alias h=history
+  531  h |grep 00000
+  532  ls
+  533  ping 10.0.1.3
+  534  ping 10.0.1.5
+  535  h
+  536  exit
+  537  ip a
+  538  sudo tshark -i br0
+  539  arp
+  540  sudo ovs-ofctl del-flows br0
+  541  h
+  542  history
+  543  lt
+  544  ls -lt
+  545  arp
+  546  h
+  547  history
+  548  sudo vim /etc/network/interfaces
+  549  sudo systemctl restart networking.service 
+  550  ip a
+  551  sudo ip link del eno1.147@eno1
+  552  sudo ip link del eno1.147
+  553  sudo vim /etc/network/interfaces
+  554  sudo systemctl restart networking.service 
+  555  sudo systemctl status networking.service 
+  556  sudo vim /etc/network/interfaces
+  557  sudo systemctl restart networking.service 
+  558  ip a
+  559  sudo vim /etc/network/interfaces
+  560  sudo ip link del  eno1.145
+  561  sudo systemctl restart networking.service 
+  562  journalctl -xe
+  563  sudo reboot
+  564  tshatk -h
+  565  tshark -h
+  566  sudo tshark -i eno1 -w -
+  567  sudo tshark -i eno1 -O tcp
+  568  sudo tshark -i eno1 -V
+  569  sudo tshark -i eno1 -V -w t.txt
+  570  sudo tshark -i eno1 -V > t.txt
+  571  sudo tshark -i eno1
+  572  arp
+  573  ip r
+  574  arping 10.0.134.1
+  575  arping 10.0.134.1 -s 10.0.134.2
+  576  arping 10.0.134.1 -I eno1.134
+  577  sudo tshark -i eno1
+  578  show vlan
+  579  ip neighbor show
+  580  ip a
+  581  ip neighbor show
+  582  ip neighbor
+  583  ip neighbor help
+  584  ip neigh del 10.0.1.2 dev eno1
+  585  sudo ip neigh del 10.0.1.2 dev eno1
+  586  arp
+  587  arping 10.0.134.1
+  588  arping 10.0.134.1 -I eno1.134
+  589  arping 10.0.1.3
+  590  arping 10.0.1.3 -I eno1
+  591  arp
+  592  ssh 10.0.134.1
+  593  arp
+  594  arp -s 10.0.134.1 54:b2:03:93:50:9e
+  595  sudo arp -s 10.0.134.1 54:b2:03:93:50:9e
+  596  arp
+  597  ping 10.0.134.1
+  598  sudo ip link set eno1 down
+  599  ip a
+  600  sudo ip link set eno1.134 up
+  601  sudo ip link set eno1 up
+  602  ip a
+  603  sudo ip link del ovs-system
+  604  sudo systemctl start  openvswitch-switch
+  605  sudo ovs-vsctl show
+  606  ovs-vsctl add-port br0 eno1.134
+  607  sudo ovs-vsctl add-port br0 eno1.134
+  608  ip r
+  609  ping 10.0.134.1
+  610  sudo systemctl stop openvswitch-switch.service 
+  611  sudo ls /etc/openvswitch/*
+  612  sudo rm /etc/openvswitch/conf.db 
+  613  sudo ls /etc/openvswitch/*
+  614  sudo ovs-vsctl show
+  615  sudo systemctl start openvswitch-switch.service 
+  616  sudo ovs-vsctl show
+  617  sudo ovs-vsctl add-br br0
+  618  sudo ovs-vsctl show
+  619  sudo ovs-vsctl add-port br0 eno1.124
+  620  sudo ovs-vsctl add-port br0 eno1.134
+  621  sudo ovs-vsctl add-port br0 eno1.146
+  622  sudo ovs-vsctl set-controller br0 tcp:10.0.2.50:6633
+  623  sudo ovs-vsctl set bridge br0 other_config:datapath-id=0000000000000004
+  624  sudo ovs-ofctl show br0
+  625  ip a
+  626  sudo ip addr add 10.0.1.4/24 dev br0
+  627  ping 10.0.1.6
+  628  ping 10.0.1.3
+  629  ping 10.0.1.2
+  630  ping 10.0.1.3
+  631  ping 10.0.1.6
+  632  ip a
+  633  sudo ip l set up br0
+  634  ping 10.0.1.6
+  635  ping 10.0.1.2
+  636  arp
+  637  ping 10.0.1.2
+  638  ping 10.0.1.3
+  639  ping 10.0.1.6
+  640  arp
+  641  ping 10.0.1.3
+  642  sudo ip link set multicast off eno1.156
+  643  ip a | grep MULTICAST
+  644  sudo ip link set multicast off eno1
+  645  sudo ip link set multicast off eno1.124
+  646  sudo ip link set multicast off eno1.134
+  647  sudo ip link set multicast off eno1.146
+  648  sudo ip link set multicast off br0
+  649  ip a | grep MULTICAST
+  650  sudo ip link set allmulticast off br0
+  651  sudo ip link set allmulticast off eno1.124
+  652  sudo ip link set allmulticast off eno1.134
+  653  sudo ip link set allmulticast off eno1.146
+  654  history 
+  655  ping 10.0.1.6
+  656  arp
+  657  ls *.py
+  658  nano udp_cli.py 
+  659  python3  udp_cli.py 
+  660  nano udp_cli.py 
+  661  python3  udp_cli.py 
+  662  nano udp_cli.py 
+  663  python3  udp_cli.py 
+  664  sudo mv br0 /etc/network/if-up.d/
+  665  sudo reboot
+  666  sudo vim /etc/network/if-up.d/br0
+  667  sudo reboot
+  668  arp
+  669  sudo vim /etc/network/if-up.d/br0
+  670  arp
+  671  sudo arp -f
+  672  arp
+  673  ping 10.0.1.1
+  674  ping 10.0.1.5
+  675  sudo systemctl restart openvswitch-switch.service 
+  676  sudo systemctl status openvswitch-switch.service 
+  677  ping 10.0.1.5
+  678  ping 10.0.1.1
+  679  sudo systemctl restart openvswitch-switch.service
+  680  ping 10.0.1.1
+  681  ping -c 4 -W 3s 10.0.1.1
+  682  ping -c 4 -W 3s 10.0.1.2
+  683  ping -c 4 -W 3s 10.0.1.3
+  684  ping -c 4 -W 3s 10.0.1.5
+  685  ping -c 4 -W 3s 10.0.1.6
+  686  ls -l Lpogs
+  687  ls -l Logs
+  688  date
+  689  cat Logs/logAsMRcvCog10.0.1.4.txt
+  690  ping 10.0.1.2
+  691  ping 10.0.1.3
+  692  ping 10.0.1.2
+  693  ping 10.0.1.3
+  694  ping 10.0.1.1
+  695  ping 10.0.1.2
+  696  ping 10.0.1.3
+  697  ping 10.0.1.4
+  698  ping 10.0.1.5
+  699  ping 10.0.1.6
+  700  ping 10.0.1.1
+  701  ping 10.0.1.2
+  702  ping 10.0.1.3
+  703  ping 10.0.1.2
+  704  ping 10.0.1.3
+  705  ping 10.0.1.1
+  706  ping 10.0.1.2
+  707  h
+  708  ls his*
+  709  pwd
+  710  cd
+  711  ls /home/seriot
+  712  less h.txt
+  713  ls -l h.txt
+  714  h
+  715  h >>h.txt 

@@ -1,0 +1,1000 @@
+ 1029  cat  pingall.sh 
+ 1030  rsh seriot2 ping 10.0.1.1
+ 1031  sh  pingall.sh 
+ 1032  rsh seriot1 ping 10.0.1.6
+ 1033  rsh seriot1 ping 10.0.1.5
+ 1034  rsh seriot1 ping 10.0.1.3
+ 1035  rsh seriot1 ping 10.0.1.5
+ 1036  rsh seriot1 ping 10.0.1.6
+ 1037  seriot1 ping 10.0.1.5
+ 1038  ssh seriot1 ping 10.0.1.5
+ 1039  ssh seriot1 ping 10.0.1.4
+ 1040  sh dumpfall.sh 
+ 1041  sh dumpfall.sh  |less
+ 1042  ssh seriot1 ping 10.0.1.4
+ 1043  less dumpfall.sh 
+ 1044  ~/shall sudo ovs-vsctl dump-flowas br0
+ 1045  ~/shall sudo ovs-vsctl dump-flows br0
+ 1046  ~/shall sudo ovs-ofctl dump-flows br0
+ 1047  ~/shall sudo ovs-ofctl show br0
+ 1048  h
+ 1049  sh dumpfall.sh 
+ 1050  sh dumpfall.sh |grep LOCAL
+ 1051  sh delfall.sh 
+ 1052  sh dumpfall.sh 
+ 1053  sh pingall.sh 
+ 1054  sh dumpfall.sh 
+ 1055  sh dumpfall.sh |grep local
+ 1056  sh dumpfall.sh |grep LOC
+ 1057  sh delfall.sh 
+ 1058  sh dumpfall.sh 
+ 1059  sh pingall.sh 
+ 1060  finds2 OFPP_LOCAL
+ 1061  cd ..
+ 1062  finds2 OFPP_LOCAL
+ 1063  ls *.sh
+ 1064  cd app/
+ 1065  sh dumpfall.sh 
+ 1066  sh dumpfall.sh | grep 124
+ 1067  sh delfall.sh 
+ 1068  sh dumpfall.sh 
+ 1069  sh dumpfall.sh | grep LOCAL
+ 1070  arp
+ 1071  ~/shall "ovs-ofctl dump-flows br0 | grep LOCAL"
+ 1072  ~/shall "sudo ovs-ofctl dump-flows br0 | grep LOCAL"
+ 1073  ~/dumpfall.sh 
+ 1074  sh delfall.sh 
+ 1075  sh pingall.sh 
+ 1076  less pingall.sh 
+ 1077  rsh
+ 1078  rsh seriot1 ping 10.0.1.3
+ 1079  rsh seriot1 ping 10.0.1.2
+ 1080  rsh seriot1 ping 10.0.1.3
+ 1081  sh pingall.sh 
+ 1082  vim pingall.sh 
+ 1083  chmod a+x pingall.sh 
+ 1084  vim pingall.sh 
+ 1085  pingall.sh 
+ 1086  ls *.py
+ 1087  ge simple_switch0_Mat.py
+ 1088  cat pingall.sh 
+ 1089  ge pingall.sh 
+ 1090  sh pingall.sh 
+ 1091  sh delfall.sh 
+ 1092  sh dumpfall.sh 
+ 1093  sh pingall.sh 
+ 1094  ls /etc
+ 1095  arp
+ 1096  sh dumpfall.sh 
+ 1097  sh delfall.sh 
+ 1098  arp
+ 1099  sh delfall.sh 
+ 1100  sh pingall.sh 
+ 1101  cat maci.sh
+ 1102  ip a
+ 1103  h
+ 1104  sh pingall.sh 
+ 1105  sh delfall.sh 
+ 1106  sh pingall.sh 
+ 1107  sh delfall.sh 
+ 1108  sh pingall.sh 
+ 1109  sh dumpfall.sh 
+ 1110  sh pingall.sh 
+ 1111  sh delfall.sh 
+ 1112  sh dumpfall.sh 
+ 1113  sh pingall.sh 
+ 1114  sh delfall.sh 
+ 1115  sh dumpfall.sh 
+ 1116  sh delfall.sh 
+ 1117  sh dumpfall.sh 
+ 1118  sh delfall.sh 
+ 1119  sh dumpfall.sh 
+ 1120  sh pingall.sh 
+ 1121  cat  delfall.sh 
+ 1122  ssh seriot1 sudo ovs-ofctl del-flows br0
+ 1123  ssh seriot1 ls
+ 1124  ssh seriot2 ls
+ 1125  ssh seriot1 ls
+ 1126  ssh seriot3 ls
+ 1127  ssh seriot1 ls
+ 1128  ping seriot6
+ 1129  ls
+ 1130  ls rnnLib.py 
+ 1131  mkdir Tmp
+ 1132  cp  simple_switch_13.py Tmp
+ 1133  h
+ 1134  sh delfall.sh 
+ 1135  sh pingall.sh 
+ 1136  sh dumpfall.sh 
+ 1137  sh delfall.sh 
+ 1138  sh dumpfall.sh 
+ 1139  sh pingall.sh 
+ 1140  sh dumpfall.sh 
+ 1141  sh pingall.sh 
+ 1142  arp
+ 1143  h
+ 1144  sh delfall.sh
+ 1145  ls *.py
+ 1146  ge AsM.py
+ 1147  ge pingall.sh 
+ 1148  ssh python3
+ 1149  ssh seriot1 python3
+ 1150  ssh seriot2 python3
+ 1151  ssh seriot1 python3 test.py
+ 1152  ssh seriot1 python33
+ 1153  ssh seriot1 python3
+ 1154  ssh seriot2 python3
+ 1155  ssh seriot3 python3
+ 1156  ssh seriot4 python3
+ 1157  ssh seriot5 python3
+ 1158  ssh seriot6 python3
+ 1159  ssh seriot7  python3
+ 1160  cat shall.sh 
+ 1161  shall ls
+ 1162  shall.sh  ls
+ 1163  ge conf.py 
+ 1164  ge AsClasses.py 
+ 1165  shall.sh ls ala
+ 1166  ls ala
+ 1167  ls *.cli
+ 1168  shall cp init12.cli ~
+ 1169  shall.sh  cp init12.cli ~
+ 1170  shall.sh  scp init12.cli ~
+ 1171  h |grep ssh
+ 1172  h |grep scp
+ 1173  ls *.sh
+ 1174  scp init12.cli  seriot1:~
+ 1175  h
+ 1176  scp init12.cli  seriot2:~
+ 1177  ge scp.sh
+ 1178  ls *.cli
+ 1179  lt
+ 1180  sh scp.sh user.cli 
+ 1181  shall ls -l user
+ 1182  shall.sh  ls -l user
+ 1183  shall.sh  ls -l user.cli 
+ 1184  python3 -v
+ 1185  python3 --v
+ 1186  shall.sh  python3 --v
+ 1187  shall.sh  python3 -h
+ 1188  shall.sh  python3 -h|less
+ 1189  shall.sh  python3 -V
+ 1190  ls *.py
+ 1191  lt
+ 1192  python3 AsClasses.py 
+ 1193  h
+ 1194  sh dumpfall.sh 
+ 1195  ls *.sh
+ 1196  sh pingall.sh 
+ 1197  sh dumpfall.sh 
+ 1198  ge referencja.py
+ 1199  python3 referencja.py 
+ 1200  sh dumpfall.sh 
+ 1201  sh delfall.sh 
+ 1202  sh dumpfall.sh 
+ 1203  python3 referencja.py 
+ 1204  finds2 tuple
+ 1205  python3 referencja.py 
+ 1206  sh delfall.sh 
+ 1207  sh pingall.sh 
+ 1208  sh delfall.sh 
+ 1209  sh dumpfall.sh 
+ 1210  sh pingall.sh 
+ 1211  sh dumpfall.sh 
+ 1212  sh delfall.sh 
+ 1213  sh dumpfall.sh 
+ 1214  sh pingall.sh 
+ 1215  sh delfall.sh 
+ 1216  sh pingall.sh 
+ 1217  cat maci.sh 
+ 1218  rsh seriot1 ip a
+ 1219  cat dumpfall.sh 
+ 1220  sh  dumpfall.sh 
+ 1221  cat maci.sh 
+ 1222  sh maci.sh 
+ 1223  ip a
+ 1224  ssh seriot3 ip a 
+ 1225  sh  dumpfall.sh 
+ 1226  sh  pingall.sh 
+ 1227  cat maci.sh
+ 1228  ssh seriot1 ip a |grep ff:ff
+ 1229  sall  ip a |grep 54:b2
+ 1230  shall  ip a |grep 54:b2
+ 1231  shall.sh   ip a |grep 54:b2
+ 1232  shall.sh   ip a |grep 54:b2|tail -1
+ 1233  shall.sh   ip a |grep 54:b2
+ 1234  ge shall
+ 1235  ge shall.sh
+ 1236  shall.sh   ip a |grep 54:b2
+ 1237  shall.sh   ip a |grep 54:b2|tail -1
+ 1238  cat maci.sh
+ 1239  rsh seriot1    ip a |grep 54:b2|tail -1
+ 1240  rsh seriot2    ip a |grep 54:b2|tail -1
+ 1241  ge maci.sh
+ 1242  sh maci.sh
+ 1243  python3 AsM.py 
+ 1244  python3 AsM.py 1
+ 1245  mkdir Logs
+ 1246  python3 AsM.py 1
+ 1247  python3 -V
+ 1248  shall.sh python3 -V
+ 1249  python3 -V
+ 1250  finds2 time_ns
+ 1251  python3 AsM.py 1
+ 1252  sh dumpfall.sh 
+ 1253  sh delfall.sh 
+ 1254  h
+ 1255  sh dumpfall.sh 
+ 1256  sh pingall.sh 
+ 1257  python3 AsM.py 1
+ 1258  sh pingall.sh 
+ 1259  lt
+ 1260  sh delfall.sh 
+ 1261  sh pingall.sh 
+ 1262  python3 AsM.py 1
+ 1263  sh delfall.sh 
+ 1264  ip a
+ 1265  pwd
+ 1266  sh scp.sh AsM.py 
+ 1267  sh scp.sh AsClasses.py 
+ 1268  sh pingall.sh 
+ 1269  ssh seriot1 python3  AsM.py 1
+ 1270  sh scp.sh conf.py
+ 1271  ssh seriot1 python3  AsM.py 1
+ 1272  shallls
+ 1273  shall ls
+ 1274  shall.sh ls
+ 1275  ls Logs/
+ 1276  ssh seriot1 python3  AsM.py 1
+ 1277  ssh seriot1 pkill python3
+ 1278  sh dumpfall.sh 
+ 1279  shall.sh pingall.sh 
+ 1280  sh  pingall.sh 
+ 1281  h
+ 1282  sh AsM.sh 
+ 1283  rsh seriot3 ls -l Logs
+ 1284  rsh seriot3 ls -l 
+ 1285  rsh seriot3 ls -l Logs
+ 1286  rsh seriot1 ls -l Logs
+ 1287  rsh seriot2 ls -l Logs
+ 1288  rsh seriot1 pkill python3
+ 1289  sh pingall.sh 
+ 1290  sh delfall.sh 
+ 1291  h
+ 1292  sh AsM.sh
+ 1293  shall.sh  ls -l Logs/
+ 1294  h
+ 1295  sh delfall.sh 
+ 1296  shall pkill python3
+ 1297  shall.sh  pkill python3
+ 1298  shall.sh  ls -l Logs/
+ 1299  ssh seriot3   ls -l Logs/
+ 1300  ls
+ 1301  h
+ 1302  sh pingall.sh 
+ 1303  sh
+ 1304  h
+ 1305  sh AsM.sh
+ 1306  shall.sh ls -l Logs
+ 1307  shall.sh ls -lh Logs
+ 1308  finds2 TestM
+ 1309  rs delfall.sh 
+ 1310  rsh delfall.sh 
+ 1311  sh delfall.sh 
+ 1312  shall.sh ls -l Logs
+ 1313  shall.sh pkill python3
+ 1314  pkp
+ 1315  kp
+ 1316  alias kp='shall.sh pkill python3'
+ 1317  kp
+ 1318  df
+ 1319  ls
+ 1320  fd
+ 1321  rf
+ 1322  h
+ 1323  alias rf='sh delfall.sh'
+ 1324  rf
+ 1325  ls -l Logs
+ 1326  shall ls -l Logs
+ 1327  shall.sh ls -l Logs
+ 1328  sh pingall.sh 
+ 1329  shall.sh ls -l Logs
+ 1330  pk
+ 1331  shall.sh ls -l Logs
+ 1332  kp
+ 1333  shall.sh ls -l Logs
+ 1334  fd
+ 1335  alias
+ 1336  rf
+ 1337  sh pingall.sh 
+ 1338  sh AsM.sh 
+ 1339  h
+ 1340  shall.sh ls -l rap*
+ 1341  rsh seriot2 -l
+ 1342  rsh seriot2 ls -l
+ 1343  rsh seriot2 ls -l Logs
+ 1344  pk
+ 1345  kp
+ 1346  rsh seriot2 ls -l Logs
+ 1347  rsh seriot2 ls -l rap*
+ 1348  ls -l rap*
+ 1349  date
+ 1350  cat rapaser
+ 1351  ls -l rapa*
+ 1352  cat rapaser
+ 1353  rf
+ 1354  h
+ 1355  lt
+ 1356  cat rapaser
+ 1357  pk
+ 1358  kp
+ 1359  h
+ 1360  sh scp.sh conf.py 
+ 1361  sh scp.sh AsM.py  
+ 1362  rf
+ 1363  sh AsM.sh 
+ 1364  lt
+ 1365  cat rapaser
+ 1366  ls -l Logs
+ 1367  h
+ 1368  ls -l Logs
+ 1369  shall ls -l Logs
+ 1370  shall.sh ls -l Logs
+ 1371  ls -lt
+ 1372  catt rapser
+ 1373  cat rapser
+ 1374  cat rapaser
+ 1375  h
+ 1376  pk
+ 1377  kp
+ 1378  lt
+ 1379  h
+ 1380  lt
+ 1381  date
+ 1382  shall.sh ls -l Logs
+ 1383  kp
+ 1384  h
+ 1385  cd
+ 1386  ls
+ 1387  cd PPtestbedsrc/
+ 1388  ls
+ 1389  cd
+ 1390  cd ryu/
+ 1391  cd ryu
+ 1392  cd app/
+ 1393  ls
+ 1394  lt
+ 1395  ls *.sh
+ 1396  sh scp.sh udp_serv.py 
+ 1397  sh scp.sh udp_cli.py 
+ 1398  shall.sh pkill python3
+ 1399  sh scp.sh udp_cli.py 
+ 1400  sh dumpfall.sh 
+ 1401  sh delfall.sh 
+ 1402  sh pingall.sh 
+ 1403  sh dumpfall.sh 
+ 1404  date
+ 1405  sh delfall.sh 
+ 1406  sh pingall.sh 
+ 1407  sh dumpfall.sh 
+ 1408  sh delfall.sh 
+ 1409  sh dumpfall.sh 
+ 1410  sh pingall.sh 
+ 1411  sh delfall.sh 
+ 1412  sh pingall.sh 
+ 1413  sh dumpfall.sh 
+ 1414  sh delfall.sh 
+ 1415  sh pingall.sh 
+ 1416  cd ryu
+ 1417  h
+ 1418  PYHTONPATH=. ryu-manager  --observe-links ryu/app/gui_topology/gui_topology.py ryu/app/simple_switch_13.py
+ 1419  h
+ 1420  ls  
+ 1421  ls *.sh
+ 1422  PYHTONPATH=. ryu-manager  --observe-links ryu/app/gui_topology/gui_topology.py ryu/app/simple_switch_13.py
+ 1423  PYHTONPATH=. ryu-manager  --observe-links ryu/app/gui_topology/gui_topology.py ryu/app/simple_switch_13.py >rap.tmp
+ 1424  PYHTONPATH=. ryu-manager  --observe-links ryu/app/gui_topology/gui_topology.py ryu/app/simple_switch_13.py 2>rap.tmp
+ 1425  lt
+ 1426  cat rap.tmp 
+ 1427  PYHTONPATH=. ryu-manager  --observe-links ryu/app/gui_topology/gui_topology.py ryu/app/simple_switch_13.py 2>rap.tmp
+ 1428  PYHTONPATH=. ryu-manager  --observe-links ryu/app/gui_topology/gui_topology.py ryu/app/simple_switch_13.py 
+ 1429  PYHTONPATH=. ryu-manager  --observe-links ryu/app/gui_topology/gui_topology.py ryu/app/simple_switch_13.py 2>rap.tmp
+ 1430  clt
+ 1431  lt
+ 1432  cat rap.tmp
+ 1433  h
+ 1434  PYHTONPATH=. ryu-manager  --observe-links ryu/app/gui_topology/gui_topology.py ryu/app/simple_switch_13.py 
+ 1435  PYHTONPATH=. ryu-manager  --observe-links ryu/app/gui_topology/gui_topology.py ryu/app/simple_switch_13.py 
+ 1436  h
+ 1437  PYHTONPATH=. ryu-manager  --observe-links ryu/app/gui_topology/gui_topology.py ryu/app/simple_switch_13.py 
+ 1438  grep . OFPP_LOCAL -name "*.py"
+ 1439  find . OFPP_LOCAL -name "*.py"
+ 1440  PYHTONPATH=. ryu-manager  --observe-links ryu/app/gui_topology/gui_topology.py ryu/app/simple_switch_13.py 
+ 1441  h
+ 1442  PYHTONPATH=. ryu-manager  --observe-links ryu/app/gui_topology/gui_topology.py ryu/app/simple_switch_13.py 
+ 1443  pkill pingall.sh
+ 1444  ps
+ 1445  pkill ping
+ 1446  PYHTONPATH=. ryu-manager  --observe-links ryu/app/gui_topology/gui_topology.py ryu/app/simple_switch_13.py 
+ 1447  cd
+ 1448  cd ryu/
+ 1449  PYHTONPATH=. ryu-manager  --observe-links ryu/app/gui_topology/gui_topology.py ryu/app/simple_switch_13.py 
+ 1450  lt
+ 1451  cat rap.tmp |grep "1,2"
+ 1452  cat rap.tmp |grep "1 , 2"
+ 1453  cat rap.tmp 
+ 1454  PYHTONPATH=. ryu-manager  --observe-links ryu/app/gui_topology/gui_topology.py ryu/app/simple_switch_13.py 
+ 1455  PYHTONPATH=. ryu-manager  --observe-links ryu/app/gui_topology/gui_topology.py ryu/app/simple_switch_13.py >rap.rmp
+ 1456  lt
+ 1457  ge rap.rmp
+ 1458  fg
+ 1459  lt
+ 1460  mv rap.rmp rap.tmp
+ 1461  lt
+ 1462  cat ala
+ 1463  lt
+ 1464  rm ala
+ 1465  ge rap.tmp
+ 1466  cat rap.tmp | grep '1 2'
+ 1467  cat rap.tmp | grep '6 5'
+ 1468  cat rap.tmp | grep '1 3'
+ 1469  cat rap.tmp | grep '2 4'
+ 1470  PYHTONPATH=. ryu-manager  --observe-links ryu/app/gui_topology/gui_topology.py ryu/app/simple_switch_13.py 
+ 1471  pwd
+ 1472  PYHTONPATH=. ryu-manager  --observe-links ryu/app/gui_topology/gui_topology.py ryu/app/simple_switch_13.py 
+ 1473  alias
+ 1474  cd ryu
+ 1475  cd Tmp
+ 1476  cd app
+ 1477  cd Tmp
+ 1478  ls
+ 1479  sh runRnn.sh 
+ 1480  ssh seriot6
+ 1481  cd ryu
+ 1482  cd app
+ 1483  ls
+ 1484  sh pingall.sh 
+ 1485  ge
+ 1486  bg
+ 1487  ls *.py
+ 1488  ge conf.py 
+ 1489  sh pingall.sh 
+ 1490  sh delfall.sh 
+ 1491  sh pingall.sh 
+ 1492  sh delfall.sh 
+ 1493  sh pingall.sh 
+ 1494  ls *.py
+ 1495  ls Tmp
+ 1496  ls 8.sh
+ 1497  ls *.sh
+ 1498  mkdir If-CS_testbed_2_8_22
+ 1499  cp *.sh If-CS_testbed_2_8_22/
+ 1500  ls *.sh
+ 1501  ls If-CS_testbed_2_8_22/
+ 1502  ls -lt *.py >ala
+ 1503  ge ala
+ 1504  cp simple_switch_13.py If-CS_testbed_2_8_22/
+ 1505  cp simple_switch0_Mat.py If-CS_testbed_2_8_22/
+ 1506  cp AsM.py If-CS_testbed_2_8_22/
+ 1507  cp udp*.py If-CS_testbed_2_8_22/
+ 1508  cp RoutingAlgoInterface.py If-CS_testbed_2_8_22/
+ 1509  cp referencja.py If-CS_testbed_2_8_22/
+ 1510  cp AsClasses.py If-CS_testbed_2_8_22/
+ 1511  cp topo_dijkstra.py If-CS_testbed_2_8_22/
+ 1512  mv ala INFO
+ 1513  mv INFO If-CS_testbed_2_8_22/
+ 1514  cd If
+ 1515  cd If-CS_testbed_2_8_22/
+ 1516  ls -l
+ 1517  cat  INFO 
+ 1518  cd ..
+ 1519  tar -cf If-CS_testbed_2_8_22.tar If-CS_testbed_2_8_22/ 
+ 1520  lt
+ 1521  cd If-CS_testbed_2_8_22/
+ 1522  ls -l
+ 1523  cd ..
+ 1524  lt
+ 1525  rf
+ 1526  sh delfall.sh 
+ 1527  ge AsM.sh 
+ 1528  ls *.sh
+ 1529  sh scp.sh  conf.py
+ 1530  sh AsM.sh 
+ 1531  shall.sh kill python3
+ 1532  shall.sh pkill python3
+ 1533  sh pingall.sh 
+ 1534  sh AsM.sh 
+ 1535  h
+ 1536  sh pingall.sh
+ 1537  h
+ 1538  pi
+ 1539  cd
+ 1540  ge .bashrc
+ 1541  h
+ 1542  kip
+ 1543  pil
+ 1544  asm
+ 1545  source .basrc
+ 1546  source .bashrc
+ 1547  h
+ 1548  def
+ 1549  source ../../.bashrc
+ 1550  source ../../../bashrc
+ 1551  source .bashrc
+ 1552  cd ryu/
+ 1553  cd ryu
+ 1554  cd app
+ 1555  ls
+ 1556  h
+ 1557  source ../../../.bashrc
+ 1558  pil
+ 1559  asm
+ 1560  def
+ 1561  kip
+ 1562  h
+ 1563  source ../../../.bashrc
+ 1564  kip
+ 1565  alias
+ 1566  pil
+ 1567  asm
+ 1568  alias
+ 1569  kip
+ 1570  lt
+ 1571  cat rpa.tmp|grel '1 , 2'
+ 1572  cat rap.tmp|grel '1 , 2'
+ 1573  cat rap.tmp|grep '1 , 2'
+ 1574  cat rap.tmp
+ 1575  cat rap.tmp|grep '1,2'
+ 1576  alias
+ 1577  kip
+ 1578  asm
+ 1579  kip
+ 1580  cat rap.tmp|grep '1 2'
+ 1581  cat rap.tmp|grep '3 5'
+ 1582  h
+ 1583  alias
+ 1584  sh dumpfall.sh 
+ 1585  del
+ 1586  def
+ 1587  pil
+ 1588  asm
+ 1589  ls *.py
+ 1590  lt
+ 1591  ls -lt
+ 1592  ge referencja.py 
+ 1593  python3  referencja.py 
+ 1594  ge time.py
+ 1595  python3 time.py
+ 1596  shall python3 time.py
+ 1597  shall.sh  python3 time.py
+ 1598  ls *.s
+ 1599  ls *.sh
+ 1600  sh scp.sh time.py
+ 1601  shall.sh  python3 time.py
+ 1602  javac
+ 1603  javac -V
+ 1604  javac -v
+ 1605  javac --v
+ 1606  javac --version
+ 1607  shall.sh  python3 time.py
+ 1608  shall.sh  python3 time.py&python3 time.py
+ 1609  alias
+ 1610  kip
+ 1611  shall.sh ls -l Logs
+ 1612  def
+ 1613  pil
+ 1614  asm
+ 1615  kip
+ 1616  sh scp.sh AsM.py
+ 1617  pil
+ 1618  asm
+ 1619  shall.sh ls -l Logs
+ 1620  kip
+ 1621  alias
+ 1622  sh dumpfall.sh 
+ 1623  alias
+ 1624  def
+ 1625  ls
+ 1626  lt
+ 1627  ls ~/Downloads/
+ 1628  cp ~/Downloads/Rnn.tar.gz .
+ 1629  ls
+ 1630  tar -xzf Rnn.tar.gz 
+ 1631  lt
+ 1632  ls
+ 1633  h
+ 1634  cd Rnn
+ 1635  tar -xzf Rnn.tar.gz 
+ 1636  gzip -d Rnn.tar.gz 
+ 1637  lt
+ 1638  tar -tf Rnn.tar 
+ 1639  lt
+ 1640  tar -xf Rnn.tar 
+ 1641  lt
+ 1642  cd Rnn
+ 1643  tar -tf Rnn.tar 
+ 1644  cd Tmp/
+ 1645  ls
+ 1646  lt
+ 1647  cd ..
+ 1648  lt
+ 1649  cd Tmp
+ 1650  ls -l
+ 1651  cat komp.sh 
+ 1652  cat run.sh
+ 1653  java  org.iitis.InformationFeeder topology3.json pipe
+ 1654  cat topology3.json 
+ 1655  lt
+ 1656  finds2 modFlows
+ 1657  cd ..
+ 1658  finds2 modFlows
+ 1659  ge RoutingAlgoInterface.py
+ 1660  cd app
+ 1661  ge RoutingAlgoInterface.py
+ 1662  ls *.py
+ 1663  cd
+ 1664  cd PPtestbedsrc/
+ 1665  ls
+ 1666  ge util.py 
+ 1667  cd
+ 1668  cd ryu/
+ 1669  cd ry
+ 1670  cd ryu
+ 1671  cd app/
+ 1672  ls *.sh
+ 1673  ls *.py
+ 1674  ge AsM.py 
+ 1675  python3 referencja.py 
+ 1676  ls
+ 1677  lsd
+ 1678  cd If-CS_testbed_2_8_22/
+ 1679  ls
+ 1680  ge simple_switch_13.py
+ 1681  ip a
+ 1682  cd ..
+ 1683  ls
+ 1684  alias
+ 1685  pil
+ 1686  h
+ 1687  alias
+ 1688  sh dumpfall.sh 
+ 1689  h
+ 1690  ls
+ 1691  alias
+ 1692  asm
+ 1693  alias
+ 1694  kip
+ 1695  sh dumpfall.sh 
+ 1696  pil
+ 1697  asm
+ 1698  kip
+ 1699  def
+ 1700  pil
+ 1701  h
+ 1702  asm
+ 1703  sh dumpfall.sh 
+ 1704  def
+ 1705  pil
+ 1706  kip
+ 1707  pil
+ 1708  asm
+ 1709  kip
+ 1710  def
+ 1711  kip
+ 1712  sh dumpfall.sh 
+ 1713  pil
+ 1714  asm
+ 1715  kip
+ 1716  def
+ 1717  sh dumpfall.sh 
+ 1718  pil
+ 1719  asm
+ 1720  def
+ 1721  kip
+ 1722  pil
+ 1723  asm
+ 1724  arp
+ 1725  finds2 Fix
+ 1726  kip
+ 1727  def
+ 1728  pil
+ 1729  asm
+ 1730  sh dumpfall.sh 
+ 1731  sh dumpfall.sh  finds2 packet
+ 1732  h
+ 1733  finds2 packet
+ 1734  top
+ 1735  cd Tmp
+ 1736  ls
+ 1737  ge topo12.json 
+ 1738  cat run2.sh 
+ 1739  cat run.sh 
+ 1740  cat runRnn.sh 
+ 1741  ge runRnn.sh 
+ 1742  cat run2.sh 
+ 1743  run2.sh topo6.json 
+ 1744  cd ..
+ 1745  sh dumpfall.sh 
+ 1746  sh dumpfall.sh  |grep 5008
+ 1747  cat dumpfall.sh 
+ 1748  alias
+ 1749  ref
+ 1750  def
+ 1751  sh dumpfall.sh 
+ 1752  pil
+ 1753  sh dumpfall.sh 
+ 1754  cd Tmp
+ 1755  h
+ 1756  run2.sh topo6.json 
+ 1757  cat run2.sh 
+ 1758  run2.sh topo6
+ 1759  ls
+ 1760  cat topo6.json 
+ 1761  h
+ 1762  run2.sh topo6
+ 1763  cat runRnn.sh 
+ 1764  sh runRnn.sh 
+ 1765  ge runRnn.sh 
+ 1766  java org.iitis.InformationFeeder topo6.json pipe
+ 1767  h
+ 1768  cat run2.sh 
+ 1769  java org.iitis.InformationFeeder topo6.json pipe
+ 1770  cd ..
+ 1771  ls
+ 1772  ls *.py
+ 1773  ge Userv.py
+ 1774  pil
+ 1775  lss *.py
+ 1776  ls *.sh
+ 1777  ge AsM.sh 
+ 1778  sh scp.sh Userv.py 
+ 1779  ls
+ 1780  ls *.py
+ 1781  ge users.py 
+ 1782  h
+ 1783  sh scp.sh users.py
+ 1784  lt
+ 1785  ls *.py
+ 1786  mv usersrcv.sh  Userv.sh
+ 1787  ge Userv.sh 
+ 1788  lt
+ 1789  sh Userv.sh 
+ 1790  alias
+ 1791  kip
+ 1792  pil
+ 1793  kip
+ 1794  sh dumpfall.sh 
+ 1795  pil
+ 1796  kip
+ 1797  alias
+ 1798  def
+ 1799  asm
+ 1800  pil
+ 1801  ls *.sh
+ 1802  sh Userv.sh 
+ 1803  history
+ 1804  ls *.sh
+ 1805  cat dumpfall.sh 
+ 1806  kip
+ 1807  def
+ 1808  asm
+ 1809  ls *.sh
+ 1810  cat Userv.sh 
+ 1811  h
+ 1812  kip
+ 1813  asm
+ 1814  sh Userv.sh 
+ 1815  kip
+ 1816  h
+ 1817  ge Userv.
+ 1818  ge Userv.py 
+ 1819  kip
+ 1820  h
+ 1821  asm
+ 1822  pil
+ 1823  cd
+ 1824  cd ryu/
+ 1825  cd ryu
+ 1826  ls
+ 1827  cd app
+ 1828  ls *.sh
+ 1829  sh scp.sh ~/.bashrc 
+ 1830  h
+ 1831  kip
+ 1832  ls *.py
+ 1833  ge RoutingAlgoInterface.py 
+ 1834  ls *.py
+ 1835  cat udp_cli.py
+ 1836  kip
+ 1837  ls
+ 1838  ls *.py
+ 1839  df
+ 1840  lsd
+ 1841  cd Tmp
+ 1842  ls
+ 1843  cd ..
+ 1844  ls *.tar
+ 1845  cd If-CS_testbed_2_8_22/
+ 1846  ls
+ 1847  cat *
+ 1848  cat *|wc
+ 1849  ls
+ 1850  cd ..
+ 1851  h
+ 1852  lt
+ 1853  alias
+ 1854  date
+ 1855  ls *.sh
+ 1856  sh dumpfall.sh 
+ 1857  alias
+ 1858  def
+ 1859  ls *.sh
+ 1860  sh dumpfall.sh 
+ 1861  asm
+ 1862  alias
+ 1863  kip
+ 1864  cat AsM.
+ 1865  cat AsM.sh
+ 1866  h
+ 1867  sh dumpfall.sh 
+ 1868  cat AsM.
+ 1869  cat AsM.py
+ 1870  cat AsM.sh
+ 1871  kip
+ 1872  def
+ 1873  sh dumpfall.sh 
+ 1874  h
+ 1875  asm
+ 1876  h
+ 1877  sh dumpfall.sh 
+ 1878  kip
+ 1879  alias
+ 1880  sh dumpfall.sh 
+ 1881  sh  AsM.sh
+ 1882  sh dumpfall.sh 
+ 1883  lt
+ 1884  finds2 receiving
+ 1885  alias
+ 1886  cat AsM.sh 
+ 1887  lt
+ 1888  kip
+ 1889  def
+ 1890  sh dumpfall.sh 
+ 1891  def
+ 1892  sh dumpfall.sh 
+ 1893  h
+ 1894  asm
+ 1895  cat scp.sh 
+ 1896  ls *.py
+ 1897  ge referencja.py 
+ 1898  python3  referencja.py 
+ 1899  sh dumpfall.sh 
+ 1900  asm
+ 1901  sh dumpfall.sh 
+ 1902  h
+ 1903  asm
+ 1904  sh dumpfall.sh 
+ 1905  def
+ 1906  kip
+ 1907  pil
+ 1908  cd urzadzenie/
+ 1909  ls
+ 1910  python Test_command_UART_STM32.py 
+ 1911  python3 Test_command_UART_STM32.py 
+ 1912  sudo python3 Test_command_UART_STM32.py 
+ 1913  r
+ 1914  sudo Power_avg.py 
+ 1915  ls -la
+ 1916  sudo ./Power_avg.py 
+ 1917  scp.sh
+ 1918  cd ..
+ 1919  scp.sh
+ 1920  scp -h
+ 1921  scp urzadzenie/Power_avg.py seriot@seriot3:~/Power_avg.py
+ 1922  seriot3
+ 1923  seriot1
+ 1924  seriot5
+ 1925  seriot2 ./Power_avg.py
+ 1926  seriot3 ./Power_avg.py
+ 1927  seriot2 sudo ./Power_avg.py
+ 1928  seriot3 sudo ./Power_avg.py
+ 1929  seriot4 sudo ./Power_avg.py
+ 1930  seriot5 sudo ./Power_avg.py
+ 1931  seriot6 sudo ./Power_avg.py
+ 1932  seriot5 sudo apt install python3-pip
+ 1933  seriot6 sudo apt install python3-pip
+ 1934  seriot6
+ 1935  seriot6 sudo apt install python3-pip
+ 1936  seriot6 python3 -m pip install pyserial
+ 1937  seriot6 sudo apt install python3-pip
+ 1938  seriot6 python3 -m pip install pyserial
+ 1939  history 
+ 1940  scp urzadzenie/Power_avg.py seriot@seriot1:~
+ 1941  seriot4 python3 -m pip install pyserial
+ 1942  cd
+ 1943  python3 -m pip install pyserial
+ 1944  seriot4 python3 -m pip install pyserial
+ 1945  seriot4 sudo apt install python3-pip
+ 1946  python3 -m pip install pyserial
+ 1947  seriot4 python3 -m pip install pyserial
+ 1948  seriot4 sudo ./Power_avg.py
+ 1949  scp urzadzenie/Power_avg.py seriot@seriot1:~
+ 1950  scp urzadzenie/Power_avg.py seriot@seriot2:~
+ 1951  scp urzadzenie/Power_avg.py seriot@seriot4:~
+ 1952  scp urzadzenie/Power_avg.py seriot@seriot5:~
+ 1953  scp urzadzenie/Power_avg.py seriot@seriot6:~
+ 1954  seriot4 sudo ./Power_avg.py
+ 1955  seriot5 sudo ./Power_avg.py
+ 1956  seriot2 sudo ./Power_avg.py
+ 1957  seriot1 sudo ./Power_avg.py
+ 1958  seriot6 sudo ./Power_avg.py
+ 1959  h
+ 1960  seriot1
+ 1961  seriot1 sudo apt install python3-pip
+ 1962  seriot1 python3 -m pip install pyserial
+ 1963  seriot1 sudo apt update
+ 1964  seriot1
+ 1965  seriot1 sudo ./Power_avg.py
+ 1966  seriot2 sudo ./Power_avg.py
+ 1967  seriot3 sudo ./Power_avg.py
+ 1968  seriot4 sudo ./Power_avg.py
+ 1969  seriot5 sudo ./Power_avg.py
+ 1970  seriot6 sudo ./Power_avg.py
+ 1971  seriot2 sudo ./Power_avg.py
+ 1972  seriot2
+ 1973  shall sudo reboot
+ 1974  seriot1
+ 1975  shall echo ALIVE
+ 1976  shall sudo ./Power_avg.py
+ 1977  h
+ 1978  seriot2 sudo ./Power_avg.py
+ 1979  seriot3 sudo ./Power_avg.py
+ 1980  seriot2 sudo ./Power_avg.py
+ 1981  ls *.sh
+ 1982  cd ryu/
+ 1983  cd ryu
+ 1984  ls
+ 1985  cd app/
+ 1986  ls
+ 1987  ls Po*
+ 1988  cat scp.sh 
+ 1989  ssh seriot3
+ 1990  seriot1
+ 1991  cd
+ 1992  seriot1
+ 1993  gedit &
+ 1994  shall ip a dev br0
+ 1995  shall ip a l dev br0
+ 1996  shall sudo arp -f
+ 1997  pil
+ 1998  shall sudo reboot
+ 1999  rsh seriot1 ping 10.0.1.2 &
+ 2000  rsh seriot1 ping 10.0.1.3 &
+ 2001  rsh seriot1 ping 10.0.1.4 &
+ 2002  rsh seriot1 ping 10.0.1.5 &
+ 2003  rsh seriot1 ping 10.0.1.6 &
+ 2004  seriot1 pkill ping
+ 2005  rsh seriot2 ping 10.0.1.1 &
+ 2006  rsh seriot2 ping 10.0.1.3 &
+ 2007  rsh seriot2 ping 10.0.1.4 &
+ 2008  rsh seriot2 ping 10.0.1.5 &
+ 2009  rsh seriot2 ping 10.0.1.6 &
+ 2010  seriot2 pkill -9 ping
+ 2011  which seriot2
+ 2012  vim seriot2
+ 2013  /etc/hosts
+ 2014  sudo vim /etc/hosts
+ 2015  pwd
+ 2016  ls
+ 2017  h
+ 2018  ls *.sh
+ 2019  cd ryu/ryu/app/
+ 2020  ls *.sh
+ 2021  cat scp.sh 
+ 2022  scp seriot4:/home/seriot/histSeriot4.txt . 
+ 2023  lt
+ 2024  ge  histSeriot4.txt
+ 2025  h
+ 2026  h \
+ 2027  h
+ 2028  h >histSeriot.txt

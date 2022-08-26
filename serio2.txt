@@ -1,0 +1,50 @@
+seriot@seriot2:~$ ifconfig
+eno1: flags=67<UP,BROADCAST,RUNNING>  mtu 1500
+        ether 54:b2:03:93:75:2b  txqueuelen 1000  (Ethernet)
+        RX packets 86305796619  bytes 8399139795504 (8.3 TB)
+        RX errors 0  dropped 120867309  overruns 0  frame 0
+        TX packets 56000178152  bytes 5445791697373 (5.4 TB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 16  memory 0xdc100000-dc120000  
+
+eno1.112: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.112.2  netmask 255.255.255.0  broadcast 10.0.112.255
+        ether 54:b2:03:93:75:2b  txqueuelen 1000  (Ethernet)
+        RX packets 6697182145  bytes 317316422654 (317.3 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 49302602090  bytes 4584731940569 (4.5 TB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+eno1.124: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.124.1  netmask 255.255.255.0  broadcast 10.0.124.255
+        ether 54:b2:03:93:75:2b  txqueuelen 1000  (Ethernet)
+        RX packets 78312789365  bytes 6012587478636 (6.0 TB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 6694697458  bytes 410734324208 (410.7 GB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp5s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.2  netmask 255.255.255.0  broadcast 0.0.0.0
+        ether 54:b2:03:93:75:2c  txqueuelen 1000  (Ethernet)
+        RX packets 7278  bytes 947617 (947.6 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 5022  bytes 700030 (700.0 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device memory 0xdc000000-dc01ffff  
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 15083  bytes 1465463 (1.4 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 15083  bytes 1465463 (1.4 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlp6s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.89.72  netmask 255.255.255.0  broadcast 192.168.89.255
+        ether 0c:dd:24:67:bf:a1  txqueuelen 1000  (Ethernet)
+        RX packets 805353  bytes 718251074 (718.2 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 418750  bytes 169224299 (169.2 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+

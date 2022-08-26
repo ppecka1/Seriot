@@ -1,0 +1,55 @@
+seriot@seriot:~/ryu$ rsh seriot1 ip a|grep ff
+    link/ether 54:b2:03:93:e9:7e brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:e9:7d brd ff:ff:ff:ff:ff:ff
+    link/ether c8:09:a8:fe:03:b2 brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:e9:7d brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:e9:7d brd ff:ff:ff:ff:ff:ff
+    link/ether 0a:a8:df:5b:fa:48 brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:e9:7d brd ff:ff:ff:ff:ff:ff ###
+seriot@seriot:~/ryu$ rsh seriot2 ip a|grep ff
+    link/ether 54:b2:03:93:75:2c brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:75:2b brd ff:ff:ff:ff:ff:ff
+    link/ether 0c:dd:24:67:bf:a1 brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:75:2b brd ff:ff:ff:ff:ff:ff
+    link/ether d2:93:44:91:0c:53 brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:75:2b brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:75:2b brd ff:ff:ff:ff:ff:ff ###
+seriot@seriot:~/ryu$ rsh seriot3 ip a|grep ff
+    link/ether 54:b2:03:93:50:9f brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:50:9e brd ff:ff:ff:ff:ff:ff
+    link/ether 0c:dd:24:5c:20:33 brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:50:9e brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:50:9e brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:50:9e brd ff:ff:ff:ff:ff:ff
+    link/ether 6e:ae:98:b5:21:2f brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:50:9e brd ff:ff:ff:ff:ff:ff ###
+seriot@seriot:~/ryu$ rsh seriot4 ip a|grep ff
+    link/ether 54:b2:03:93:ea:95 brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:ea:94 brd ff:ff:ff:ff:ff:ff
+    link/ether c8:09:a8:fe:2f:ae brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:ea:94 brd ff:ff:ff:ff:ff:ff
+    link/ether ba:da:bc:21:27:19 brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:ea:94 brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:ea:94 brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:ea:94 brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:ea:94 brd ff:ff:ff:ff:ff:ff ###
+seriot@seriot:~/ryu$ rsh seriot5 ip a|grep ff
+    link/ether 54:b2:03:93:e7:b4 brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:e7:b3 brd ff:ff:ff:ff:ff:ff
+    link/ether 98:af:65:46:11:53 brd ff:ff:ff:ff:ff:ff
+    link/ether 8e:d3:e7:06:d4:65 brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:e7:b3 brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:e7:b3 brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:e7:b3 brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:e7:b3 brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:e7:b3 brd ff:ff:ff:ff:ff:ff ###
+seriot@seriot:~/ryu$ rsh seriot6 ip a|grep ff
+^C
+seriot@seriot:~/ryu$ rsh seriot7 ip a|grep ff
+    link/ether 54:b2:03:93:76:54 brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:76:53 brd ff:ff:ff:ff:ff:ff
+    link/ether 0c:dd:24:67:bf:fb brd ff:ff:ff:ff:ff:ff
+    link/ether 02:2f:06:8e:ba:38 brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:76:53 brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:76:53 brd ff:ff:ff:ff:ff:ff
+    link/ether 54:b2:03:93:76:53 brd ff:ff:ff:ff:ff:ff ###

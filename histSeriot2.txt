@@ -1,0 +1,1000 @@
+   94  python3 WinIperf.py 
+   95  python3 WinIperf.py --IP 10.0.0.1
+   96  nano WinIperf.py 
+   97  python3 WinIperf.py --IP 10.0.0.1
+   98  mv WinIperf.py generator.py
+   99  ls
+  100  netstat
+  101  netstate
+  102  netstat
+  103  sudo apt install net-tools
+  104  netstat
+  105  netstat -tuna
+  106  sudo apt-get update
+  107  sudo apt-get upgrade
+  108  ikp a
+  109  ip a
+  110  ping 10.0.1.7
+  111  ip r
+  112  ping 10.0.1.7
+  113  ssh seriot@10.0.1.7
+  114  iperf -c 10.0.1.7
+  115  nano generator.py 
+  116  python3 generator.py --IP 10.0.1.7 --SleepBetween 10 --Step 200 --TransmissionDuration 20
+  117  nano generator.py 
+  118  python3 generator.py --IP 10.0.1.7 --SleepBetween 10 --Step 200 --TransmissionDuration 20
+  119  nano generator.py 
+  120  python3 generator.py --IP 10.0.1.7 --SleepBetween 10 --Step 200 --TransmissionDuration 20
+  121  nano generator.py 
+  122  python3 generator.py --IP 10.0.1.7 --SleepBetween 10 --Step 200 --TransmissionDuration 20
+  123  python3 generator.py --IP 10.0.1.7 --SleepBetween 1 --Step 200 --TransmissionDuration 1
+  124  python3 generator.py --IP 10.0.1.7 --SleepBetween 10 --Step 200 --TransmissionDuration 20
+  125  python3 generator.py --IP 10.0.1.7 --SleepBetween 1 --Step 50 --TransmissionDuration 5
+  126  python3 generator.py --IP 10.0.1.7 --SleepBetween 1 --Step 10 --TransmissionDuration 1
+  127  nano generator.py 
+  128  python3 generator.py --IP 10.0.1.7 --SleepBetween 1 --Step 1 --TransmissionDuration 1
+  129  nano generator.py 
+  130  python3 generator.py --IP 10.0.1.7 --SleepBetween 1 --Step 1 --TransmissionDuration 1
+  131  nano generator.py 
+  132  python3 generator.py --IP 10.0.1.7 --SleepBetween 1 --Step 2 --TransmissionDuration 1
+  133  nano generator.py 
+  134  python3 generator.py --IP 10.0.1.7 --SleepBetween 1 --Step 2 --TransmissionDuration 3
+  135  ssh seriot@10.0.1.7
+  136  nano generator.py 
+  137  python3 generator.py --IP 10.0.1.7 --SleepBetween 1 --Step 2 --TransmissionDuration 3
+  138  nano generator.py 
+  139  ssh seriot@10.0.1.7
+  140  nano generator.py 
+  141  ssh seriot@10.0.1.7
+  142  nano generator.py 
+  143  python3 generator.py --IP 10.0.1.7 --SleepBetween 1 --Step 2 --TransmissionDuration 3
+  144  nano generator.py 
+  145  python3 generator.py --IP 10.0.1.7 --SleepBetween 1 --Step 50 --TransmissionDuration 3
+  146  nano generator.py 
+  147  python3 generator.py --IP 10.0.1.7 --SleepBetween 1 --Step 50 --TransmissionDuration 3
+  148  nano generator.py 
+  149  python3 generator.py --IP 10.0.1.7 --SleepBetween 1 --Step 5 --TransmissionDuration 3
+  150  ssh 10.0.1.6
+  151  ip a
+  152  ssh 10.0.1.7
+  153  nano generator.py 
+  154  python3 generator.py --IP 10.0.1.7 --SleepBetween 1 --Step 5 --TransmissionDuration 3
+  155  nano generator.py 
+  156  python3 generator.py --IP 10.0.1.7 --SleepBetween 1 --Step 5 --TransmissionDuration 3
+  157  ip a
+  158  ping 10.0.1.7
+  159  ip
+  160  ip a
+  161  ip r
+  162  ping 10.0.1.7
+  163  python3 generator.py --IP 10.0.1.7 --SleepBetween 1 --Step 5 --TransmissionDuration 3
+  164  nano generator.py 
+  165  python3 generator.py --IP 10.0.1.7 --SleepBetween 1 --Step 5 --TransmissionDuration 3
+  166  nano generator.py 
+  167  python3 generator.py --IP 10.0.1.7 --SleepBetween 1 --Step 2 --TransmissionDuration 3
+  168  python3 generator.py --IP 10.0.1.7 --SleepBetween 2 --Step 5 --TransmissionDuration 5
+  169  nano generator.py 
+  170  python3 generator.py --IP 10.0.1.7 --SleepBetween 1 --Step 5 --TransmissionDuration 3
+  171  i\ls
+  172  ls
+  173  rm *.lo
+  174  rm *.log
+  175  ls
+  176  history 
+  177  ip a
+  178  ping 10.0.1.88
+  179  python3 clientSpawner.py --IP 10.0.1.88 -w 1 --numberOfHogs 500
+  180  python3 clientSpawner.py --IP 10.0.1.88 -w 1 --numberOfHogs 250
+  181  python3 clientSpawner.py --IP 10.0.1.88 -w 1 --numberOfHogs 500
+  182  cat hog_number_32
+  183  cat hog_number_32.log 
+  184  cat hog_number_325.log 
+  185  cat hog_number_3.log 
+  186  cat hog_number_7.log 
+  187  ls -l
+  188  python3 clientSpawner.py --IP 10.0.1.88 -w 1 --numberOfHogs 500
+  189  ps -aux | grep python
+  190  pkill clientEnergyTests.py
+  191  ps -aux | grep python
+  192  python3 clientSpawner.py --IP 10.0.1.88 -w 1 --numberOfHogs 20
+  193  python3 clientSpawner.py --IP 10.0.1.88 -w 1 --numberOfHogs 40
+  194  python3 clientSpawner.py --IP 10.0.1.88 -w 1 --numberOfHogs 60
+  195  python3 clientSpawner.py --IP 10.0.1.88 -w 1 --numberOfHogs 80
+  196  python3 clientSpawner.py --IP 10.0.1.88 -w 1 --numberOfHogs 100
+  197  mkdir 100
+  198  mv *.log 100
+  199  ls
+  200  python3 clientSpawner.py --IP 10.0.1.88 -w 1 --numberOfHogs 120
+  201  mkdir 120
+  202  mv *.log 120
+  203  python3 clientSpawner.py --IP 10.0.1.88 -w 1 --numberOfHogs 140
+  204  mkdir 140
+  205  mv *.log 140
+  206  python3 clientSpawner.py --IP 10.0.1.88 -w 1 --numberOfHogs 200
+  207  mkdir 200
+  208  mv *.log 200
+  209  python3 clientSpawner.py --IP 10.0.1.88 -w 1 --numberOfHogs 250
+  210  python3 clientSpawner.py --IP 10.0.1.88 -w 1 --numberOfHogs 50
+  211  python3 clientSpawner.py --IP 10.0.1.88 -w 1 --numberOfHogs 10
+  212  python3 clientSpawner.py --IP 10.0.1.88 -w 1 --numberOfHogs 25
+  213  python3 clientSpawner.py --IP 10.0.1.88 -w 1 --numberOfHogs 75
+  214  python3 clientSpawner.py --IP 10.0.1.88 -w 1 --numberOfHogs 100
+  215  python3 clientSpawner.py --IP 10.0.1.88 -w 1 --numberOfHogs 150
+  216  ls
+  217  cat hog_number_246.log 
+  218  ping 10.0.1.88
+  219  iup r
+  220  ip r
+  221  ping 10.0.1.88
+  222  ip a
+  223  ping 10.0.1.88
+  224  ls
+  225  rm *log
+  226  ls
+  227  ls -l
+  228  sudo apt-get install python3-pygame
+  229  ping google.com
+  230  sudo apt-get install python3-pygame
+  231  sudo apt-get install python-pygame
+  232  nano clientLong.py 
+  233  python clientLong.py --IP 10.0.1.88 -w 1
+  234  ls
+  235  ps -aux
+  236  ps -aux | grep python
+  237  ls
+  238  rm *.log
+  239  ls
+  240  rm -r 10
+  241  rm -r 100
+  242  rm -r 120
+  243  rm -r 140
+  244  rm -r 200
+  245  rm -r 5
+  246  rm -r 6
+  247  ls
+  248  nano clientLong.py 
+  249  python clientLong.py --IP 10.0.1.88 -w 1
+  250  ls
+  251  cat hog_number_0.log 
+  252  nano clientSpawner.py
+  253  python clientLong.py --IP 10.0.1.88 -w 1
+  254  ls
+  255  rm -r 5
+  256  cat hog_number_2.log 
+  257  nano clientSpawner.py
+  258  ls
+  259  python clientLong.py --IP 10.0.1.88 -w 1
+  260  ls
+  261  rm -r 5
+  262  cat hog_number_3.log 
+  263  python clientLong.py --IP 10.0.1.88 -w 1
+  264  cd 5
+  265  cat hog_number_
+  266  cat hog_number_0.log 
+  267  cat hog_number_3.log 
+  268  cat hog_number_5.log 
+  269  cat hog_number_4.log 
+  270  cd ..
+  271  ls
+  272  nano clientEnergyTests.py 
+  273  python clientLong.py --IP 10.0.1.88 -w 1
+  274  ls
+  275  nano clientSpawner.py
+  276  rm -r 5
+  277  python clientLong.py --IP 10.0.1.88 -w 1
+  278  nano clientEnergyTests.py 
+  279  python clientLong.py --IP 10.0.1.88 -w 1
+  280  ps -aux | grep python
+  281  python clientLong.py --IP 10.0.1.88 -w 1
+  282  ps -aux | grep python
+  283  ls
+  284  sudo init.sh
+  285  sudo ./init.sh
+  286  mkdir _
+  287  python restart.py 
+  288  less restar
+  289  ls -la
+  290  less management 
+  291  python generator.py 
+  292  which python
+  293  python3
+  294  python3 generator.py 
+  295  python3 generator.py 0.0.0.0
+  296  python3 generator.py --IP 0.0.0.0
+  297  ifconfig
+  298  ping 10.0.1.8
+  299  route add 10.0.1.8 enp5s0
+  300  sudo route add 10.0.1.8 enp5s0
+  301  ping 10.0.1.8
+  302  sudo route add 10.0.1.8 eno1
+  303  sudo route del 10.0.1.8 enp5s0
+  304  ping 10.0.1.8
+  305  ip list 
+  306  ip help
+  307  ip addr list
+  308  ls
+  309  python3 ap-client.py 
+  310  python3 clientSpawner.py
+  311  ls
+  312  rm -rf 1
+  313  ls -l hog*
+  314  less hog_number_0.log 
+  315  less hog_log_own_0.log 
+  316  python3 iperfGraidial.py 
+  317  python3 clientEnergyTests.py 
+  318  python3 clientEnergyTests.py -h
+  319  python3 clientEnergyTests.py --IP 127.0.0.1
+  320  grep -
+  321  grep "clientEnergyTests" *.py
+  322  python3 clientSpawner.py
+  323  python3 clientSpawner.py -h
+  324  grep "clientSpawner" *.py
+  325  python3 clientLong.py
+  326  python3 clientLong.py --IP 127.0.0.1
+  327  vim clientLong.py 
+  328  sudo apt install vim
+  329  vim clientLong.py 
+  330  ls
+  331  ls -l
+  332  ls
+  333  rm 1 2 475
+  334  rm -rf 1 2 475
+  335  rm -rm hog*log
+  336  rm -rf hog*log
+  337  ls
+  338  htop
+  339  sudo apt  install htop
+  340  htop
+  341  python3 cpu.py 
+  342  python3 clientEnergyTests.py 
+  343  python3 clientEnergyTests.py --IP 127.0.0.1
+  344  sudo python3 clientEnergyTests.py --IP 127.0.0.1
+  345  python3 clientLong.py 
+  346  python3 clientLong.py --IP 127.0.0.1
+  347  python3 clientLong.py --IP 127.0.0.1 --numberOfHogs 10 --sleep 10
+  348  ls
+  349  python3 cpu.py 
+  350  grep "cpu" *.py
+  351  less cpu.py
+  352  ls -la
+  353  python3 serviceEnergyTest.py 
+  354  vim serviceEnergyTest.py 
+  355  ifconfig
+  356  python3 serviceEnergyTest.py 
+  357  ip addr list
+  358  ip route list 
+  359  ip route list Tak j
+  360  ip route list
+  361  ip route add 10.0.1.0/24 eno1
+  362  ip route add to 10.0.1.0/24 eno1
+  363  ip route add to 10.0.1.0/24 via eno1
+  364  ip route add to 10.0.1.0/24 via 10.0.1.6
+  365  sudo ip route add to 10.0.1.0/24 via 10.0.1.6
+  366  sudo ip route add to 10.0.1.0/24 via eno1
+  367  sudo ip route add to 10.0.1.0/24 via 10.0.1.6/24
+  368  sudo ip route add to 10.0.1.0/24 via 10.0.1.6
+  369  ip route help
+  370  ip route get 10.0.1.8
+  371  ip route add to 10.0.1.255/24 dev eno1
+  372  sudo ip route add to 10.0.1.255/24 dev eno1
+  373  sudo ip route add to 10.0.1.0/24 dev eno1
+  374  ip route get 10.0.1.8
+  375  ping 10.0.1.8
+  376  ip route list
+  377  tracert
+  378  traceroute
+  379  sudo apt install inetutils-traceroute
+  380  sudo apt install inetutils
+  381  traceroute
+  382  traceroute 10.0.1.8
+  383  arp
+  384  arp --help
+  385  arp -s 10.0.1.8
+  386  arp -d 10.0.1.8
+  387  sudo arp -d 10.0.1.8
+  388  arp
+  389  traceroute 10.0.1.8
+  390  arp
+  391  sudo arp -d 10.0.1.8
+  392  sudo arp -d 10.0.1.88
+  393  arp
+  394  traceroute 10.0.1.8
+  395  ls
+  396  python3 serviceEnergyTest.py 
+  397  htop
+  398  ps aux | grep X
+  399  kill -15 gdm
+  400  kill -15 2045
+  401  sudo kill -15 2045
+  402  sudo kill -15 17760
+  403  sudo systemctl set-default multi-user
+  404  gnome-session-quit 
+  405  htop
+  406  sudo apt update
+  407  sudo apt upgrade
+  408  python3 serviceEnergyTest.py 
+  409  vim serviceEnergyTest.py 
+  410  vim cpu.py 
+  411  vim serviceEnergyTest.py 
+  412  python3 serviceEnergyTest.py 
+  413  vim serviceEnergyTest.py 
+  414  python3 serviceEnergyTest.py 
+  415  less serviceEnergyTest.py 
+  416  vim clientEnergyTests.py 
+  417  vim clientSpawner.py
+  418  less serviceEnergyTest.py 
+  419  vim serviceEnergyTest.py 
+  420  ps -ef | grep serv
+  421  ps aux | grep serv
+  422  pkill python3
+  423  ps aux | grep serv
+  424  vim ser
+  425  vim serviceEnergyTest.py 
+  426  python3 serviceEnergyTest.py 
+  427  vim serviceEnergyTest.py 
+  428  python3 serviceEnergyTest.py 
+  429  vim serviceEnergyTest.py 
+  430  python3 serviceEnergyTest.py 
+  431  vim serviceEnergyTest.py 
+  432  vim cpu.py 
+  433  python3 serviceEnergyTest.py 
+  434  vim cpu.py 
+  435  python3 serviceEnergyTest.py 
+  436  pip3 install gunicorn flask
+  437  gunicorn --bind 0.0.0.0:5001
+  438  sudo apt install gunicorn
+  439  gunicorn --bind 0.0.0.0:5001
+  440  vim wsgi.py
+  441  gunicorn --bind 0.0.0.0:5001 wsgi:app
+  442  vim serviceEnergyTest.py
+  443  gunicorn --bind 0.0.0.0:5001 wsgi:app
+  444  vim serviceEnergyTest.py
+  445  gunicorn --bind 0.0.0.0:5001 wsgi:app
+  446  pip install wheel
+  447  pip install gunicorn flask
+  448  gunicorn --bind 0.0.0.0:5001 wsgi:app
+  449  apt remove python
+  450  sudo apt remove python
+  451  pip uninstall gunicorn flask
+  452  gunicorn --bind 0.0.0.0:5001 wsgi:app
+  453  gunicorn --help
+  454  gunicorn --help | python
+  455  gunicorn --help | grep python
+  456  which python3
+  457  ls /usr/lib/python3
+  458  ls /usr/lib/python3/dist-packages/
+  459  ls /usr/lib/python3.8/dist-packages/
+  460  ls /usr/lib/python3.8/
+  461  pip3 install gunicorn
+  462  which gunicorn
+  463  ls /usr/lib/python3.8/lib2to3/
+  464  python3 -v
+  465  sudo apt remove python3.8
+  466  sudo apt remove python3.7
+  467  ls /usr/lib/python3.7
+  468  ls /usr/lib/python3.6
+  469  ls -la /usr/lib/python*
+  470  ls -la /usr/lib/python3
+  471  gunicorn --bind 0.0.0.0:5001 wsgi:app
+  472  gunicorn --bind 0.0.0.0:5001 wsgi
+  473  sudo apt install python-pip3
+  474  sudo apt install python-pip
+  475  sudo apt install python-pip python3-dev
+  476  sudo apt install python3-pip python3-dev
+  477  sudo apt install python3-pip python3-dev nginx
+  478  export WORKON_HOME $HOME/.virtualenvs
+  479  export WORKON_HOME=$HOME/.virtualenvs
+  480  export PROJECT_HOME=$HOME/energy
+  481  ls
+  482  rm -rf *.hdd
+  483  rm -rf file140100*.hdd
+  484  rm -rf file1401000*.hdd
+  485  ls
+  486  rm -rf file1401001*.hdd
+  487  rm -rf file1401002*.hdd
+  488  rm -rf file1401003*.hdd
+  489  rm -rf file1401004*.hdd
+  490  rm -rf file1401005*.hdd
+  491  rm -rf file1401006*.hdd
+  492  rm -rf file1401007*.hdd
+  493  rm -rf file1401008*.hdd
+  494  rm -rf file1401009*.hdd
+  495  rm -rf file140101*.hdd
+  496  rm -rf file140102*.hdd
+  497  rm -rf file1401020*.hdd
+  498  rm -rf file1401021*.hdd
+  499  rm -rf file1401022*.hdd
+  500  rm -rf file1401023*.hdd
+  501  rm -rf file140102*.hdd
+  502  rm -rf file140103*.hdd
+  503  rm -rf file1401031*.hdd
+  504  rm -rf file1401032*.hdd
+  505  rm -rf file140103*.hdd
+  506  rm -rf file140104*.hdd
+  507  rm -rf file1401041*.hdd
+  508  rm -rf file140104*.hdd
+  509  rm -rf file1401042*.hdd
+  510  rm -rf file140104*.hdd
+  511  rm -rf file1401051*.hdd
+  512  rm -rf file1401052*.hdd
+  513  rm -rf file140105*.hdd
+  514  rm -rf file1401053*.hdd
+  515  rm -rf file140105*.hdd
+  516  rm -rf file1401061*.hdd
+  517  rm -rf file1401062*.hdd
+  518  rm -rf file1401063*.hdd
+  519  rm -rf file140106*.hdd
+  520  rm -rf file1401064*.hdd
+  521  rm -rf file1401065*.hdd
+  522  rm -rf file140106*.hdd
+  523  rm -rf file140107\*.hdd
+  524  rm -rf file140107*.hdd
+  525  rm -rf file1401071*.hdd
+  526  rm -rf file1401072*.hdd
+  527  rm -rf file1401073*.hdd
+  528  rm -rf file1401074*.hdd
+  529  rm -rf file140107*.hdd
+  530  ls
+  531  mkdir _
+  532  mkdir Trash
+  533  mf file*hdd Trash
+  534  mv file*hdd Trash
+  535  rm -rf file140108*.hdd
+  536  vim clean.py
+  537  python3 clean.py 
+  538  vim clean.py
+  539  python3 clean.py 
+  540  vim clean.py
+  541  python3 clean.py 
+  542  vim clean.py
+  543  python3 clean.py 
+  544  vim clean.py
+  545  python3 clean.py 
+  546  vim clean.py
+  547  python3 clean.py 
+  548  vim clean.py
+  549  python3 clean.py 
+  550  ls -l
+  551  vim wsgi.py
+  552  vim serviceEnergyTest.py
+  553  gunicorn --bind 0.0.0.0:5001 wsgi
+  554  gunicorn3
+  555  sudo apt install gunicorn3
+  556  gunicorn3 --bind 0.0.0.0:5001 wsgi
+  557  gunicorn3 --bind 0.0.0.0:5001 wsgi:app
+  558  vim serviceEnergyTest.py
+  559  vim cpu.py 
+  560  gunicorn3 --bind 0.0.0.0:5001 wsgi:app
+  561  vim cpu.py 
+  562  gunicorn3 --bind 0.0.0.0:5001 wsgi:app
+  563  rm *.pyc
+  564  gunicorn3 --bind 0.0.0.0:5001 wsgi:app
+  565  gunicorn3 --bind 0.0.0.0:5001 -w 8 wsgi:app
+  566  htop
+  567  vim serviceEnergyTest
+  568  python3 serviceEnergyTest.py 
+  569  vim cpu.py 
+  570  vim serviceEnergyTest
+  571  vim serviceEnergyTest.py 
+  572  ls -la
+  573  ls | wc 
+  574  ls file1401*
+  575  ls file140100
+  576  ls file140100*
+  577  ls
+  578  ls | wc 
+  579  ls -l
+  580  ls | wc 
+  581  ls file140108*
+  582  ls file1401081*
+  583  history 
+  584  ls | wc 
+  585  ls
+  586  vim serviceEnergyTest.py
+  587  ifconfig
+  588  sudo ip addr 10.0.1.6 dev eno1
+  589  sudo ip addr add 10.0.1.6 dev eno1
+  590  ifconfig
+  591  ls
+  592  vim serviceEnergyTest.py 
+  593  vim hdd.py 
+  594  ls -la
+  595  vim serviceEnergyTest.py 
+  596  vim hdd.py 
+  597  ls
+  598  vim hdd.py 
+  599  vim serviceEnergyTest.py 
+  600  vim hdd.py 
+  601  ls
+  602  htop
+  603  python3 serviceEnergyTest.py
+  604  history 
+  605  gunicorn3 --bind 0.0.0.0:5001 -w 8 wsgi:app
+  606  history
+  607  gunicorn3 -h
+  608  gunicorn3 -h | less
+  609  gunicorn3 --bind 0.0.0.0:5001 -w 8 wsgi:app
+  610  ls
+  611  ls | wc
+  612  gunicorn3 --bind 0.0.0.0:5001 -w 8 wsgi:app
+  613  gunicorn3 --bind 0.0.0.0:5001 -t 8 wsgi:app
+  614  ls
+  615  ls | wc
+  616  ls | less
+  617  rm -rf file1399045*
+  618  rm -rf file13990458*
+  619  rm -rf file139904586*
+  620  rm -rf file1399045864*
+  621  rm -rf file139904586*
+  622  ls | less
+  623  rm -rf file139904586*
+  624  rm -rf file1399045868*
+  625  rm -rf file13990458686*
+  626  rm -rf file139904586864*
+  627  rm -rf file1399045868641*
+  628  rm -rf file1399045868643*
+  629  rm -rf file13990458686438*
+  630  rm -rf file139904586864381*
+  631  rm -rf file13990458686438*
+  632  rm -rf file139904586864380*
+  633  rm -rf file13990458686438*
+  634  rm -rf file139904586864382*
+  635  rm -rf file139904586864383*
+  636  rm -rf file139904586864384*
+  637  rm -rf file1399045868643841*
+  638  rm -rf file1399045868643842*
+  639  rm -rf file1399045868643843*
+  640  rm -rf file1399045868643844*
+  641  rm -rf file1399045868643845*
+  642  rm -rf file1399045868643846*
+  643  rm -rf file1399045868643847*
+  644  rm -rf file1399045868643848*
+  645  rm -rf file1399045868643849\*
+  646  rm -rf file1399045868643849*
+  647  rm -rf file1399045868643840*
+  648  rm -rf file139904586864384*
+  649  rm -rf file13990458686438*
+  650  rm -rf file1399045868643*
+  651  ls | less
+  652  rm -rf file139904595257*
+  653  rm -rf file139904595257088*
+  654  rm -rf file1399045952570881*
+  655  rm -rf file139904595257088*
+  656  rm -rf file1399045952570882*
+  657  rm -rf file1399045952570883*
+  658  rm -rf file1399045952570884*
+  659  rm -rf file1399045952570885*
+  660  rm -rf file1399045952570886*
+  661  rm -rf file1399045952570887*
+  662  rm -rf file1399045952570888*
+  663  rm -rf file1399045952570889*
+  664  rm -rf file1399045952570880*
+  665  ls | less
+  666  ls
+  667  gunicorn3 --bind 0.0.0.0:5001 -t 8 wsgi:app
+  668  gunicorn3 --bind 0.0.0.0:5001 -w 8 wsgi:app
+  669  fg
+  670  gunicorn3 --bind 0.0.0.0:5001 -w 8 wsgi:app
+  671  gunicorn3 --bind 0.0.0.0:5001 -w 20 wsgi:app
+  672  rm file*.hdd
+  673  ls
+  674  gunicorn3 --bind 0.0.0.0:5001 -w 20 -- worker-class=asyncio wsgi:app
+  675  gunicorn3 --bind 0.0.0.0:5001 -w 20 -- worker-class=Asyncio wsgi:app
+  676  gunicorn3 --bind 0.0.0.0:5001 -w 20 -- worker-class=gevent wsgi:app
+  677  gunicorn3 --bind 0.0.0.0:5001 -w 10 -t 10 -- worker-class=gevent wsgi:app
+  678  gunicorn3 --bind 0.0.0.0:5001 -w 10 -t 10 --worker-class=gevent wsgi:app
+  679  pip3 install gevent
+  680  pip3 install asyncio
+  681  gunicorn3 --bind 0.0.0.0:5001 -w 10 -t 10 --worker-class=asyncio wsgi:app
+  682  gunicorn3 --bind 0.0.0.0:5001 -w 10 -t 10 --worker-class=Asyncio wsgi:app
+  683  gunicorn3 --bind 0.0.0.0:5001 -w 10 -t 10 --worker-class=gevent wsgi:app
+  684  gunicorn3 --bind 0.0.0.0:5001 -w 10 -t 2 wsgi:app
+  685  ls
+  686  gunicorn3 --bind 0.0.0.0:5001 -w 12 -t 4 wsgi:app
+  687  ls
+  688  gunicorn3 --bind 0.0.0.0:5001 -w 8 -t 4 wsgi:app
+  689  vim hdd.py 
+  690  gunicorn3 --bind 0.0.0.0:5001 -w 8 -t 4 wsgi:app
+  691  vim hdd.py 
+  692  gunicorn3 --bind 0.0.0.0:5001 -w 8 -t 4 wsgi:app
+  693  vim hdd.py 
+  694  gunicorn3 --bind 0.0.0.0:5001 -w 8 -t 4 wsgi:app
+  695  gunicorn3 --bind 0.0.0.0:5001 -w 8 -t 4 wsgi:app > log.txt
+  696  less log.txt 
+  697  gunicorn3 --bind 0.0.0.0:5001 -w 8 -t 4 wsgi:app
+  698  ls
+  699  vim clean.py 
+  700  vim hdd.py 
+  701  vim cpu.py 
+  702  vim serviceEnergyTest.py 
+  703  vim hdd.py 
+  704  vim clean.py 
+  705  vim serviceEnergyTest.py 
+  706  vim hdd.py 
+  707  vim serviceEnergyTest.py 
+  708  vim hdd.py
+  709  vim serviceEnergyTest.py 
+  710  vim hdd.py
+  711  ls
+  712  python3 clean.py 
+  713  ls
+  714  python3 clean.py 
+  715  rm -rf file13990*
+  716  rm -rf file139990*
+  717  python3 clean.py 
+  718  rm -rf file139990*
+  719  rm -rf file1398*
+  720  ls
+  721  htop
+  722  history 
+  723  gunicorn3 --bind 0.0.0.0:5001 -w 8 -t 4 wsgi:app
+  724  ip addr list
+  725  sudo ip addr add 10.0.1.6 dev eno1
+  726  ip addr list
+  727  sudo ip addr del 10.0.1.6 dev eno1
+  728  sudo ip addr del 10.0.1.6/32 dev eno1
+  729  sudo ip addr add 10.0.1.6/24 dev eno1
+  730  ip addr list
+  731  gunicorn3 --bind 0.0.0.0:5001 -w 8 -t 4 wsgi:app
+  732  ip a
+  733  vim /etc/network/interfaces
+  734  sudo vim /etc/network/interfaces
+  735  sudo su -c 'echo "8021q" >> /etc/modules'
+  736  reboot
+  737  sudo reboot
+  738  sudo su
+  739  sudo apt-get gnome
+  740  sudo apt-get install gnome
+  741  ip a
+  742  sudo vim /etc/network/interfaces
+  743  sudo reboot
+  744  sudo apt update
+  745  ip a
+  746  ssh 10.0.1.50
+  747  ping 8.8.8.8
+  748  traceroute 8.8.8.8
+  749  sudo route
+  750  sudo route add default 192.168.89.72
+  751  sudo route add default 192.168.89.72/24
+  752  sudo route add default wlp6s0
+  753  sudo route
+  754  traceroute 8.8.8.8
+  755  sudo route add default eno1
+  756  traceroute 8.8.8.8
+  757  route
+  758  sudo route add default eno1 gateway 192.168.100.1
+  759  sudo route add default eno1 gw 192.168.100.1
+  760  sudo route del default eno1 gw 192.168.100.1
+  761  sudo route del default eno1
+  762  sudo route add default eno1 gw 192.168.100.1
+  763  sudo route add default eno1 gw 192.168.100.1/24
+  764  route
+  765  ping 10.0.1.1
+  766  ping 10.0.1.50
+  767  ping 8.8.8.8
+  768  tracert 8.8.8.8
+  769  traceroute 8.8.8.8
+  770  ssh 10.0.1.1
+  771  ip r
+  772  sudp ip r del default dev wlp6s0 scope link
+  773  sudo ip r del default dev wlp6s0 scope link
+  774  ip r
+  775  sudo ip r del default via 10.0.1.50
+  776  ip r
+  777  sudo apt update
+  778  sudo apt upgrade
+  779  ip a
+  780  ip r
+  781  sudo apt update
+  782  sudo ovs-vsctl show
+  783  ping 10.0.1.50
+  784  ssh 10.0.0.1.50:6633
+  785  ssh 10.0.0.1.50 -p 6633
+  786  ssh -p 6633 10.0.0.1.50
+  787  ssh -p 6633 10.0.1.50
+  788  ssh -p 6632 10.0.1.50
+  789  sudo ovs-vsctl show
+  790  sudo ovs-vsctl del-manager
+  791  sudo ovs-vsctl set-controller tcp:10.0.1.50:6633
+  792  sudo ovs-vsctl set-controller br0 tcp:10.0.1.50:6633
+  793  sudo ovs-vsctl set bridge br0 other_config:datapath-id=00:00:00:00:00:00:00:02
+  794  sudo ovs-vsctl show
+  795  sudo ovs-vsctl set bridge br0 other_config:datapath-id=0000000000000002
+  796  ls -la
+  797  rm -rf .ssh
+  798  ip a
+  799  sudo vim /etc/network/interfaces
+  800  ip a
+  801  ovs-vsctl
+  802  sudo ovs-vsctl show
+  803  sudo ovs-vsctl emer-reset
+  804  sudo ovs-vsctl show
+  805  sudo ovs-vsctl del-port br0 eno1.46
+  806  sudo ovs-vsctl del-port br0 eno1.66
+  807  sudo ovs-vsctl del-port br0 eno1.26
+  808  sudo ovs-vsctl del-port br0 eno1.16
+  809  sudo ovs-vsctl del-port br0 eno1.67
+  810  sudo ovs-vsctl del-port br0 eno1.56
+  811  sudo apt install gdm3 && sudo dpkg-reconfigure gdm3
+  812  systemctl
+  813  systemctl --help
+  814  sudo apt install gdm3 && sudo dpkg-reconfigure gdm3
+  815  systemctl gdm.service start
+  816  systemctl start gdm.service
+  817  sudo apt install gdm3 && sudo dpkg-reconfigure gdm3
+  818  systemctl restart network.service
+  819  systemctl restart networking.service
+  820  ip a
+  821  sudo ovs-vsctl add-port br0 eno1.112
+  822  sudo ovs-vsctl add-port br0 eno1.124
+  823  sudo ovs-vsctl show
+  824  sudo ovs-vsctl ovs-vsctl set-manager tcp:10.0.1.50:6633
+  825  sudo ovs-vsctl set-manager tcp:10.0.1.50:6633
+  826  cd .ssh
+  827  ls
+  828  ls -la
+  829  ssh 10.0.112.1
+  830  ip a dev eno1
+  831  ip a a dev eno1
+  832  ip a help
+  833  ip a show dev eno1
+  834  sudo apt remove cups
+  835  ssh 10.0.113.2
+  836  arp
+  837  ssh 10.0.113.2
+  838  ssh 10.0.112.1
+  839  sudo systemctl stop openvswitch-switch.service 
+  840  ssh 10.0.112.1
+  841  arp
+  842  ssh-keygen
+  843  sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
+  844  sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
+  845  sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
+  846  arp
+  847  ssh 10.0.112.1
+  848  ip a 
+  849  tcpdump
+  850  sudo tcpdump
+  851  sudo tcpdump | grep arp
+  852  sudo tcpdump | grep ARP
+  853  ip a 
+  854  pingp
+  855  ip r
+  856  sudo ip a add 10.0.2.2 dev enp5s0 
+  857  sudo ip a del 10.0.2.2 dev enp5s0 
+  858  sudo ip a add 10.0.2.2/24 dev enp5s0 
+  859  ping 10.0.2.4
+  860  ping 10.0.2.3
+  861  ping 10.0.2.1
+  862  sudo tshark
+  863  sudo apt install tshark
+  864  sudo tshark -p vlan
+  865  sudo tshark -i eno1 -p vlan
+  866  ip a
+  867  sudo ip a add 10.0.1.202 dev br0
+  868  ip a
+  869  sudo ip a del 10.0.1.202 dev br0
+  870  sudo ip a add 10.0.1.202/24 dev br0
+  871  ip a
+  872  ip r
+  873  sudo ip a del 10.0.1.202/24 dev br0
+  874  sudo ip a add 10.0.2.1/24 dev br0
+  875  sudo systemctl start openvswitch-switch
+  876  sudo tshark -i eno1.112
+  877  exit
+  878  ping 10.0.1.4
+  879  ping 10.0.1.7
+  880  ping 10.0.1.5
+  881  ping 10.0.1.1
+  882  ping 10.0.1.3
+  883  sudo ip a del 10.0.1.2/24 dev eno1
+  884  ip a
+  885  sudo ip del  10.0.1.6/24 dev enp5s0
+  886  sudo ip a del  10.0.1.6/24 dev enp5s0
+  887  sudo sysctl -p
+  888  ip a
+  889  sudo vim /etc/sysctl.conf 
+  890  sudo sysctl -p
+  891  ping 10.0.124.2
+  892  ip a
+  893  sudo ovs-vsctl show
+  894  sudo ovs-vsctl del-port eno1.124
+  895  sudo ovs-vsctl del-port eno1.112
+  896  sudo ovs-vsctl del-controller
+  897  sudo ovs-vsctl del-controller br0
+  898  sudo ovs-vsctl show
+  899  less /etc/network/interfaces
+  900  ip addr
+  901  ifconfig
+  902  sudo ovs-vsctl add-port br0 eno1.112
+  903  sudo ovs-vsctl add-port br0 eno1.124
+  904  sudo ovs-vsctl set-controller br0 tcp:10.0.2.50:6633
+  905  ping 10.0.2.50
+  906  ping 10.0.124.2
+  907  ls ala
+  908  ls
+  909  ifconfig
+  910  ls /var/run
+  911  ls /etc/openvswitch/
+  912  sudo systemctl start openvswitch-switch.service
+  913  ls /etc/openvswitch/
+  914  sudo ovs-vsctl show
+  915  sudo ovs-vsctl add-br br0
+  916  sudo ovs-vsctl add-port br0 eno1.112
+  917  sudo ovs-vsctl add-port br0 eno1.124
+  918  sudo ovs-vsctl show
+  919  sudo ovs-ofctl show br0
+  920  sudo ovs-vsctl set bridge br0 other_config:datapath-id=0000000000000002
+  921  ip a
+  922  sudo ip addr add 10.0.1.2/24 dev br0
+  923  sudo ip link set up dev br0
+  924  ping 10.0.1.5
+  925  tshark -i eno1 -f vlan
+  926  tshark -i enp5s0 -f vlan
+  927  sudo tshark -i enp5s0 -f vlan
+  928  sudo tshark -i eno1 -f vlan
+  929  ip r
+  930  ip a
+  931  sudo vim /etc/network/interfaces
+  932  ping seriot3
+  933  ping 10.0.1.3
+  934  ip a
+  935  h
+  936  alias h=history
+  937  h
+  938  sudo tcpdump | grep arp
+  939  sudo tcpdump | grep ARP
+  940  sudo tcpdump 
+  941  sudo tcpdump | grep ARP
+  942  sudo tcpdump -v  | grep ARP
+  943  sudo tcpdump -v  | grep arp
+  944  sudo vim /etc/network/interfaces
+  945  sudo ovs-vsctl show
+  946  exit
+  947  ping 10.0.1.3
+  948  ip a
+  949  sudo ovs-vsctl show
+  950  ping 10.0.1.4
+  951  ping 10.0.2.4
+  952  ping 10.0.1.4
+  953  ip a dev br0
+  954  ip a br0
+  955  ping 10.0.1.4
+  956  ping 10.0.1.1
+  957  arp
+  958  sudo arp -d 10.0.112.1
+  959  sudo arp -d 10.0.124.2
+  960  arp
+  961  sudo ip link set multicast off eno1
+  962  ip a | grep MULTICAST
+  963  sudo ip link set multicast off eno1.112
+  964  sudo ip link set multicast off eno1.124
+  965  sudo ip link set multicast off br0
+  966  sudo ip link set allmulticast off br0
+  967  sudo ip link set allmulticast off eno1.112
+  968  sudo ip link set allmulticast off eno1.124
+  969  ping 10.0.1.1
+  970  arp
+  971  ping 10.0.1.4
+  972  ps -ef
+  973  ps -ef | grep seriot
+  974  sudo systemctl status avahi-daemon.service 
+  975  sudo systemctl stop avahi-daemon.service 
+  976  sudo tshark -i br0
+  977  arp
+  978  arp -h
+  979  arp -v
+  980  vim /etc/ethers
+  981  man ethers
+  982  sudo vim /etc/ethers
+  983  sudo arp -f /etc/ethers 
+  984  arp
+  985  ip a l dev eno1
+  986  sudo arp -f /etc/ethers 
+  987  sudo vim /etc/ethers
+  988  scp /etc/ethers seriot@10.0.2.50:ethers
+  989  arp
+  990  sudo tshark -i eno1
+  991  arp
+  992  sudo tshark -i eno1
+  993  sudo tshark -i br0
+  994  ls -l
+  995  lt
+  996  ls -lt
+  997  cd Logs
+  998  ls -l
+  999  cat logAsMSenderCog10.0.1.2.txt
+ 1000  ls -l
+ 1001  cat  logAsMRcvCog10.0.1.2.txt
+ 1002  ping 10.0.1.1
+ 1003  exit
+ 1004  ls
+ 1005  python3 AsM.py 2
+ 1006  pkill python3
+ 1007  cat rapaser
+ 1008  ls -l Logs
+ 1009  cat Logs/logAsMSenderCog10.0.1.2.txt
+ 1010  ls -l Logs
+ 1011  ping 10.0.1.1
+ 1012  pkill python2
+ 1013  nano
+ 1014  ls
+ 1015  cat raopaser
+ 1016  cat rapaser
+ 1017  nano AsM.py 
+ 1018  h
+ 1019  alias h='history'
+ 1020  h
+ 1021  python3 AsM.py 2
+ 1022  ls -lt
+ 1023  ls *.py
+ 1024  nano udp_cli.py 
+ 1025  ls 8.py
+ 1026  ls *.py
+ 1027  python3 udp_cli.py 
+ 1028  nano udp_cli.py 
+ 1029  python3 udp_cli.py 
+ 1030  sudo apt install python3-pip
+ 1031  python3 -m pip install pyserial
+ 1032  ip a
+ 1033  ip r
+ 1034  ping 8.8.8.8
+ 1035  traceroute
+ 1036  traceroute 8.8.8.8
+ 1037  ip a
+ 1038  sudo vim /etc/network/interfaces
+ 1039  sudo ip r
+ 1040  sudo ip r del default via 10.0.2.50
+ 1041  traceroute 8.8.8.8
+ 1042  sudo apt update
+ 1043  python3 -m pip install pyserial
+ 1044  ls /dev
+ 1045  reboot
+ 1046  sudo reboot
+ 1047  ls /dev
+ 1048  ip a
+ 1049  sudo vim /etc/network/interfaces
+ 1050  sudo ifup eno1
+ 1051  ip a
+ 1052  sudo ifup enp5s0 
+ 1053  ip a
+ 1054  sudo ifdown enp5s0 
+ 1055  sudo ifup enp5s0 
+ 1056  sudo vim /etc/network/interfaces
+ 1057  sudo ifup enp5s0 
+ 1058  ip a
+ 1059  ssh 10.0.2.50
+ 1060  ls /dev
+ 1061  sudo ./Power_avg.py 
+ 1062  ls Power_avg.py 
+ 1063  lt
+ 1064  ge Power_avg.py 
+ 1065  ping 10.0.1.1
+ 1066  ping 10.0.1.2
+ 1067  ping 10.0.1.3
+ 1068  sudo mv br0 /etc/network/if-up.d/
+ 1069  ls /etc/network/if-up.d/
+ 1070  sudo reboot
+ 1071  sudo vim /etc/network/if-up.d/br0
+ 1072  sudo reboot
+ 1073  arp -h
+ 1074  sudo vim /etc/network/if-up.d/br0
+ 1075  ping 10.0.1.4
+ 1076  arp
+ 1077  ping 10.0.1.1
+ 1078  ping 10.0.1.3
+ 1079  sudo systemctl restart openvswitch-switch.service
+ 1080  ping 10.0.1.3
+ 1081  ping -c 4 -W 3s 10.0.1.1
+ 1082  ping -c 4 -W 3s 10.0.1.3
+ 1083  ping -c 4 -W 3s 10.0.1.4
+ 1084  ls -Logs
+ 1085  ls -l Logs
+ 1086  cat  logAsMRcvCog10.0.1.2.txt
+ 1087  cat  Logs/logAsMRcvCog10.0.1.2.txt
+ 1088  ping 10.0.1.3
+ 1089  h
+ 1090  ls
+ 1091  ls h*
+ 1092  pwd
+ 1093  h >histSeriot2.txt

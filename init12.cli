@@ -1,0 +1,25 @@
+py "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+py "  Uruchomienie AS -ow:  pingall;  source init12.cli"
+py "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+h1 rm rapas* 
+
+h1 python3 AsM.py  1   >>rapas  2>>rapaser&
+h2 python3 AsM.py  2   >>rapas  2>>rapaser&
+h3 python3 AsM.py  3   >>rapas  2>>rapaser&
+h4 python3 AsM.py  4   >>rapas  2>>rapaser&
+
+h5 python3 AsM.py  5   >>rapas  2>>rapaser&
+h6 python3 AsM.py  6   >>rapas  2>>rapaser&
+h7 python3 AsM.py  7   >>rapas  2>>rapaser&
+h8 python3 AsM.py  8   >>rapas  2>>rapaser&
+
+h9 python3 AsM.py  9   >>rapas  2>>rapaser&
+h10 python3 AsM.py  10   >>rapas  2>>rapaser&
+h11 python3 AsM.py  11   >>rapas  2>>rapaser&
+h12 python3 AsM.py  12   >>rapas  2>>rapaser&
+
+   
+
+
+
+

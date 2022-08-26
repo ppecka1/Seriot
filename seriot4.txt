@@ -1,0 +1,67 @@
+seriot@seriot4:~$ ifconfig
+eno1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.1.4  netmask 255.255.255.0  broadcast 10.0.1.255
+        ether 54:b2:03:93:ea:94  txqueuelen 1000  (Ethernet)
+        RX packets 92797795260  bytes 9579167028350 (9.5 TB)
+        RX errors 0  dropped 5615313975  overruns 0  frame 0
+        TX packets 146210764914  bytes 14986710002289 (14.9 TB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 16  memory 0xdc100000-dc120000  
+
+eno1.124: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.124.2  netmask 255.255.255.0  broadcast 10.0.124.255
+        ether 54:b2:03:93:ea:94  txqueuelen 1000  (Ethernet)
+        RX packets 2002791008  bytes 84387663174 (84.3 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 4034023579  bytes 226458852549 (226.4 GB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+eno1.134: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.134.2  netmask 255.255.255.0  broadcast 10.0.134.255
+        ether 54:b2:03:93:ea:94  txqueuelen 1000  (Ethernet)
+        RX packets 2084596767  bytes 87837041088 (87.8 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 3952222431  bytes 221864386119 (221.8 GB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+eno1.145: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.145.1  netmask 255.255.255.0  broadcast 10.0.145.255
+        ether 54:b2:03:93:ea:94  txqueuelen 1000  (Ethernet)
+        RX packets 148073040  bytes 10103903145 (10.1 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 86612520946  bytes 8485697431047 (8.4 TB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+eno1.147: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.147.1  netmask 255.255.255.0  broadcast 10.0.147.255
+        ether 54:b2:03:93:ea:94  txqueuelen 1000  (Ethernet)
+        RX packets 1949426954  bytes 82145488033 (82.1 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 4086917670  bytes 229409569958 (229.4 GB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp5s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.4  netmask 255.255.255.0  broadcast 0.0.0.0
+        ether 54:b2:03:93:ea:95  txqueuelen 1000  (Ethernet)
+        RX packets 9059  bytes 1118739 (1.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 6379  bytes 900892 (900.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device memory 0xdc000000-dc01ffff  
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 35098  bytes 3474118 (3.4 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 35098  bytes 3474118 (3.4 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlp6s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.89.63  netmask 255.255.255.0  broadcast 192.168.89.255
+        ether c8:09:a8:fe:2f:ae  txqueuelen 1000  (Ethernet)
+        RX packets 349193  bytes 63667561 (63.6 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 321522  bytes 42008367 (42.0 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+

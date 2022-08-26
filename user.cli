@@ -1,0 +1,15 @@
+py "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+py "  Uruchomienie Generatorow ruchu  pingall;  source init12.cli"
+py "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+h1 python3 users.py 12&
+h5 python3 users.py 8&
+h9 python3 users.py 4&
+h12 python3 users.py 1&
+h8 python3 users.py 9&
+h4 python3 users.py 5&
+
+
+
+
+
+
