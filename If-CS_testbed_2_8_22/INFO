@@ -1,0 +1,11 @@
+-rw-rw-r-- 1 seriot seriot  7184 sie  2 12:46 simple_switch_13.py
+-rw-rw-r-- 1 seriot seriot 18504 sie  2 12:35 simple_switch0_Mat.py
+-rw-rw-r-- 1 seriot seriot  8040 sie  2 12:27 AsM.py
+-rw-rw-r-- 1 seriot seriot   274 sie  2 10:43 udp_serv.py
+-rw-rw-r-- 1 seriot seriot   302 sie  2 10:41 udp_cli.py
+-rw-rw-r-- 1 seriot seriot  2154 sie  1 13:53 conf.py
+-rw-rw-r-- 1 seriot seriot 16389 sie  1 11:11 RoutingAlgoInterface.py
+-rw-rw-r-- 1 seriot seriot   486 sie  1 11:04 referencja.py
+-rw-rw-r-- 1 seriot seriot  1680 sie  1 10:21 AsClasses.py
+-rw-rw-r-- 1 seriot seriot  8101 lip 28 12:09 topo_dijkstra.py
+-

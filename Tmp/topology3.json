@@ -1,0 +1,61 @@
+{
+  "devices": [
+    {
+      "device id": 0,
+      "hosts": [
+        {
+          "ip host": "10.0.1.11",
+          "id host": 11
+        }
+      ],
+      "links": [
+        {
+          "device id": 1,
+          "port number": 1
+        },
+        {
+          "device id": 2,
+          "port number": 2
+        }
+      ]
+    },
+    {
+      "device id": 1,
+      "hosts": [
+        {
+          "ip host": "10.0.1.12",
+          "id host": 12
+        }
+      ],
+      "links": [
+        {
+          "device id": 0,
+          "port number": 1
+        },
+        {
+          "device id": 2,
+          "port number": 2
+        }
+      ]
+    },
+    {
+      "device id": 2,
+      "hosts": [
+        {
+          "ip host": "10.0.1.13",
+          "id host": 13
+        }
+      ],
+      "links": [
+        {
+          "device id": 1,
+          "port number": 1
+        },
+        {
+          "device id": 0,
+          "port number": 2
+        }
+      ]
+    }
+  ]
+}

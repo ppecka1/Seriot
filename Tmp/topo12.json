@@ -1,0 +1,282 @@
+{
+  "devices": [
+    {
+      "device id": 1,
+      "hosts": [
+        {
+          "ip host": "10.0.1.11",
+          "id host": 11
+        }
+      ],
+      "links": [
+        {
+          "device id": 2,
+          "port number": 2
+        },
+        {
+          "device id": 5,
+          "port number": 3
+        }
+        
+      ]
+    },
+    {
+      "device id": 2,
+      "hosts": [
+        {
+          "ip host": "10.0.1.12",
+          "id host": 12
+        }
+      ],
+      "links": [
+        {
+          "device id": 1,
+          "port number": 2
+        },
+        { 
+          "device id": 3,
+          "port number": 3
+        },
+        {
+          "device id": 6,
+          "port number": 4
+        }  
+      ]
+    },
+    {
+      "device id": 3,
+      "hosts": [
+        {
+          "ip host": "10.0.1.13",
+          "id host": 13
+        }
+      ],
+      "links": [
+        {
+          "device id": 2,
+          "port number": 2
+        },
+        {
+          "device id": 4,
+          "port number": 3
+        },
+        {
+          "device id": 7,
+          "port number": 4
+        }
+       
+      ]
+    },
+     {
+      "device id": 4,
+      "hosts": [
+        {
+          "ip host": "10.0.1.14",
+          "id host": 14
+        }
+      ],
+      "links": [
+        {
+          "device id": 3,
+          "port number": 2
+        },
+        {
+          "device id": 8,
+          "port number": 3
+        }
+      ]
+    },
+    
+     {
+      "device id": 5,
+      "hosts": [
+        {
+          "ip host": "10.0.1.15",
+          "id host": 15
+        }
+      ],
+      "links": [
+        {
+          "device id": 1,
+          "port number": 2
+        },
+        {
+          "device id": 6,
+          "port number": 3
+        },
+        {
+          "device id": 9,
+          "port number": 4
+        }    
+      ]
+    },
+
+     {
+      "device id": 6,
+      "hosts": [
+        {
+          "ip host": "10.0.1.16",
+          "id host": 16
+        }
+      ],
+      "links": [
+        {
+          "device id": 2,
+          "port number": 2
+        },
+        {
+          "device id": 5,
+          "port number": 3
+        },
+        {
+          "device id": 7,
+          "port number": 4
+        },
+         {
+          "device id": 10,
+          "port number": 5
+        }
+      ]
+    },
+    {
+      "device id": 7,
+      "hosts": [
+        {
+          "ip host": "10.0.1.17",
+          "id host": 17
+        }
+      ],
+      "links": [
+        {
+          "device id": 3,
+          "port number": 2
+        },
+        {
+          "device id": 6,
+          "port number": 3
+        },
+        {
+          "device id": 8,
+          "port number": 4
+        },
+        {
+          "device id": 11,
+          "port number": 5
+        }
+      ]
+    },
+    {
+      "device id": 8,
+      "hosts": [
+        {
+          "ip host": "10.0.1.18",
+          "id host": 18
+        }
+      ],
+      "links": [
+        {
+          "device id": 4,
+          "port number": 2
+        },
+        {
+          "device id": 7,
+          "port number": 3
+        },
+        {
+          "device id": 12,
+          "port number": 4
+        }
+        
+      ]
+    },
+    {
+      "device id": 9,
+      "hosts": [
+        {
+          "ip host": "10.0.1.19",
+          "id host": 19
+        }
+      ],
+      "links": [
+        {
+          "device id": 5,
+          "port number": 2
+        },
+        {
+          "device id": 10,
+          "port number": 3
+        }
+        
+      ]
+    },
+    {
+      "device id": 10,
+      "hosts": [
+        {
+          "ip host": "10.0.1.20",
+          "id host": 20
+        }
+      ],
+      "links": [
+        {
+          "device id": 6,
+          "port number": 2
+        },
+        {
+          "device id": 9,
+          "port number": 3
+        },
+        {
+          "device id": 11,
+          "port number": 4
+        }
+       
+         
+      ] 
+      },
+
+      {
+      "device id": 11,
+      "hosts": [
+        {
+          "ip host": "10.0.1.21",
+          "id host": 21
+        }
+      ],
+      "links": [
+        {
+          "device id": 7,
+          "port number": 2
+        },
+        {
+          "device id": 10,
+          "port number": 3
+        },
+        {
+          "device id": 12,
+          "port number": 4
+        }
+        
+      ]
+      },
+       {
+      "device id": 12,
+      "hosts": [
+        {
+          "ip host": "10.0.1.22",
+          "id host": 22
+        }
+      ],
+      "links": [
+        {
+          "device id": 8,
+          "port number": 2
+        },
+        {
+          "device id": 11,
+          "port number": 3
+        }    
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[Unit]
+Description=Mount unit for curl, revision 1046
+Before=snapd.service
+After=zfs-mount.service
+
+[Mount]
+What=/var/lib/snapd/snaps/curl_1046.snap
+Where=/snap/curl/1046
+Type=squashfs
+Options=nodev,ro,x-gdu.hide,x-gvfs-hide
+LazyUnmount=yes
+
+[Install]
+WantedBy=multi-user.target

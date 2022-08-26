@@ -431,7 +431,7 @@ Zatrzymujemy OVS:
   601  sudo ip link set eno1 up  ???????? !!!!!!
   602  ip a
   603  sudo ip link del ovs-system
-  604  sudo systemctl start  openvswitch-switch
+  604  sudo systemctl start  openvswitch-switch ( iina usluga: start ssh)
   605  sudo ovs-vsctl show
   606  ovs-vsctl add-port br0 eno1.134
   607  sudo ovs-vsctl add-port br0 eno1.134

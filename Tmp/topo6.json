@@ -1,0 +1,135 @@
+{
+  "devices": [
+    {
+      "device id": 1,
+      "hosts": [
+        {
+          "ip host": "10.0.1.11",
+          "id host": 11
+        }
+      ],
+      "links": [
+        {
+          "device id": 2,
+          "port number": 1
+        },
+        {
+          "device id": 3,
+          "port number": 2
+        }
+        
+      ]
+    },
+    {
+      "device id": 2,
+      "hosts": [
+        {
+          "ip host": "10.0.1.12",
+          "id host": 12
+        }
+      ],
+      "links": [
+        {
+          "device id": 1,
+          "port number": 1
+        },
+        { 
+          "device id": 4,
+          "port number": 2
+        }
+        
+      ]
+    },
+    {
+      "device id": 3,
+      "hosts": [
+        {
+          "ip host": "10.0.1.13",
+          "id host": 13
+        }
+      ],
+      "links": [
+        {
+          "device id": 1,
+          "port number": 1
+        },
+        {
+          "device id": 4,
+          "port number": 2
+        },
+        {
+          "device id": 5,
+          "port number": 3
+        }
+       
+      ]
+    },
+     {
+      "device id": 4,
+      "hosts": [
+        {
+          "ip host": "10.0.1.14",
+          "id host": 14
+        }
+      ],
+      "links": [
+        {
+          "device id": 2,
+          "port number": 1
+        },
+        {
+          "device id": 3,
+          "port number": 2
+        },
+        {
+          "device id": 6,
+          "port number": 3
+        }
+      ]
+    },
+    
+     {
+      "device id": 5,
+      "hosts": [
+        {
+          "ip host": "10.0.1.15",
+          "id host": 15
+        }
+      ],
+      "links": [
+        {
+          "device id": 3,
+          "port number": 1
+        },
+        {
+          "device id": 6,
+          "port number": 2
+        }  
+      ]
+    },
+
+     {
+      "device id": 6,
+      "hosts": [
+        {
+          "ip host": "10.0.1.16",
+          "id host": 16
+        }
+      ],
+      "links": [
+        {
+          "device id": 4,
+          "port number": 1
+        },
+        {
+          "device id": 5,
+          "port number": 2
+        }
+        
+        ]
+    }
+  ]
+
+}       
+        
+   

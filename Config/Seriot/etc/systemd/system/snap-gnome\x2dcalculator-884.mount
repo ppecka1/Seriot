@@ -1,0 +1,14 @@
+[Unit]
+Description=Mount unit for gnome-calculator, revision 884
+Before=snapd.service
+After=zfs-mount.service
+
+[Mount]
+What=/var/lib/snapd/snaps/gnome-calculator_884.snap
+Where=/snap/gnome-calculator/884
+Type=squashfs
+Options=nodev,ro,x-gdu.hide,x-gvfs-hide
+LazyUnmount=yes
+
+[Install]
+WantedBy=multi-user.target

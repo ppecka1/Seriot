@@ -1,0 +1,14 @@
+[Unit]
+Description=Mount unit for pdftk, revision 9
+Before=snapd.service
+After=zfs-mount.service
+
+[Mount]
+What=/var/lib/snapd/snaps/pdftk_9.snap
+Where=/snap/pdftk/9
+Type=squashfs
+Options=nodev,ro,x-gdu.hide,x-gvfs-hide
+LazyUnmount=yes
+
+[Install]
+WantedBy=multi-user.target

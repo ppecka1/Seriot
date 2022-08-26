@@ -1,0 +1,14 @@
+[Unit]
+Description=Mount unit for gtk2-common-themes, revision 13
+Before=snapd.service
+After=zfs-mount.service
+
+[Mount]
+What=/var/lib/snapd/snaps/gtk2-common-themes_13.snap
+Where=/snap/gtk2-common-themes/13
+Type=squashfs
+Options=nodev,ro,x-gdu.hide,x-gvfs-hide
+LazyUnmount=yes
+
+[Install]
+WantedBy=multi-user.target
