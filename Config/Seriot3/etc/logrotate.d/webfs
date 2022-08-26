@@ -1,0 +1,11 @@
+/var/log/webfs/webfs.log {
+	rotate 4
+	daily
+	compress
+	missingok
+	notifempty
+	su root root
+	postrotate
+	  start-stop-daemon --stop --oknodo --signal 1 --quiet --pidfile /var/run/webfs/webfsd.pid
+	endscript
+}

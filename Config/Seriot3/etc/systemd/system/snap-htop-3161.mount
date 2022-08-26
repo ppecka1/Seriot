@@ -1,0 +1,14 @@
+[Unit]
+Description=Mount unit for htop, revision 3161
+Before=snapd.service
+After=zfs-mount.service
+
+[Mount]
+What=/var/lib/snapd/snaps/htop_3161.snap
+Where=/snap/htop/3161
+Type=squashfs
+Options=nodev,ro,x-gdu.hide,x-gvfs-hide
+LazyUnmount=yes
+
+[Install]
+WantedBy=multi-user.target

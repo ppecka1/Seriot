@@ -1,0 +1,6 @@
+[Unit]
+Description=Perform portscan
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/nmap -vvv -p 1-1000 10.0.2.33

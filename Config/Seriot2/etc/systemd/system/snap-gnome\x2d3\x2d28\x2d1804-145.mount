@@ -1,0 +1,14 @@
+[Unit]
+Description=Mount unit for gnome-3-28-1804, revision 145
+Before=snapd.service
+After=zfs-mount.service
+
+[Mount]
+What=/var/lib/snapd/snaps/gnome-3-28-1804_145.snap
+Where=/snap/gnome-3-28-1804/145
+Type=squashfs
+Options=nodev,ro,x-gdu.hide,x-gvfs-hide
+LazyUnmount=yes
+
+[Install]
+WantedBy=multi-user.target

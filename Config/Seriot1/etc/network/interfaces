@@ -1,0 +1,33 @@
+# interfaces(5) file used by ifup(8) and ifdown(8)
+auto lo
+iface lo inet loopback
+
+#auto eno1
+auto enp5s0
+auto eno1.112
+auto eno1.113
+
+#iface eno1 inet static
+#    address 10.0.1.1
+#    netmask 255.255.255.0
+#    gateway 10.0.1.50
+
+iface enp5s0 inet static
+    address 10.0.2.1
+    netmask 255.255.255.0
+
+iface eno1.112 inet static
+    address 10.0.112.1
+    netmask 255.255.255.0
+    network 10.0.112.0
+    broadcast 10.0.112.255
+    mtu 1500
+    vlan-raw-device eno1
+
+iface eno1.113 inet static
+    address 10.0.113.1
+    netmask 255.255.255.0
+    network 10.0.113.0
+    broadcast 10.0.113.255
+    mtu 1500
+    vlan-raw-device eno1

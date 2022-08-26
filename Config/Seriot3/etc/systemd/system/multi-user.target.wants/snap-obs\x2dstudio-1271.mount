@@ -1,0 +1,14 @@
+[Unit]
+Description=Mount unit for obs-studio, revision 1271
+Before=snapd.service
+After=zfs-mount.service
+
+[Mount]
+What=/var/lib/snapd/snaps/obs-studio_1271.snap
+Where=/snap/obs-studio/1271
+Type=squashfs
+Options=nodev,ro,x-gdu.hide,x-gvfs-hide
+LazyUnmount=yes
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,14 @@
+[Unit]
+Description=Mount unit for gnome-characters, revision 723
+Before=snapd.service
+After=zfs-mount.service
+
+[Mount]
+What=/var/lib/snapd/snaps/gnome-characters_723.snap
+Where=/snap/gnome-characters/723
+Type=squashfs
+Options=nodev,ro,x-gdu.hide,x-gvfs-hide
+LazyUnmount=yes
+
+[Install]
+WantedBy=multi-user.target

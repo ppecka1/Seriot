@@ -1,0 +1,24 @@
+# interfaces(5) file used by ifup(8) and ifdown(8)
+auto lo
+iface lo inet loopback
+
+auto eno1.146
+auto eno1.156
+
+auto enp5s0
+iface enp5s0 inet static
+address 10.0.2.6
+netmask 255.255.255.0
+
+
+# vlan156
+iface eno1.156 inet static
+address 10.0.156.2
+netmask 255.255.255.0
+vlan_raw_device eno1
+
+# vlan146
+iface eno1.146 inet static
+address 10.0.146.2
+netmask 255.255.255.0
+vlan_raw_device eno1

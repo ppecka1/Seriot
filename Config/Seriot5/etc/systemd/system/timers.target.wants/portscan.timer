@@ -1,0 +1,9 @@
+[Unit]
+Description=Perform port scan every 30+1 minutes
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=31min
+
+[Install]
+WantedBy=timers.target

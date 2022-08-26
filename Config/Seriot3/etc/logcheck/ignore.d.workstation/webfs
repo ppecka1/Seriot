@@ -1,0 +1,3 @@
+# Ignore stopping and starting.
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ webfsd\[[0-9]+\]: stopped on signal 15 \(Terminated\)
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ webfsd\[[0-9]+\]: started \(listen on .*\)

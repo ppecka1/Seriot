@@ -1,0 +1,13 @@
+[Unit]
+Description=Mount unit for gnome-characters, revision 708
+Before=snapd.service
+
+[Mount]
+What=/var/lib/snapd/snaps/gnome-characters_708.snap
+Where=/snap/gnome-characters/708
+Type=squashfs
+Options=nodev,ro,x-gdu.hide
+LazyUnmount=yes
+
+[Install]
+WantedBy=multi-user.target

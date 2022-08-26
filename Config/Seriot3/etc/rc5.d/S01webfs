@@ -1,0 +1,96 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          webfs
+# Required-Start:    $local_fs $remote_fs $syslog $network
+# Required-Stop:     $local_fs $remote_fs $syslog $network
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Webfs simple HTTP server
+# Description:       Webfs is a very basic HTTP server
+### END INIT INFO
+
+NAME="webfsd"
+
+DAEMON="/usr/bin/webfsd"
+CONFFILE="/etc/webfsd.conf"
+
+test -f $DAEMON	|| exit 0
+test -f $CONFFILE || exit 0
+
+# Fetch runtime environment.
+. /lib/init/vars.sh
+
+# Include all LSB log_* functions.
+. /lib/lsb/init-functions
+
+# Allow location to be overridden.
+pidfile=/var/run/webfs/webfsd.pid
+
+# read + verify config
+. $CONFFILE
+test "$web_root" = ""		&& exit 0
+
+# pidfile management
+pidfdir=`dirname $pidfile`
+
+if test ! -d "$pidfdir" && test "$pidfdir" != '/'; then
+	mkdir -p "$pidfdir"
+	test "$web_user"  != ""	&& chown $web_user  "$pidfdir"
+	test "$web_group" != ""	&& chgrp $web_group "$pidfdir"
+fi
+
+# build command line
+ARGS="-k $pidfile -r $web_root"
+test "$web_host"	!= ""	&& ARGS="$ARGS -n $web_host"
+test "$web_ip"		!= ""	&& ARGS="$ARGS -i $web_ip"
+test "$web_port"	!= ""	&& ARGS="$ARGS -p $web_port"
+test "$web_timeout"	!= ""	&& ARGS="$ARGS -t $web_timeout"
+test "$web_conn"	!= ""	&& ARGS="$ARGS -c $web_conn"
+test "$web_dircache"	!= ""	&& ARGS="$ARGS -a $web_dircache"
+test "$web_index"	!= ""	&& ARGS="$ARGS -f $web_index"
+#test "$web_accesslog"	!= ""	&& ARGS="$ARGS -l $web_accesslog"
+if test "$web_accesslog" != ""; then
+	if test "$web_logbuffering" = "true"; then
+		ARGS="$ARGS -l $web_accesslog"
+	else
+		ARGS="$ARGS -L $web_accesslog"
+	fi
+fi
+test "$web_syslog" = "true"	&& ARGS="$ARGS -s"
+test "$web_virtual" = "true"	&& ARGS="$ARGS -v"
+test "$web_user"	!= ""	&& ARGS="$ARGS -u $web_user"
+test "$web_group"	!= ""	&& ARGS="$ARGS -g $web_group"
+test "$web_cgipath"	!= ""	&& ARGS="$ARGS -x $web_cgipath"
+test "$web_extras"	!= ""	&& ARGS="$ARGS $web_extras"
+#echo "debug: webfsd $ARGS"
+
+case "$1" in
+start)
+	log_daemon_msg "Starting httpd daemon" "$NAME"
+	start-stop-daemon --start --quiet --oknodo \
+		--pidfile $pidfile --exec $DAEMON -- $ARGS
+	log_end_msg $?
+	;;
+stop)
+	log_daemon_msg "Stopping httpd daemon" "$NAME"
+	start-stop-daemon --stop --quiet --oknodo --pidfile $pidfile
+	log_end_msg $?
+	rm -f $pidfile || true
+	;;
+restart|force-reload)
+	log_daemon_msg "Re-starting httpd daemon" "$NAME"
+	start-stop-daemon --stop --quiet --oknodo --pidfile $pidfile
+	rm -f $pidfile || true
+	start-stop-daemon --start --quiet --pidfile $pidfile \
+		--exec $DAEMON -- $ARGS
+	log_end_msg $?
+	;;
+status)	status_of_proc "$DAEMON" "$NAME" && exit 0 || exit $?
+	;;
+*)
+	echo "Usage: /etc/init.d/webfsd start|stop|restart|force-reload|status"
+	exit 1 
+	;;
+esac
+exit 0
+

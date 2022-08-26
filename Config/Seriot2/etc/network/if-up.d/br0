@@ -1,0 +1,5 @@
+#!/bin/sh
+ip addr add dev br0 10.0.1.2/24
+ip l set up dev br0
+arp -f
+
