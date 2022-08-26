@@ -417,7 +417,7 @@ server 10.0.2.50 prefer iburst
 #fudge 127.127.22.1 flag3 1            # enable PPS API
 ----------------------------------------------------------
 WAZNIEJSZE POLECENIA:
-
+gnome-screenshot -a # wycina obrazek 
 #to wszystko robimy na wezlach, nie na seriot
 Zatrzymujemy OVS:
  sudo systemctl stop openvswitch-switch.service # stop

@@ -6,17 +6,23 @@ t=[(1, 2, 1, 1), (1,3,1,2),(2,1,1,1),(2,4,1,2),(3,1,1,1),(3,4,1,2),(3,5,1,3),
 pt=copy(t) #kopia
 pt=t #referencja
 pt[1]=(6,0,0,0)
-print (t)
-print(pt)        
+#print (t)
+#print(pt)        
 # zmiana pojedynczego elementu w tuple
 x=t[3] # (2,4,1,2)
 y = list(x)  #zamieniamy tuple na list
 y[2] = 123 #zmieniamy 4 na 123
 x = tuple(y) # ponownie  zmieniamy liste na tuple
 t[3]=x # umiesczamy w tablicy
-print (t)
+#print (t)
 import time
 x=time.time()
+print (1)
+#time.sleep(1)
+y=time.time() # czas w micro sec (us)
+
+print( "%.16f" % ((y-x)*1000000), ' us') # czas w micro sec
+quit()
 w=0
 print(x)
 for i in range(1,2000):

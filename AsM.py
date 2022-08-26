@@ -59,7 +59,7 @@ def CogSender(dpid,log,startTime,energy): # nadajnik pakietow Cog uzywa bibliote
             time.sleep(conf.SendIntCog) # co SendIntCog  ms wysylamy pakiet COG
             ##tim=time.time_ns() #aktualny czas w nano sekundach python 7
             tim=time.time()
-            msg = "%d, %d, %f, %f "% (dpid,tim,time.time()-startTime,ene) #  trojka:  src,time[ns], startTime[s]  / dpid nadaje do x[0];   w x[]1] nr portu
+            msg = "%d, %f, %f, %f "% (dpid,tim,time.time()-startTime,ene) #  trojka:  src,time[ns], startTime[s]  / dpid nadaje do x[0];   w x[]1] nr portu
             log.write(msg)
             msg=bytes(msg,"ascii")
             #print ('wysylam')
@@ -97,7 +97,7 @@ def CogRecv(dpid,log,startTime): # odbiornik pakietow Cog
                 msg=str(data,"ascii")
                 if msg.find("$END$")!=-1:  
                     break # konczymy jezeli Sender  wysle "$END$"
-                sendTime=int(msg.split(",")[1]) # czas nadania pakietu przez Sender [ns] od 1970 roku
+                sendTime=float(msg.split(",")[1]) # czas nadania pakietu przez Sender [ns] od 1970 roku
                 src=(msg.split(",")[0]) # id switcha  ktorego przyszla wiadomosc ATENCJONE:nie optymalne za duzo splitow ale tu niema to znaczenia
                 AT=float((msg.split(",")[2])) # czas w [s] nadania wiadomosci
                 ene=float((msg.split(",")[3]))
@@ -113,7 +113,7 @@ def CogRecv(dpid,log,startTime): # odbiornik pakietow Cog
                 
                 #ATENCJONE :po kazdej zmianie na seriot(glowny host) nalezy przkopiowac plik AsM.py na switche seriot1, seriot2 .. 
                 #energy=0.9
-                log.write("*Time=*%f CogRecv - receiving  COG packet from %s delay[NS]=%d ENERGY=%f\n"
+                log.write("*Time=*%f CogRecv - receiving  COG packet from %s delay[NS]=%f ENERGY=%f\n"
                  % (time.time()-startTime,addr,delay,ene))
                 #DT=sendTime-int(startTime*1000*1000*1000) # czas  nadania pakietu przez Sender [ns]  od uruchomienia AS-ow 
                 #DT=int(startTime*1000*1000*1000)
