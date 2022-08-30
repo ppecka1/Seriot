@@ -998,3 +998,4 @@
  2026  h \
  2027  h
  2028  h >histSeriot.txt
+ git clone https://github.com/ppecka1/Seriot.git

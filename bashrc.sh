@@ -161,6 +161,7 @@ lsd(){ set -- */; printf "%s\n" "${@%/}"; }
 #ARCH   wybrnych plikow: ********************************************************************
 #find mininet  -type f   -name "*.py" -o  -name "*.java" -o -name "*.sh" -o -name "*.json"  -o -name "*.txt"|tar -cf somefile.tar  -T -
 # DU: kartoteki naj grubsze
+#setxkbmap pl - polskie litery
 #du -k  * | sort -nr | cut -f2 | xargs -d '\n' du -sh
 	
 	
