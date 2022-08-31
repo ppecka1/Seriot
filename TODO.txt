@@ -1,0 +1,8 @@
+TODO
+- add running instructions
+- format README.txt file
+
+Issues
+- cleanup *.cli files (are there some aliases there?)
+- are *.tar files necessary?
+- what's in `Config` directory? 
