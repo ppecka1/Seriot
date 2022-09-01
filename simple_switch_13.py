@@ -135,7 +135,7 @@ class SimpleSwitch13(app_manager.RyuApp):
                 #self.log.write("*Time=*%f Controller:  /Calling Process/ %s\n "  % (time.time()-self.startTime, name)  ) 
                 print('    ******  try to mod flow: ',self.Algo.getAlgoName())
                 #for dp in self.dpaths:   # dla Mininet
-                for dp in self.nodes_dpids: # dla TestBed
+                for dp in self.nodes_dpids: # dla TestBed Atencjone nodes_dpids[dp] to datapath ustawiamy na kazdym z nich NS-1 flowow (DW) albo (NS-1)^2 flowow
                     self.Algo.modFlows(self.nodes_dpids[dp],conf.PRIOUS,self.startTime,self.log,dport=conf.USPORT) # ustawia flowy dla aktualnego dpid: wszystkie pozostale NS -1 wezlow 
                 return # Atencjone : sprawdzic czy dziala
         #print('packet in:  ',src,'    ',dst)
@@ -143,8 +143,9 @@ class SimpleSwitch13(app_manager.RyuApp):
             #print('_packet_in_handler: dpid=',dpid,'  src=',src,'   dst=',dst)
             return # odrzucamy arpy
         #Atencjone flowy pocztkowe wymusic uzywajac skryptu pingall.sh
-        if dpid not in self.nodes_dpids: # tu usawia sie flowy poczatkowe:  DA oraz info zwrotne do KONTROLERA
-            self.nodes_dpids[dpid]=datapath
+        if dpid not in self.nodes_dpids: # ATENCJONE: tu usawia sie flowy poczatkowe:  DA oraz info zwrotne do KONTROLERA
+            # @ATENCJONE@ tu nalezy zaincjowac self.newSettingsDim[dpid][dst_][src_] dla ALGO DW !!!!!!!!!!!!!
+            self.nodes_dpids[dpid]=datapath # nodes_dpids mamy skompletowane wszystkie DATAPATH 
             start=dpid
             #print('ustawiam flow dla',dpid,'  ',len( self.nodes_dpids))
             nearestNode,NS=nearestNodeDijkstra(start,self.NS,self.topo6) # ostatni parametr to lista czworek 
@@ -154,12 +155,17 @@ class SimpleSwitch13(app_manager.RyuApp):
             for i in range(1,self.NS+1):
                 macDst=self.MACS[i] # hid2mac()
                 if i==dpid:  # adres lokalny ustawiany wczesniej
+                    #if RoutingAlgo==1:  # ustawienie poczatjowych flowow TYLKO dla DwAlgo
+                    #self.Algo.setWeiht() #setWeight(self,i,j,w): # ustawiamy wage na krawedzi i -----> j TYLKO dla DW - Rnn potrzebuje src i dst
+                        
                     match = parser.OFPMatch(eth_dst=macDst) 
-                    action = [parser.OFPActionOutput(ofproto.OFPP_LOCAL)]  # Swich--->AS
+                    action = [parser.OFPActionOutput(ofproto.OFPP_LOCAL)]  # Swich--->AS LOCAL adres !!!
                     self.add_flow(datapath, 12345, match, action)
                     #self.add_flow(datapath, 6, match, action) 
                     continue
                 inter_port=nearestNode[i][1]
+                if conf.RoutingAlgo==1:  # INCICJACJa newSettingsDim[dpid][dst_][src_] dla DW !!!!!!!!!!!!!!!!!!!!!!!!!!
+                    self.Algo.newSettingsDim[dpid][i][0]=inter_port # dst=1, src=0 nie uzywamy d DW !!!!
                 match = parser.OFPMatch(eth_dst=macDst) 
                 action = [parser.OFPActionOutput(inter_port)]  # Swich--->AS
                 self.add_flow(datapath, 12345, match, action) 

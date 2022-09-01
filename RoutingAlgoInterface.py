@@ -48,9 +48,17 @@ class RoutingAlgoInterface(ABC):  # ATENCJONE: nie potrzebne wystarczylo zwykle 
         self.TimeOut=False # ustawiany przez sygnal ALARM (Linux/Unix)
         signal.signal(signal.SIGALRM, self.alarm)
         signal.alarm(Tout) # czas alarmu
-        self.oldSettingsDim = [[[-1 for k in range(NS+1)] for j in range(NS+1)] for i in range(NS+1)] # 3 wymiarowa tablica dynamiczna
+        # tablice wypelnione -1 ; na poczatku musi byc DA w oldSettingsDim MiniNet
+        # Tablice numerow portow !!! port[dpid,src,dst] dla Rnn port[dpid,dst] @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
+        # To niema nic wspolnego z wagami !!!!!!!!!!!!!!!!!!!!! wykrywa sie gdzie zmienil sie port:
+        # range(NS+1) od 0 do NS+1 =  range(0,NS+1)
+        self.oldSettingsDim = [[[-1 for k in range(NS+1)] for j in range(NS+1)] for i in range(NS+1)] # 3 wymiarowa tablica dynamiczna dla Rnn dla DW wyorzystujemy 2 wymiary
         self.newSettingsDim = [[[-1 for k in range(NS+1)] for j in range(NS+1)] for i in range(NS+1)] # jezeli port(src,dpid) -zalezy odL
-      
+        #  ???? Test Bed wypelnimy 1-ynkami
+        #self.oldSettingsDim = [[[1 for k in range(NS+1)] for j in range(NS+1)] for i in range(NS+1)] # 3 wymiarowa tablica dynamiczna dla Rnn dla DW wyorzystujemy 2 wymiary
+        #self.newSettingsDim = [[[1 for k in range(NS+1)] for j in range(NS+1)] for i in range(NS+1)] # jezeli port(src,dpid) -zalezy odL
+       
+        #^^^  dla DW ustawimay 1 - wszystkie wagi takie same
     def alarm(self,num,fr): # zastapic sygnalem na threadzie bo dziala tylko z rozdzielczoscia sekunda
         self.TimeOut=True  # alarm wylaczony
         print(" *********** ALERT  ***********")
@@ -74,7 +82,11 @@ class RoutingAlgoInterface(ABC):  # ATENCJONE: nie potrzebne wystarczylo zwykle 
     #V Kotroler wywoluje alg.modFlow()
     #V modyfikuje flowy dla pakietow USER 
     def modFlows(self,datapath, priority,tims,log,dport): # wywoluje switch o id datapath.id tims - to  czas startu kontrolera
-        # Tu trzeba wywolac dla wszyskich dpid   i!!!!
+        # Tu trzeba wywolac dla wszyskich dpid   !!!!
+        # dla DW tylko dst sie liczy dla Rnn src ids !!!
+        # czestosc wywolania odwrotnie proporcjonalna do conf.CAP i conf.FlowTimeOut
+        #print ('old settings=',self.oldSettingsDim,'modFlows() callefrom simple_switch_13()')
+        #print ('NEW settings=',self.newSettingsDim,'modFlows() callefrom simple_switch_13()')  
         ofproto = datapath.ofproto
         parser = datapath.ofproto_parser
         dpid=datapath.id  # for datapath in self.dpaths: tablica datapaths w  konstr klasy SimpleSwitch13
@@ -87,16 +99,17 @@ class RoutingAlgoInterface(ABC):  # ATENCJONE: nie potrzebne wystarczylo zwykle 
             start=0;rang=1 # dla Dijkstry - nie zalezy od historii przybycia do węzła
         for src_ in range(start,rang):
             for dst_ in range(start,self.NS+1): 
-                newPort=self.newSettingsDim[dpid][dst_][src_]
+                newPort=self.newSettingsDim[dpid][dst_][src_] #@@ATENCJONE !!! Tu byl BLAD w porow z org (mial byc newSttingsDim zamiast OldSettingsDim!!!
+                #print('newPort=',newPort)
                 if newPort!=self.oldSettingsDim[dpid][dst_][src_]: #and newPort!=-1 :
                     if newPort== -1: # dajemy dijkstre bez wag
                         assert 0
                     #print('gggg=',self.oldSettingsDim[dpid][dst_][0])
-                    p=random.random()
-                    p=2
-                    if p<0.9:
-                        print(' ***Fix Rnn *****')
-                        newPort=self.oldSettingsDim[dpid][dst_][0] # losowo naprawiamy blad Rnn wpisujac port z alg. DA (dane w wymiarze 0 )
+                    #p=random.random()
+                    #p=2
+                    #if p<0.9:
+                    #print(' ***Fix Rnn *****')
+                    #newPort=self.oldSettingsDim[dpid][dst_][0] # losowo naprawiamy blad Rnn wpisujac port z alg. DA (dane w wymiarze 0 )
                     self.oldSettingsDim[dpid][dst_][src_]=newPort
                     self.newSettingsDim[dpid][dst_][src_]=newPort
                     print("ustawiam/mod flow: ",dpid,"  ---> ",dst_, "zmieniam port z  " ,self.oldSettingsDim[dpid][dst_][src_], "na: ",newPort ,'    src=' ,   src_)
@@ -114,8 +127,9 @@ class RoutingAlgoInterface(ABC):  # ATENCJONE: nie potrzebne wystarczylo zwykle 
                         match = parser.OFPMatch(eth_src=mac_src,eth_dst=mac_dst,ip_proto=17, udp_dst=dport, eth_type=0x0800) #flowy (dpid,src,dst)
                     else:
                         match = parser.OFPMatch(eth_dst=mac_dst,ip_proto=17, udp_dst=dport, eth_type=0x0800)#flowy (dpid,dst)
-                    mod = parser.OFPFlowMod(datapath=datapath, priority=priority+1, match=match, instructions=inst) #dajemy wiekszy priorytet
+                    mod = parser.OFPFlowMod(datapath=datapath, priority=priority, match=match, instructions=inst) #dajemy wiekszy priorytet
                     datapath.send_msg(mod) # Tujest blad - port = -1
+            print('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
                     #self.oldSettingsDim[dpid][y][z]=newPort #  aktualizacja tablicy flow
         #self.settingsState[dpid]=False # na True  bedzie zmieniac alg routingu jak znajdzie zmiane
       
@@ -211,7 +225,7 @@ class DWAlgo(RoutingAlgoInterface):
     def getEdges(self):  return self.edges # dla zewnetrnej funkcji nearestNodeDijkstra
    
     
-    def setWeight(self,i,j,w): # ustawiamy wage na krawedzi i -----> j
+    def setWeight(self,i,j,w): # ustawiamy wage na krawedzi i -----> j TYLKO dla DW - Rnn potrzebuje src i dst
         for k in range(0,len(self.edges)-2): # len() -liczba polaczen 
             if  i==j:continue # polaczenie do samego siebie pomijamy
             if self.edges[k][0]==i and self.edges[k][1]==j: #ATTENCJONE :  wyszukiwanie liniowe !!! REFERENCJA i Clonowanie latwo w pytonie pomylic
