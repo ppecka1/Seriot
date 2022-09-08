@@ -147,7 +147,8 @@ from  rnnLib import PayloadInfoSender # komunikuje sie z Rnn (wysyla info o obci
     
 class RnnAlgo(RoutingAlgoInterface):
     #V Max dlugosc kolekcji CAP; time out Tout[s],NC- liczba switchy,alg Rnn nasluchuje na port= i host= 
-    def __init__(self,CAP=10,Tout=1,NS=12,host="127.0.0.1",port=9999):
+    #def __init__(self,CAP,Tout=1,NS=6,topo='',edges=conf.edges6): # Atencjone sprawdzic init TOPOLOGIA w Tmp/topo6.json
+    def __init__(self,CAP=10,Tout=1,NS=6,host="127.0.0.1",port=9999):
         super().__init__(CAP,Tout,NS,f3d=True) # wywolanie konstuktora w klasie nadrzednej #f3d=False  ustawia sie NSx(NS-1) flowow (dpid,src, dst) dla kazdego switcha
         self.pis=PayloadInfoSender(host,port) # wysyla do modulu Rnn dane (osobny proces Java)
         self.PACKET="" #""" json format: {  "payload": .......,  }"""
@@ -198,28 +199,34 @@ class RnnAlgo(RoutingAlgoInterface):
 #    #V Max dlugosc kolekcji CAP; time out Tout[s],NC- liczba switchy,alg Rnn nasluchuje na port= i host= 
 #    def __init__(self,CAP=10,Tout=1,NS=12,host="127.0.0.1",port=9999):
 class DWAlgo(RoutingAlgoInterface):
-    def __init__(self,CAP,Tout=1,NS=12,topo=conf.TOPO):
+    #def __init__(self,CAP,Tout=1,NS=6,topo='',edges=conf.edges6): BAZOWA klasa
+    def __init__(self,CAP,Tout=1,NS=6,topo='',edges=conf.edges6):
         super().__init__(conf.CAP,Tout,NS,f3d=False)  #f3d=False  ustawia sie NS flowow (dpid,dst) dla kazdego switcha
         #TOPO="connections12mesh.pickle" # plik binarny z topolagia sieci dla alg routingu
         #nearestNode,NS=nearestNodeDijkstra(dpid,self.NS,edges[..]) - znajduje najblizszy wezel,wywolujemy RAZ 
         #inter_port=nearestNode[x][1] # port posredni do odleglego hosta x
         #edges=[(1, 2, 1, 1), (2, 1, 1, 1), (2, 3, 1, 2), (3, 2, 1, 1),  (3 , 1, 1,2), (1, 3, 1, 2),(3, 0, 0, 0)] - siec 3 wezlow 
+        print('DW parameters: ',NS,edges)
         self.edges=[]
-        self.edgesCopy=[]
+        #self.edgesCopy=[]
         self.sizeOfEdges=0
         self.ALFA=conf.ALFA #(1-alfa)old+alfa(old)  wspolczynnik sredniej wazonej MUSI byc w przedziale  (0,1)
-        try:  
-            with open(topo, 'rb') as handle:   #  topo:  plik z topologia typ  pickle 
-                #self.edgesCopy=self.edges = pickle.load(handle) # Atencjone: Copy pokazuje na to samo miejsce w pamieci 
-                #defaultowe ustawienie grafu na podstawie topologii, modyfikujemy  edges[i][2]
-                self.edges= pickle.load(handle)
-                self.sizeOfEdges=len(self.edges)
-                handle.close()
-            with open(topo, 'rb') as handle:
-                self.edgesCopy= pickle.load(handle)
-                handle.close()
-        except:
-            assert False 
+        if topo!='':  # topologia z pliku pickle *Mininet*
+            try:  
+                with open(topo, 'rb') as handle:   #  topo:  plik z topologia typ  pickle 
+                    #self.edgesCopy=self.edges = pickle.load(handle) # Atencjone: Copy pokazuje na to samo miejsce w pamieci 
+                    #defaultowe ustawienie grafu na podstawie topologii, modyfikujemy  edges[i][2]
+                    self.edges= pickle.load(handle)
+                    self.sizeOfEdges=len(self.edges)
+                    handle.close()
+                with open(topo, 'rb') as handle:
+                    self.edgesCopy= pickle.load(handle)
+                    handle.close()
+            except:
+                assert False 
+        else:
+            self.edges=edges# z pliku conf: dges6=[(1, 2, 1, 1),  .............. *TESTBED*
+            
         #print("type=",type(self.edges).__name__)
     def getAlgoName(self): return "Dijkstra with waigth DW"
     def getEdges(self):  return self.edges # dla zewnetrnej funkcji nearestNodeDijkstra
@@ -228,18 +235,14 @@ class DWAlgo(RoutingAlgoInterface):
     def setWeight(self,i,j,w): # ustawiamy wage na krawedzi i -----> j TYLKO dla DW - Rnn potrzebuje src i dst
         for k in range(0,len(self.edges)-2): # len() -liczba polaczen 
             if  i==j:continue # polaczenie do samego siebie pomijamy
-            if self.edges[k][0]==i and self.edges[k][1]==j: #ATTENCJONE :  wyszukiwanie liniowe !!! REFERENCJA i Clonowanie latwo w pytonie pomylic
+            if self.edges[k][0]==i and self.edges[k][1]==j: #ATTENCJONE :  wyszukiwanie liniowe !!! REFERENCJA i Clonowanie (latwo w pytonie pomylic
                 x=self.edges[k]
                 y = list(x)
                 y[2] = w*(1-self.ALFA)+y[2]*self.ALFA #self.edges[k][2]=w #modyfikujemy wezel - w ten sposob nie dziala!
                 x = tuple(y) # 
                 self.edges[k]=x
                 size2=len(self.edges)
-        #if(len(self.edges)!=len(self.edgesCopy)): #ATTENCJONE :  wyszukiwanie liniowe !!! REFERENCJA i Clonowanie latwo w pytonie pomylic
-         
-   
-        
-                
+        #if(len(self.edges)!=len(self.edgesCopy)): #ATTENCJONE :  wyszukiwanie liniowe !!! REFERENCJA i Clonowanie latwo w pytonie pomylic f.copy()          
     def insertData(self,src=0,dst=0,tim=None,delay=0): # f. wirtualna 
         if not self.enable(): # jeszcze nie wywolujemy alg. DW do Rnn - gromadzimy payload-y dodajac przecinek COM na koniec  V
             self.setWeight(src,dst,delay) # ustawiamy wage

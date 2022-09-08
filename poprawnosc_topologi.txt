@@ -1,0 +1,84 @@
+*** SERIOT1:
+==> Logs/logAsMRcvCog10.0.1.1.txt <==
+*Time=*0.005781 CogRecv - aktivation
+  / ppid=1144, dpid=1145 /
+*Time=*0.319842 CogRecv - receiving  COG packet from ('10.0.1.2', 57366) delay[Sec]=0.001243 ENERGY=16.465000
+*Time=*0.392911 CogRecv - receiving  COG packet from ('10.0.1.3', 41028) delay[Sec]=0.000332 ENERGY=19.104000
+*Time=*0.523125 CogRecv - receiving  COG packet from ('10.0.1.2', 57366) delay[Sec]=0.000736 ENERGY=16.121000
+*Time=*0.696296 WARNING: CogRecv  <NEGATIVE TIME> ('10.0.1.3', 41028) 
+*Time=*0.696330 CogRecv - receiving  COG packet from ('10.0.1.3', 41028) delay[Sec]=0.000192 ENERGY=18.278000
+*Time=*0.726302 CogRecv - receiving  COG packet from ('10.0.1.2', 57366) delay[Sec]=0.000762 ENERGY=16.225000
+*Time=*0.930142 CogRecv - receiving  COG packet from ('10.0.1.2', 57366) delay[Sec]=0.000757 ENERGY=16.583000
+*Time=*1.000355 WARNING: CogRecv  <NEGATIVE TIME> ('10.0.1.3', 41028) 
+
+==> Logs/logAsMRcvUser10.0.1.1.txt <==
+*** SERIOT2:
+==> Logs/logAsMRcvCog10.0.1.2.txt <==
+*Time=*0.006065 CogRecv - aktivation
+  / ppid=19207, dpid=19208 /
+*Time=*0.308139 CogRecv - receiving  COG packet from ('10.0.1.1', 44409) delay[Sec]=0.000918 ENERGY=18.245000
+*Time=*0.437095 CogRecv - receiving  COG packet from ('10.0.1.4', 52054) delay[Sec]=0.001979 ENERGY=17.626000
+*Time=*0.510719 CogRecv - receiving  COG packet from ('10.0.1.1', 44409) delay[Sec]=0.000240 ENERGY=17.791000
+*Time=*0.714379 CogRecv - receiving  COG packet from ('10.0.1.1', 44409) delay[Sec]=0.000213 ENERGY=17.980000
+*Time=*0.740338 CogRecv - receiving  COG packet from ('10.0.1.4', 52054) delay[Sec]=0.001440 ENERGY=17.664000
+*Time=*0.917700 CogRecv - receiving  COG packet from ('10.0.1.1', 44409) delay[Sec]=0.000235 ENERGY=17.750000
+*Time=*1.044412 CogRecv - receiving  COG packet from ('10.0.1.4', 52054) delay[Sec]=0.001421 ENERGY=17.560000
+*Time=*1.121499 CogRecv - receiving  COG packet from ('10.0.1.1', 44409) delay[Sec]=0.000209 ENERGY=18.183000
+
+==> Logs/logAsMRcvUser10.0.1.2.txt <==
+*** SERIOT3:
+==> Logs/logAsMRcvCog10.0.1.3.txt <==
+*Time=*0.005253 CogRecv - aktivation
+  / ppid=30872, dpid=30873 /
+*Time=*0.231873 CogRecv - receiving  COG packet from ('10.0.1.1', 44409) delay[Sec]=0.001541 ENERGY=18.095000
+*Time=*0.238836 CogRecv - receiving  COG packet from ('10.0.1.5', 44992) delay[Sec]=0.001800 ENERGY=17.446000
+*Time=*0.260765 CogRecv - receiving  COG packet from ('10.0.1.4', 52054) delay[Sec]=0.002873 ENERGY=17.878000
+*Time=*0.435330 CogRecv - receiving  COG packet from ('10.0.1.1', 44409) delay[Sec]=0.001203 ENERGY=18.245000
+*Time=*0.441712 CogRecv - receiving  COG packet from ('10.0.1.5', 44992) delay[Sec]=0.001353 ENERGY=16.604000
+*Time=*0.564361 CogRecv - receiving  COG packet from ('10.0.1.4', 52054) delay[Sec]=0.002389 ENERGY=17.626000
+*Time=*0.638517 CogRecv - receiving  COG packet from ('10.0.1.1', 44409) delay[Sec]=0.001183 ENERGY=17.791000
+*Time=*0.645562 CogRecv - receiving  COG packet from ('10.0.1.5', 44992) delay[Sec]=0.001364 ENERGY=16.454000
+
+==> Logs/logAsMRcvUser10.0.1.3.txt <==
+*** SERIOT4:
+==> Logs/logAsMRcvCog10.0.1.4.txt <==
+*Time=*0.005415 CogRecv - aktivation
+  / ppid=7945, dpid=7946 /
+*Time=*0.159287 WARNING: CogRecv  <NEGATIVE TIME> ('10.0.1.3', 41028) 
+*Time=*0.159332 CogRecv - receiving  COG packet from ('10.0.1.3', 41028) delay[Sec]=0.000921 ENERGY=18.599000
+*Time=*0.187059 CogRecv - receiving  COG packet from ('10.0.1.2', 57366) delay[Sec]=0.000077 ENERGY=16.507000
+*Time=*0.240343 WARNING: CogRecv  <NEGATIVE TIME> ('10.0.1.6', 37333) 
+*Time=*0.240385 CogRecv - receiving  COG packet from ('10.0.1.6', 37333) delay[Sec]=0.000757 ENERGY=17.124000
+*Time=*0.389870 WARNING: CogRecv  <NEGATIVE TIME> ('10.0.1.2', 57366) 
+*Time=*0.389889 CogRecv - receiving  COG packet from ('10.0.1.2', 57366) delay[Sec]=0.000421 ENERGY=16.465000
+*Time=*0.443619 WARNING: CogRecv  <NEGATIVE TIME> ('10.0.1.6', 37333) 
+
+==> Logs/logAsMRcvUser10.0.1.4.txt <==
+*** SERIOT5:
+==> Logs/logAsMRcvCog10.0.1.5.txt <==
+*Time=*0.005556 CogRecv - aktivation
+  / ppid=9870, dpid=9871 /
+*Time=*0.263459 CogRecv - receiving  COG packet from ('10.0.1.6', 37333) delay[Sec]=0.000389 ENERGY=17.096000
+*Time=*0.385664 CogRecv - receiving  COG packet from ('10.0.1.3', 41028) delay[Sec]=0.000149 ENERGY=18.599000
+*Time=*0.466158 WARNING: CogRecv  <NEGATIVE TIME> ('10.0.1.6', 37333) 
+*Time=*0.466187 CogRecv - receiving  COG packet from ('10.0.1.6', 37333) delay[Sec]=0.000299 ENERGY=17.124000
+*Time=*0.669799 WARNING: CogRecv  <NEGATIVE TIME> ('10.0.1.6', 37333) 
+*Time=*0.669840 CogRecv - receiving  COG packet from ('10.0.1.6', 37333) delay[Sec]=0.000301 ENERGY=16.977000
+*Time=*0.689043 WARNING: CogRecv  <NEGATIVE TIME> ('10.0.1.3', 41028) 
+*Time=*0.689062 CogRecv - receiving  COG packet from ('10.0.1.3', 41028) delay[Sec]=0.000400 ENERGY=19.104000
+
+==> Logs/logAsMRcvUser10.0.1.5.txt <==
+*** SERIOT6:
+==> Logs/logAsMRcvCog10.0.1.6.txt <==
+*Time=*0.005682 CogRecv - aktivation
+  / ppid=2159, dpid=2160 /
+*Time=*0.157814 CogRecv - receiving  COG packet from ('10.0.1.5', 44992) delay[Sec]=0.001808 ENERGY=17.219000
+*Time=*0.361129 CogRecv - receiving  COG packet from ('10.0.1.5', 44992) delay[Sec]=0.001309 ENERGY=17.446000
+*Time=*0.383425 CogRecv - receiving  COG packet from ('10.0.1.4', 52054) delay[Sec]=0.002697 ENERGY=17.878000
+*Time=*0.564430 CogRecv - receiving  COG packet from ('10.0.1.5', 44992) delay[Sec]=0.001314 ENERGY=16.604000
+*Time=*0.686976 CogRecv - receiving  COG packet from ('10.0.1.4', 52054) delay[Sec]=0.002340 ENERGY=17.626000
+*Time=*0.768282 CogRecv - receiving  COG packet from ('10.0.1.5', 44992) delay[Sec]=0.001327 ENERGY=16.454000
+*Time=*0.971403 CogRecv - receiving  COG packet from ('10.0.1.5', 44992) delay[Sec]=0.001310 ENERGY=16.628000
+*Time=*0.990760 CogRecv - receiving  COG packet from ('10.0.1.4', 52054) delay[Sec]=0.002292 ENERGY=17.664000
+
+==> Logs/logAsMRcvUser10.0.1.6.txt <==

@@ -2,7 +2,7 @@ IP_ADDR="10.0.1." # na test bandzie  zmienic MAX liczba wezlow: 0xFF-1 :ostatni 
 NS=6 #liczba switchy mozna odczytac funkcja  createLinksDijkstra("connections12mesh.pickle")
 #TestMode=True #rowne opoznienia do testow MOZLIWE sztuczne obciazenie wybranych wezlow:   *simple_switch0_Mat.py* linia: @wagi
 TestMode=False
-RoutingAlgo= 0 # 0 (DA) 1 (DW) 2 (Rnn) Dijkstra bez wag, z wagami, oparty o siec  neuronowa 
+RoutingAlgo= 1 # 0 (DA) 1 (DW) 2 (Rnn) Dijkstra bez wag, z wagami, oparty o siec  neuronowa 
 ALFA=0.15 # parametr sredniej wazonej dla algorytmu DW 
 #EqualWeigthMode=False 
 ################################
@@ -12,32 +12,32 @@ MS=0.001
 Sec=1.0 #float
 SEC=1 # integer
 ##################################
-SendIntCog=100*MS# odstep czasu [US,MS] miedzy wysylanymi  pakietami Cognitywnymi 
-FlowTimeOut=40*SEC  # po tym czasie wywolany zostanie alg. routingu
-CAP=1000 # pojemnosc zgloszen pakietow kognitywnych - po przekroczeniu - wywolania alg. Routingu
-COPORT=5007 # nr portu dla pakietow COG
-PRIOCOG=58888 # priorytet dla COG
+SendIntCog=10000*MS# odstep czasu  [US,MS] miedzy wysylanymi  pakietami Cognitywnymi 
+FlowTimeOut=400*SEC  # po tym czasie wywolany zostanie alg. routingu
+CAP=1000 # pojemnosc zgloszen pakietow kognitywnych (default 1000)- po przekroczeniu - wywolanie alg. Routingu
+COPORT=5007 # nr portu dla pakietow COG :   TYLKO  mininet 
+PRIOCOG=58888 # priorytet dla COG - nie uzywane na TestBed (prio=12345, obowiazuje dla wszystkich pakietow)
 UDP_CTRL=5006 # wyslanie na ten port przekierowuje pakiet do kontrolera plik   *AsM.py*
 BUFSIZE=1024
 DELTA=1*1000 #  opoznienie progowe   [NS] - ponizej nie wysylamy infomacji do kontrolera  *AsM.py*
 #####################################
+# po uruchomieniu aliasu asm pojawia sie ponizsze reguly TYLKO dla  conf.RoutingAlgo>0
 USPORT=5008 # nr portu dla pakietow USER *users.py*  *Userv.py* /mininet: *user.cli* *init12sv.cli*
-PRIOUS=58888 # priorytet dla pakietow user  (proporcjonalnie do wielkosci)
+PRIOUS=58889 # priorytet dla pakietow user  (proporcjonalnie do wielkosci)
 SendIntUser=0.0001*MS# odstep czasu [US,MS] miedzy wysylanymi  pakietami
 NP=4000000 # liczba pakietow wysylanych prze USER plik:  *users.py*
 # plik binarny z topolagia sieci dla alg routingu : plik *topo_dijkstra.py* *RoutingAlgoInterface.py* *simple_switch0_Mat.py*
-TOPO="connections12mesh.pickle" # wykorzystano w Mini Net
+TOPO="connections12mesh.pickle" # wykorzystano w Mini Net : nazwa pliku
 ################################
 # Topologia dla Test Bed:
-TOPO6=[(1, 2, 1, 1), (1,3,1,2),(2,1,1,1),(2,4,1,2),(3,1,1,1),(3,4,1,2),(3,5,1,3),
-        (4,2,1,1),(4,3,1,2),(4,6,1,3),(5,3,1,1),(5,6,1,2),(6,4,1,1),(6,5,1,2),(6,0,0,0)]  # (src,dst,waga,port)
+edges6=[(1, 2, 1, 1), (1,3,1,2),(2,1,1,1),(2,4,1,2),(3,1,1,1),(3,4,1,2),(3,5,1,3),  
+        (4,2,1,1),(4,3,1,2),(4,6,1,3),(5,3,1,1),(5,6,1,2),(6,4,1,1),(6,5,1,2),(6,0,0,0)]  # (src,dst,waga,port) 
 # adresy wezlow od 1 do 6 ,  dpid=0 nie uzywamy
 MACS=['','54:b2:03:93:e9:7d','54:b2:03:93:75:2b','54:b2:03:93:50:9e','54:b2:03:93:ea:94','54:b2:03:93:e7:b3','54:b2:03:93:76:53']
 
 
-
-
-
+# pingi 10.0.1.x do 10.0.1.y powinny dzialac wezlach
+# pingi 10.0.2.x do 10.0.2.y powinny dzialac na wszystkim
 """
 poleceniea arp na seriot (kontroler):
 

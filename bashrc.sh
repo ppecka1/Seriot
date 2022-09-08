@@ -102,6 +102,7 @@ alias cp='cp -iv'
 alias mv='mv -iv' 
 alias kip='shall.sh sudo pkill python3;pkill python3' 
 alias pil='sh pingall.sh'
+alias dum='sh  dumpfall.sh'
 alias asm='sh AsM.sh'
 alias def='sh delfall.sh'
 alias ca='cd  ~/ryu/ryu/app/'
@@ -142,7 +143,7 @@ fi
 finds() {
 
 #find . -type f \( -name "*.ini" -o  -name "*.ned" -o  -name "*.cc" -o  -name "*.h" -o -name "*.msg" \) -exec grep -l -i  $1 {}
-    find . -type f \( -name "*.py" \) -exec grep  --with-filename  -l -i  $1 {} \;
+    find . -type f \( -name "*.py" \) -exec grep  -i --with-filename  -l -i  $1 {} \;
 
    
    
@@ -150,7 +151,7 @@ finds() {
 finds2() {
 
 #find . -type f \( -name "*.cc" -o  -name "*.h" \) -exec grep   $1 {} \;
-    find . -type f \( -name "*.py" \) -exec grep  --with-filename  $1 {} \;
+    find . -type f \( -name "*.py" \) -exec grep -i  --with-filename  $1 {} \;
 
 
    

@@ -2,6 +2,13 @@
 # Copyright (C) 2021  Piotr Pecka 
 # Piotr Pecka:  piotr@iitis.pl ZmioesK
 # kontroler dla Test Bed
+# Atencjone odpalamy kontroler:
+#seriot@seriot:~/ryu$  PYHTONPATH=. ryu-manager  --observe-links ryu/app/gui_topology/gui_topology.py ryu/app/simple_switch_13.py
+# wczesniej czystka: kip ,def (aliasy w seriot@seriot:~/ryu/ryu/app kasuje demony i usuwa flowy)
+# odpalenie pakietw cog: asm (alias sh AsM.sh dpid)
+# wyswietlenie flowow (alias dum;  dumpfall.sh )
+# odpalenie odbiornikow (demonow) pakietow USER:   Userv.sh
+# wyslanie pakietu (strumienia  pakietow - zmiana kodu w users.py) do odbiornikow (demonow) pakietow USER: users.py  
 import conf
 
 from ryu.base import app_manager
@@ -40,7 +47,8 @@ class SimpleSwitch13(app_manager.RyuApp):
         self.mac_to_port = {}
         self.nodes_dpids={}
         self.NS=6 # 6 wezlow
-        self.topo6=conf.TOPO6 # dla test bed 
+        #self.topo6=conf.TOPO6 # dla test bed 
+        self.edges=conf.edges6
         #polecenie maci.sh: hosty TestBeda
         self.MACS=conf.MACS
         #sid= dpid-1 if dpid==7 else dpid # Uwaga switch 6 ma numer 7 
@@ -48,7 +56,8 @@ class SimpleSwitch13(app_manager.RyuApp):
         if conf.RoutingAlgo==1:
             self.Algo=DWAlgo(conf.CAP,conf.FlowTimeOut,conf.NS)
         elif  conf.RoutingAlgo==2:
-            self.Algo=RnnAlgo(conf.CAP,conf.FlowTimeOut,conf.NS) # inicjalizacja aalgorytmu
+            #(self,CAP,Tout=1,NS=12,topo=conf.TOPO)
+            self.Algo=RnnAlgo(CAP=conf.CAP,Tout=conf.FlowTimeOut,NS=self.NS,edges=self.edges) # inicjalizacja aalgorytmu 
         else:
             self.Algo=None # conf.RoutingAlgo=0
         if self.Algo!=None:
@@ -139,7 +148,7 @@ class SimpleSwitch13(app_manager.RyuApp):
                     self.Algo.modFlows(self.nodes_dpids[dp],conf.PRIOUS,self.startTime,self.log,dport=conf.USPORT) # ustawia flowy dla aktualnego dpid: wszystkie pozostale NS -1 wezlow 
                 return # Atencjone : sprawdzic czy dziala
         #print('packet in:  ',src,'    ',dst)
-        if (dst == 'ff:ff:ff:ff:ff:ff'): 
+        if (dst == 'ff:ff:ff:ff:ff:ff'): #statycznie przydzielone arp-y /etc/ethers 
             #print('_packet_in_handler: dpid=',dpid,'  src=',src,'   dst=',dst)
             return # odrzucamy arpy
         #Atencjone flowy pocztkowe wymusic uzywajac skryptu pingall.sh
@@ -148,7 +157,7 @@ class SimpleSwitch13(app_manager.RyuApp):
             self.nodes_dpids[dpid]=datapath # nodes_dpids mamy skompletowane wszystkie DATAPATH 
             start=dpid
             #print('ustawiam flow dla',dpid,'  ',len( self.nodes_dpids))
-            nearestNode,NS=nearestNodeDijkstra(start,self.NS,self.topo6) # ostatni parametr to lista czworek 
+            nearestNode,NS=nearestNodeDijkstra(start,self.NS,edges=self.edges) # ostatni parametr to lista czworek - topologia w formacie python
             if NS<0 or NS!=self.NS:
                 assert(0)
             macSrc=self.MACS[dpid]
@@ -166,6 +175,8 @@ class SimpleSwitch13(app_manager.RyuApp):
                 inter_port=nearestNode[i][1]
                 if conf.RoutingAlgo==1:  # INCICJACJa newSettingsDim[dpid][dst_][src_] dla DW !!!!!!!!!!!!!!!!!!!!!!!!!!
                     self.Algo.newSettingsDim[dpid][i][0]=inter_port # dst=1, src=0 nie uzywamy d DW !!!!
+                    #self.Algo.oldSettingsDim[dpid][i][0]=inter_port
+                print('iport=',inter_port)
                 match = parser.OFPMatch(eth_dst=macDst) 
                 action = [parser.OFPActionOutput(inter_port)]  # Swich--->AS
                 self.add_flow(datapath, 12345, match, action) 
@@ -175,6 +186,14 @@ class SimpleSwitch13(app_manager.RyuApp):
                 #************************************************************************
                 #self.logger.info("%6d sw%d:TOPO ACTION for HOST %s -> out_port %s", self.logcnt, dpid, host.mac, host.port.port_no); self.logcnt+=1
                 self.add_flow(datapath, 60000, match, action) 
+        """
+        print('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
+        for i in range(1,self.NS+1):
+            for j in range(1,self.NS+1):
+                print(self.Algo.newSettingsDim[i][j][0], end =" |") 
+            print
+        """
+               
         return 
         
         

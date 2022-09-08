@@ -137,12 +137,12 @@ if __name__ == '__main__':
 
     myId=int(sys.argv[1]) # dpid : id Agena : 1..NS
     
-    logFileName="./Logs/logAsMRcvCog"+conf.IP_ADDR+str(myId)+".txt"
+    logFileName="./Logs/logCogRcvAgent[AS]"+conf.IP_ADDR+str(myId)+".txt"
     if os.path.exists(logFileName):
         os.remove(logFileName)
     log1 = open(logFileName,"w")
     
-    logFileName="./Logs/logAsMSenderCog"+conf.IP_ADDR+str(myId)+".txt"
+    logFileName="./Logs/logCogSndAgent[AS]"+conf.IP_ADDR+str(myId)+".txt"
     if os.path.exists(logFileName):
         os.remove(logFileName)
     log2 = open(logFileName,"w")

@@ -77,7 +77,7 @@ def UserSender(dst,log,startTime,NS=6): # nadajnik pakietow USER
                 # sendTime czas nadani w us zamieniamy na us
             #log.close()    
 if __name__ == '__main__': 
-
+    # podajemy adres zrodla jako argument , cel  ustawiamy w   UserSender(dst,log,startTime,NS=6)
     dst=int(sys.argv[1]) # dpid : id Agena : 1..NS
     
     
