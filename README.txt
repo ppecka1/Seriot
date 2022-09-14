@@ -1,4 +1,5 @@
 UWAGA:  setxkbmap pl nie dziala na tej wersji ubuntu: 18.04.1-Ubuntu - SMP stad brak polskich znakow
+Library for testing routing algo. in openflow networks using Ryu Controler (TestBed ver for 6 switches and one controler)
   
 Najwazniejsze pliki systemu If-CsV1.0:
  - simple_switch_13.py - klasa kontrolera
